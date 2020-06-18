@@ -3,6 +3,8 @@ import requestbutton from "./nobackrequest.png";
 import logo from "./forumCircle.png";
 import "./main.css";
 import RequestButtons from "./requestButtons";
+import TrendingNewsTopicsPage from "./trendingNews/trendingNewsTopics";
+
 class Main extends Component {
   render() {
     return (
@@ -45,6 +47,9 @@ class Main extends Component {
             <div class="trendingNewstopicstext">
               {" "}
               <h4>Trending News Topics</h4>
+              <div class="TrendingNewTopicsBox"> 
+              <TrendingNewsTopicsPage/>
+              </div>
             </div>
           </div>
         </div>
