@@ -220,3 +220,7 @@ h1 {
   left: 700px;
   top: -530px;
 }
+
+.TrendingNewTopicsBox {
+  position: relative;
+}
