@@ -2,16 +2,17 @@
   color: #3c065f;
   font-family: Noto Sans;
   font-style: bold;
-  font-size: 25px;
+  font-size: 20px;
   position: relative;
-  right: -100px;
+  right: -60px;
+  top: -100px;
 }
 
 .mainForumlogo {
   position: relative;
-  top: 140px;
-  width: 140px;
-  height: 130px;
+  top: 5px;
+  width: 100px;
+  height: 90px;
   left: -30px;
 }
 
@@ -30,7 +31,7 @@
 .breaktheNews {
   position: absolute;
   left: 60px;
-  top: 100px;
+  top: 200px;
 }
 .forumaboveLine {
   display: flex;
@@ -42,8 +43,8 @@
   position: relative;
   width: 749px;
   height: 0px;
-  left: 110px;
-  top: -30px;
+  left: 60px;
+  top: -130px;
   border: 2px solid #3c065f;
 }
 
@@ -74,7 +75,7 @@ h1 {
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0px;
-  height: 30%;
+  height: 200px;
 }
 
 .topicRequestbox {
@@ -150,9 +151,9 @@ h1 {
   left: 75px;
   top: 62px;
   font-family: Noto Sans;
-  font-style: italic;
+  font-style: bold;
   font-weight: 800;
-  font-size: 20px;
+  font-size: 30px;
   line-height: 27px;
   color: #3c065f;
 }
@@ -219,6 +220,9 @@ h1 {
   position: relative;
   left: 700px;
   top: -530px;
+  text: bold;
+  font-size: 20px;
+  color: red;
 }
 
 .TrendingNewTopicsBox {

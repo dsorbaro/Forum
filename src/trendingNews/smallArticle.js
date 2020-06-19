@@ -9,8 +9,13 @@ class SmallArticle extends Component {
   render() {
     return (
       <div>
-        <p>{this.props.title}</p>
-        <p>{this.props.url}</p>
+      <div class= "trendingnewstopicsandlinks">
+        <div class="titleofTrendingarticle">
+          <div class= "trendinglistDots"></div>
+          <p>{this.props.title}</p>
+        </div>
+        <div class="linkofTrendingarticle"><p>{this.props.url}</p></div>
+        </div>
       </div>
     );
   }

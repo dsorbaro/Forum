@@ -41,7 +41,7 @@ class Main extends Component {
         <div>
           <div class="trendinglogoline"> </div>
           <div class="todaysTrendingConversationRequests">
-            <h4> Today's Trending Conversation Requests </h4>
+            <h4>Trending Conversation Requests</h4>
             <div class="trendinglogolineTwo"> </div>
             <div class="trendingvoterRectangle"> </div>
             <div class="trendingNewstopicstext">
