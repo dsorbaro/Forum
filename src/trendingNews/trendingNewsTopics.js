@@ -33,7 +33,7 @@ class TrendingNewsTopicsPage extends Component {
       })
     }
     return (
-      <div >
+      <div class="trendingnews">
         {currentAr}
       </div>
     );

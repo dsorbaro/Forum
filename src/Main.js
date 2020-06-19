@@ -47,13 +47,13 @@ class Main extends Component {
             <div class="trendingNewstopicstext">
               {" "}
               <h4>Trending News Topics</h4>
-              <div class="TrendingNewTopicsBox"> 
-              <TrendingNewsTopicsPage/>
+              <div class="TrendingNewTopicsBox">
+                      <TrendingNewsTopicsPage/>
+              </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
+          </div>
     );
   }
 }

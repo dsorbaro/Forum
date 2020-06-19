@@ -5,8 +5,6 @@ class RequestButtons extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dog: "Pompom",
-      brother: "David",
     };
   }
 

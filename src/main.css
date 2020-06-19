@@ -223,4 +223,5 @@ h1 {
 
 .TrendingNewTopicsBox {
   position: relative;
+  top: 50px;
 }
