@@ -10,8 +10,7 @@ class SmallArticle extends Component {
     return (
       <div>
         <p>{this.props.title}</p>
-        <p>{this.props.author}</p>
-        <p>{this.props.description}</p>
+        <p>{this.props.url}</p>
       </div>
     );
   }

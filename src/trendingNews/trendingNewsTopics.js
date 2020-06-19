@@ -10,11 +10,12 @@ class TrendingNewsTopicsPage extends Component {
   }
 
   componentDidMount() {
-     var url = 'http://newsapi.org/v2/top-headlines?country=us&apiKey=85f3e01217b741ca90fec0f951096865';
+    var url = "https://webhose.io/filterWebContent?token=a6c91544-5aa9-4a58-9f8d-edffcf1730d8&format=json&sort=social.facebook.shares&q=policy%20social.facebook.likes%3A%3E15000%20site_type%3Anews%20language%3Aenglish%20site_category%3Apolitics%20thread.country%3AUS%20social.facebook.shares%3A%3E5000"
+  //   var url = 'http://newsapi.org/v2/top-headlines?country=us&apiKey=85f3e01217b741ca90fec0f951096865';
      axios.get(`${url}`)
          .then(res => {
-           const articles = res.data.articles;
-          // console.log(articles);
+           const articles = res.data.posts;
+           //console.log(res);
            this.setState({articles:articles})
          })
          .catch(error => {
@@ -26,9 +27,10 @@ class TrendingNewsTopicsPage extends Component {
   render() {
     var currentAr = null;
     if(this.state.articles!=null){
+      console.log(this.state.articles)
       currentAr = this.state.articles.map((article)=>{
         return(
-          <SmallArticle title={article.title} description={article.description} author={article.author}/>
+          <SmallArticle title={article.title} url={article.url}/>
         )
       })
     }
