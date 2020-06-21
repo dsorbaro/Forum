@@ -1,12 +1,37 @@
 import React, { Component } from "react";
-import requestbutton from "./nobackrequest.png";
+import requestbutton from "./nocutoffrequest.png";
 import logo from "./forumCircle.png";
 import "./main.css";
 import RequestButtons from "./requestButtons";
 import TrendingNewsTopicsPage from "./trendingNews/trendingNewsTopics";
+import RequestButtonTopics from "./Requestbuttontopics";
+import parth from "./parth.png"
+const axios = require('axios');
+
+
 
 class Main extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {articles: null};
+  }
+
+  componentDidMount() {
+    var url = "https://webhose.io/filterWebContent?token=a6c91544-5aa9-4a58-9f8d-edffcf1730d8&format=json&sort=social.facebook.shares&q=policy%20social.facebook.likes%3A%3E15000%20site_type%3Anews%20language%3Aenglish%20site_category%3Apolitics%20thread.country%3AUS%20social.facebook.shares%3A%3E5000"
+  //   var url = 'http://newsapi.org/v2/top-headlines?country=us&apiKey=85f3e01217b741ca90fec0f951096865';
+     axios.get(`${url}`)
+         .then(res => {
+           const articles = res.data.posts;
+           console.log(res.data.posts);
+           this.setState({articles:articles})
+         })
+         .catch(error => {
+           console.log(error);
+         });
+  }
+
   render() {
+    console.log(this.state.articles)
     return (
       <div>
         <div class="row">
@@ -22,21 +47,28 @@ class Main extends Component {
           <div class="breaktheNews">
             <h1> Break the News</h1>
           </div>
-          <div class="innerTitleDiv">
+
+          <div class="parth" src={parth}>
+          <div class="requestsystemRow">
+            <div class="publicFigurerequstBox">
             <RequestButtons
-              title="Public figures"
-              mainText="What public figure would you like to call to debate?"
+              title="Public Figure"
             />
-            <RequestButtons
+            </div>
+            <div class="topicRequestbox">
+            <RequestButtonTopics
               title="Debate Topic"
-              mainText="On what trending news topic do you want to see a debate?"
+              articles={this.state.articles}
             />
+            </div>
+            <div class="publicFigurerequstBox">
             <RequestButtons
-              title="Public figures"
-              mainText="What public figure would you like to call to debate?"
+              title="Public Figure"
             />
+            </div>
             <img class="requestbutton" src={requestbutton} />
           </div>
+        </div>
         </div>
         <div>
           <div class="trendinglogoline"> </div>
@@ -48,7 +80,7 @@ class Main extends Component {
               {" "}
               <h4>Trending News Topics</h4>
               <div class="TrendingNewTopicsBox">
-                      <TrendingNewsTopicsPage/>
+                      <TrendingNewsTopicsPage articles={this.state.articles}/>
               </div>
               </div>
             </div>
