@@ -53,9 +53,8 @@ class RequestButtonTopics extends Component {
     return (
       <div>
           <div class="topicsrequestText">
-            <h4> {this.props.title}</h4>
           </div>
-          <input placeholder="Request Public Figure..." value={this.state.text} onChange={this.onTextChanged} type="text" />
+          <input className="searchBarTopic" placeholder="News Topic..." value={this.state.text} onChange={this.onTextChanged} type="text" />
           {this.renderData()}
       </div>
     )

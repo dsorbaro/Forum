@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import requestbutton from "./nocutoffrequest.png";
 import logo from "./forumCircle.png";
 import "./main.css";
+import trendingcolumnfirst from "./trendingcolumnfirst.png"
 import RequestButtons from "./requestButtons";
 import TrendingNewsTopicsPage from "./trendingNews/trendingNewsTopics";
 import RequestButtonTopics from "./Requestbuttontopics";
@@ -34,58 +35,68 @@ class Main extends Component {
     console.log(this.state.articles)
     return (
       <div>
+
         <div class="row">
           <div class="forumaboveLine">
             <img class="mainForumlogo" src={logo} />
-            <div class="mainForumtext">
-              <h1>FORUM</h1>
-            </div>
-            <div class="logoline"></div>
+                  <div class="mainForumtext"><h1>FORUM</h1></div>
+                  <div class="logoline"></div>
           </div>
         </div>
-        <div>
-          <div class="breaktheNews">
-            <h1> Break the News</h1>
-          </div>
+          <div>
+            <div class="breaktheNews"><h1>Break the News</h1></div>
+            <div class="parth" src={parth}>
+                <div class="requestsystemRow">
 
-          <div class="parth" src={parth}>
-          <div class="requestsystemRow">
-            <div class="publicFigurerequstBox">
-            <RequestButtons
-              title="Public Figure"
-            />
-            </div>
-            <div class="topicRequestbox">
-            <RequestButtonTopics
-              title="Debate Topic"
-              articles={this.state.articles}
-            />
-            </div>
-            <div class="publicFigurerequstBox">
-            <RequestButtons
-              title="Public Figure"
-            />
-            </div>
-            <img class="requestbutton" src={requestbutton} />
+
+                  <div class="publicFigurerequstBoxLeft">
+                      <div class="publicFigurerequstBox">
+                      <RequestButtons
+                        title="Public Figure"
+                      />
+                      </div>
+                  </div>
+
+                      <div class="topicRequestbox">
+                      <RequestButtonTopics
+                      title="Debate Topic"
+                      articles={this.state.articles}
+                      />
+                      </div>
+
+                      <div class="publicFigurerequstBoxRight">
+                      <div class="publicFigurerequstBox">
+                      <RequestButtons
+                      title="Public Figure"
+                      />
+                      </div>
+
+                            <img class="requestbutton" src={requestbutton} />
+                      </div>
+
+                </div>
           </div>
         </div>
-        </div>
+
+
         <div>
           <div class="trendinglogoline"> </div>
-          <div class="todaysTrendingConversationRequests">
-            <h4>Trending Conversation Requests</h4>
-            <div class="trendinglogolineTwo"> </div>
-            <div class="trendingvoterRectangle"> </div>
-            <div class="trendingNewstopicstext">
-              {" "}
-              <h4>Trending News Topics</h4>
-              <div class="TrendingNewTopicsBox">
-                      <TrendingNewsTopicsPage articles={this.state.articles}/>
-              </div>
-              </div>
-            </div>
+          <div class="todaysTrendingConversationRequests"><h4>Trending Conversation Requests</h4>
+                <div class="trendinglogolineTwo"> </div>
+                      <div class="trendingNewstopicstext">
+                        {" "}
+                        <h4>Trending News Topics</h4>
+                              <div class="TrendingNewTopicsBox"><TrendingNewsTopicsPage articles={this.state.articles}/></div>
+                      </div>
+                <div class="trendingvoterRectangle">
+                  <img class="trendingcolumnfirst" src={trendingcolumnfirst} />
+                  <img class="trendingcolumnsecond" src={trendingcolumnfirst} />
+                    <img class="trendingcolumnthird" src={trendingcolumnfirst} />
+                  </div>
           </div>
-          </div>
+
+        </div>
+    </div>
     );
   }
 }

@@ -43,7 +43,6 @@ class RequestButtons extends Component {
   render() {
     return (
       <div class="publicfigurerequestBoxtext">
-        <h4> {this.props.title}</h4>
         <input className="searchBarPublicFigure" placeholder="Request Public Figure..." value={this.state.text} onChange={this.onTextChanged} type="text" />
         {this.renderData()}
       </div>
