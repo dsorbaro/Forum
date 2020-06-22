@@ -29,6 +29,7 @@
   font-family: Noto Sans;
   font-style: bold;
   font-size: 30px;
+    z-index: 2;
 }
 
 .parth {
@@ -36,9 +37,10 @@ position: relative;
 width: 1200px;
 height: 326px;
 left: 30px;
-top: -240px;
-background: #d3d3d3;
+top: -280px;
+background: #f5f5f5;
 border-radius: 17px;
+  z-index: 1;
 }
 
 .requestsystemRow {
@@ -99,10 +101,11 @@ h1 {
   background-color: white;
   border: 0px solid #60009E;
   box-sizing: border-box;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 0px;
-  height: 100px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 90px;
     width: 300px;
+    padding-left: 45px;
+      border: 2px solid #60009E;
   left: 15px;
   top: 90px;
   border-radius: 17px;
@@ -112,12 +115,13 @@ h1 {
 .publicFigurerequstBoxLeft {
   position: relative;
   background-color: white;
-  border: 0px solid #60009E;
+  border: 2px solid #60009E;
   box-sizing: border-box;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0px;
-  height: 100px;
+  height: 90px;
   width: 300px;
+      padding-left: 50px;
   left: 50px;
   top: 90px;
   border-radius: 17px;
@@ -133,7 +137,7 @@ h1 {
   box-sizing: border-box;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0px;
-  height: 100px;
+  height: 90px;
   width: 400px;
   left: 30px;
   z-index: 1;
@@ -155,17 +159,6 @@ h1 {
   left: 320px;
 }
 
-.publicfigurerequestBoxtext h4 {
-  font-family: Noto Sans;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  color: #3c065f;
-  padding-left: 10px;
-  padding-right: 100px;
-  position: relative;
-  top: -25px;
-}
 
 .topicsrequestText {
   font-family: Noto Sans;
@@ -223,33 +216,7 @@ h1 {
   top: -300px;
 }
 
-.searchBarPublicFigure{
-  color: #3c065f;
-  font-family: Noto Sans;
-  font-style: bold;
-  font-size: 20px;
-  position: relative;
-margin-left: 20px;
-margin-right: 20px;
-height: 50px;
-position: relative;
-top: 20px;
-border: none;
-}
 
-.searchBarTopic{
-  color: white;
-  font-family: Noto Sans;
-  background-color: #3c065f;
-  font-style: bold;
-  font-size: 20px;
-  position: relative;
-  margin-left: 50px;
-  height: 50px;
-  position: relative;
-  top: 20px;
-  border: none;
-}
 
 
 .trendingvoterRectangle {

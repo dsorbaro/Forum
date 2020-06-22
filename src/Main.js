@@ -18,7 +18,7 @@ class Main extends Component {
   }
 
   componentDidMount() {
-    var url = "https://webhose.io/filterWebContent?token=a6c91544-5aa9-4a58-9f8d-edffcf1730d8&format=json&sort=social.facebook.shares&q=policy%20social.facebook.likes%3A%3E15000%20site_type%3Anews%20language%3Aenglish%20site_category%3Apolitics%20thread.country%3AUS%20social.facebook.shares%3A%3E5000"
+    var url = "https://webhose.io/filterWebContent?token=a6c91544-5aa9-4a58-9f8d-edffcf1730d8&format=json&sort=crawled&q=policy%20social.facebook.likes%3A%3E6000%20site_type%3Anews%20language%3Aenglish%20site_category%3Apolitics%20thread.country%3AUS%20social.facebook.shares%3A%3E2000"
   //   var url = 'http://newsapi.org/v2/top-headlines?country=us&apiKey=85f3e01217b741ca90fec0f951096865';
      axios.get(`${url}`)
          .then(res => {
@@ -44,8 +44,8 @@ class Main extends Component {
           </div>
         </div>
           <div>
-            <div class="breaktheNews"><h1>Break the News</h1></div>
-            <div class="parth" src={parth}>
+                <div class="breaktheNews"><h1>Break the News</h1></div>
+                <div class="parth" src={parth}>
                 <div class="requestsystemRow">
 
 

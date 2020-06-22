@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./main.css";
+import "./TopicRequestSearchbox.css";
 import TrendingNewsTopicsPage from "./trendingNews/trendingNewsTopics";
 class RequestButtonTopics extends Component {
   constructor(props) {
@@ -48,17 +48,28 @@ class RequestButtonTopics extends Component {
     }
 
 
-
-  render() {
-    return (
-      <div>
-          <div class="topicsrequestText">
+render() {
+  console.log(this.state.data)
+  return (
+    <div class="topicsrequestText">
+      <div class="searchrowtwo">
+        <img width="27px" height="30px" className="newspapericon" src={require("./newspapericon.png")} />
+          <div class="formtwo"><input className="formtwo"
+          value={this.state.text} onChange={this.onTextChanged}
+          type="text" name="name" autocomplete="off" required />
+            <label for="name" class= "label-nametwo">
+              <span class="content-nametwo">News Topic</span>
+            </label>
           </div>
-          <input className="searchBarTopic" placeholder="News Topic..." value={this.state.text} onChange={this.onTextChanged} type="text" />
-          {this.renderData()}
-      </div>
-    )
-  }
-}
 
+    </div>
+
+    <div style = {{marginTop: '20px'}}>
+      {this.renderData()}
+   </div>
+
+    </div>
+  );
+}
+}
 export default RequestButtonTopics;
