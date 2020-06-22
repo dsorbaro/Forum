@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import requestbutton from "./nocutoffrequest.png";
 import logo from "./forumCircle.png";
+import buttonicon from "./requestbuttonicon.png";
 import "./main.css";
 import trendingcolumnfirst from "./trendingcolumnfirst.png"
 import RequestButtons from "./requestButtons";
 import TrendingNewsTopicsPage from "./trendingNews/trendingNewsTopics";
 import RequestButtonTopics from "./Requestbuttontopics";
-import parth from "./parth.png"
+import SubmitRequestbutton from "./submitrequestbutton";
 const axios = require('axios');
 
 
@@ -18,17 +18,17 @@ class Main extends Component {
   }
 
   componentDidMount() {
-    var url = "https://webhose.io/filterWebContent?token=a6c91544-5aa9-4a58-9f8d-edffcf1730d8&format=json&sort=crawled&q=policy%20social.facebook.likes%3A%3E6000%20site_type%3Anews%20language%3Aenglish%20site_category%3Apolitics%20thread.country%3AUS%20social.facebook.shares%3A%3E2000"
-  //   var url = 'http://newsapi.org/v2/top-headlines?country=us&apiKey=85f3e01217b741ca90fec0f951096865';
-     axios.get(`${url}`)
-         .then(res => {
-           const articles = res.data.posts;
-           console.log(res.data.posts);
-           this.setState({articles:articles})
-         })
-         .catch(error => {
-           console.log(error);
-         });
+  //   var url = "https://webhose.io/filterWebContent?token=a6c91544-5aa9-4a58-9f8d-edffcf1730d8&format=json&sort=crawled&q=policy%20social.facebook.likes%3A%3E6000%20site_type%3Anews%20language%3Aenglish%20site_category%3Apolitics%20thread.country%3AUS%20social.facebook.shares%3A%3E2000"
+  // //   var url = 'http://newsapi.org/v2/top-headlines?country=us&apiKey=85f3e01217b741ca90fec0f951096865';
+  //    axios.get(`${url}`)
+  //        .then(res => {
+  //          const articles = res.data.posts;
+  //          console.log(res.data.posts);
+  //          this.setState({articles:articles})
+  //        })
+  //        .catch(error => {
+  //          console.log(error);
+  //        });
   }
 
   render() {
@@ -45,7 +45,7 @@ class Main extends Component {
         </div>
           <div>
                 <div class="breaktheNews"><h1>Break the News</h1></div>
-                <div class="parth" src={parth}>
+                <div class="parth">
                 <div class="requestsystemRow">
 
 
@@ -71,7 +71,8 @@ class Main extends Component {
                       />
                       </div>
 
-                            <img class="requestbutton" src={requestbutton} />
+                            <SubmitRequestbutton
+                            />
                       </div>
 
                 </div>
