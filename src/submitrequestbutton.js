@@ -10,7 +10,7 @@ class SubmitRequestbutton extends Component {
   render() {
     return (
         <div class="wrap">
-          <button class="button">
+          <button class={this.props.bclass}>
             <img src={require("./requestbuttonicon.png")} class="buttonicon"/>
           </button>
         </div>

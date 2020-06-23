@@ -12,8 +12,8 @@
   font-family: Noto Sans;
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
-  line-height: 27px;
+  font-size: 18px;
+  line-height: 7px;
   margin-top: 0px;
   margin-top: 30px;
   color: #3c065f;
@@ -45,5 +45,7 @@
 .trendinglistDots {
 width: 8px;
 height: 8px;
+border-radius: 1000px;
+margin-right: 10px;
 background: #3C065F;
 }

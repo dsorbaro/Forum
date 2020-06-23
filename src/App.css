@@ -13,6 +13,135 @@
   }
 }
 
+.navbardesign{
+  background-color: white;
+  height: 130px;
+  box-shadow: 5px 10px 30px #888888;
+}
+
+.mainForumlogo {
+  position: relative;
+  top: 5px;
+  width: 130px;
+  height: 120px;
+  left: -30px;
+}
+
+
+.navbarRow {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    position: relative;
+    top: -125px;
+  }
+
+  .mainForumtext {
+    color: #3c065f;
+    font-family: Noto Sans;
+    font-style: bold;
+    font-size: 30px;
+    position: relative;
+    left: -50px;
+    top: -20px;
+  }
+
+  .logoline {
+    position: relative;
+    width: 749px;
+    height: 0px;
+    top: -55px;
+    left: -40px;
+    border: 2px solid #3c065f;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    position: relative;
+  }
+
+
+  .forumaboveLine {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+
+
+.navbarbutton {
+  background-color: white;
+  font-family: Noto Sans;
+  font-style: bold;
+  font-size: 20px;
+  font-weight: 800;
+  width: 120px;
+  color: #3c065f;
+  height: 40px;
+  margin-right: 0px;
+  border-top-style: none;
+  border-bottom-style: none;
+  border-right: 2px solid #3c065f;
+  border-left: 2px solid #3c065f;
+}
+
+.navbarbutton:hover {
+  color: #530096;
+  background-color: #f5f5f5;
+}
+
+.aboutnavbarbutton {
+  background-color: white;
+  font-family: Noto Sans;
+  font-style: bold;
+  font-size: 20px;
+  font-weight: 800;
+  width: 120px;
+  color: #3c065f;
+  height: 40px;
+  margin-left: 400px;
+  border-top-style: none;
+  border-bottom-style: none;
+  border-right: none;
+  border-left: 2px solid #3c065f;
+}
+
+
+.aboutnavbarbutton:hover {
+  color: #530096;
+  background-color: #f5f5f5;
+}
+
+
+.signinbutton {
+  background-color: white;
+  font-family: Noto Sans;
+  font-style: bold;
+  font-size: 20px;
+  font-weight: 800;
+  width: 120px;
+  color: #3c065f;
+  height: 40px;
+  margin-left: 280px;
+  border: 2px solid #3c065f;
+}
+
+.signupbutton {
+  background-color: #3c065f;
+  font-family: Noto Sans;
+  font-style: bold;
+  font-size: 20px;
+  font-weight: 800;
+  width: 120px;
+  color: white;
+  height: 40px;
+  margin-left: 30px;
+  border: 1px solid #3c065f;
+}
+
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

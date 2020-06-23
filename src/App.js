@@ -4,19 +4,40 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Main from "./Main";
 import AboutPage from "./about";
 import ContactPage from "./contact";
+import SignInPage from "./SignInPage";
+import SignUpPage from "./SignUpPage";
+import logo from "./forumCircle.png";
 
 const MainMenu = () => {
   return (
-    <div>
-      <Link to="/">
-        <button>home</button>
-      </Link>
-      <Link to="/about">
-        <button>About</button>
-      </Link>
-      <Link to="/contact">
-        <button>contact</button>
-      </Link>
+
+<div>
+<div>
+<div class="row">
+            <img class="mainForumlogo" src={logo} />
+  <div class="forumaboveLine">
+          <div class="mainForumtext"><h1>FORUM</h1></div>
+          <div class="logoline"></div>
+  </div>
+</div>
+</div>
+    <div class= "navbarRow">
+            <Link to="/about">
+                  <button class = "aboutnavbarbutton">About</button>
+            </Link>
+
+            <Link to="/contact">
+              <button class = "navbarbutton">Contact</button>
+            </Link>
+
+            <Link to="/SignInPage">
+              <button class = "signinbutton">Sign In</button>
+            </Link>
+
+            <Link to="/SignUpPage">
+              <button class = "signupbutton">Sign Up</button>
+            </Link>
+          </div>
     </div>
   );
 };
@@ -25,14 +46,17 @@ class App extends Component {
   render() {
     return (
       <Router>
+<div class="navbardesign">
         <div>
           <MainMenu />
           <div>
             <Route exact path="/" component={Main} />
+
             <Route exact path="/about" component={AboutPage} />
             <Route exact path="/contact" component={ContactPage} />
           </div>
         </div>
+</div>
       </Router>
     );
   }

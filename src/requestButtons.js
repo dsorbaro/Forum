@@ -25,6 +25,12 @@ class RequestButtons extends Component {
 
   clickedItem = (item) => {
     this.setState({text: item, collapse: false})
+    if(this.props.changePerson1 != null ){
+      this.props.changePerson1(item)
+    }
+    if(this.props.changePerson2 !=null) {
+      this.props.changePerson2(item)
+    }
   }
 
   renderData = () => {

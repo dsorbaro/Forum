@@ -28,7 +28,12 @@ class RequestButtonTopics extends Component {
         const regex = new RegExp(`^${value}`, 'i');
         data = items.sort().filter((v) => regex.test(v));
       }
-      this.setState(() => ({ data, text: value }));
+      this.setState(() => ({ data, text: value,  collapse: true }));
+    }
+
+    clickedItem = (item) => {
+      this.setState({text: item, collapse: false})
+      this.props.changeTopic1(item)
     }
 
     renderData = () => {
@@ -37,12 +42,12 @@ class RequestButtonTopics extends Component {
       if(data==null || this.state.text === ''){
         return null;
       }
-      else if (data.length === 0 || this.state.text === '') {
+      else if (data.length === 0 || this.state.text === '' || !this.state.collapse) {
         return null;
       }
       return (
         <ul>
-          {data.map((item) => <li className="dropDown">{item}</li>)}
+        {data.map((item) => <li className="dropDown" onClick={() => {this.clickedItem(item)}}>{item}</li>)}
         </ul>
       );
     }

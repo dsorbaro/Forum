@@ -31,7 +31,7 @@ class TrendingNewsTopicsPage extends Component {
       //console.log(this.state.articles)
       currentAr = this.props.articles.map((article)=>{
         return(
-          <SmallArticle title={article.title} url={article.url}/>
+             <SmallArticle title={article.title} url={article.url}/>
         )
       })
     }

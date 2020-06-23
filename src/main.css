@@ -1,3 +1,7 @@
+.backgroundofsite {
+  background-color: white;
+}
+
 
 .row {
   display: flex;
@@ -6,38 +10,31 @@
   position: relative;
 }
 
-.forumaboveLine {
-  display: flex;
-  flex-direction: column;
-  margin-left: 10px;
-}
-
-.mainForumlogo {
-  position: relative;
-  top: 5px;
-  width: 130px;
-  height: 120px;
-  left: -30px;
-}
-
 
 .breaktheNews {
   position: relative;
-  left: 380px;
-  top: -210px;
-  color: #3c065f;
+  left: 344px;
+  top: 0px;
+  color: black;
   font-family: Noto Sans;
   font-style: bold;
-  font-size: 30px;
+  font-style: italic;
+  font-size: 25px;
     z-index: 2;
+}
+
+.SubmitRequestbuttonlocation {
+  position: absolute;
+  left: 320px;
+  top: 2px;
 }
 
 .parth {
 position: relative;
 width: 1200px;
-height: 326px;
+height: 270px;
 left: 30px;
-top: -280px;
+top: -50px;
 background: #f5f5f5;
 border-radius: 17px;
   z-index: 1;
@@ -47,18 +44,10 @@ border-radius: 17px;
   display: flex;
   flex-direction: row;
   position: absolute;
+  top: 20px;
 }
 
 
-.mainForumtext {
-  color: #3c065f;
-  font-family: Noto Sans;
-  font-style: bold;
-  font-size: 30px;
-  position: relative;
-  right: -90px;
-  top: -140px;
-}
 
 
 .topLogo {
@@ -69,14 +58,7 @@ border-radius: 17px;
 
 
 
-.logoline {
-  position: relative;
-  width: 749px;
-  height: 0px;
-  left: 90px;
-  top: -180px;
-  border: 2px solid #3c065f;
-}
+
 
 .publicFiguretext {
   font-family: Noto Sans;
@@ -149,7 +131,6 @@ h1 {
   position: relative;
 }
 
-
 .topicsrequestText {
   font-family: Noto Sans;
   font-style: normal;
@@ -161,14 +142,12 @@ h1 {
   margin-right: 100px;
 }
 
-
-
 .todaysTrendingConversationRequests h4 {
   position: relative;
   width: 448px;
   height: 40px;
-  left: 165px;
-  top: -260px;
+  left: 225px;
+  top: -255px;
   font-family: Noto Sans;
   font-style: bold;
   font-weight: 800;
@@ -177,10 +156,11 @@ h1 {
 
 .trendinglogoline {
   position: relative;
-  width: 115px;
+  width: 175px;
   left: 27px;
   top: -220px;
   height: 0px;
+    opacity: 50%;
   border: 1px solid #3c065f;
 }
 
@@ -188,7 +168,8 @@ h1 {
   position: relative;
   width: 700px;
   top: -305px;
-  left: 450px;
+    opacity: 50%;
+  left: 500px;
   border: 1px solid #3c065f;
 }
 
@@ -203,31 +184,41 @@ h1 {
 
 .TrendingNewTopicsBox {
   position: relative;
+  left: -35px;
   top: -300px;
 }
 
-
-
+.bottomhalf {
+  position: relative;
+  top: 200px;
+}
 
 .trendingvoterRectangle {
   position: absolute;
   width: 650px;
   height: 467px;
   left: 27px;
-  top: 720px;
+  top: -190px;
   background: #f5f5f5;
   border-radius: 36px;
 }
 
-.trendingcolumnfirst {
+.mediumColumn {
   position: absolute;
-  height: 230px;
-  left: 30px;
-  top: 130px;
+  transform: scale(.5);
+  margin-left: 22px;
 }
-.trendingcolumnsecond {
+
+.bigColumn {
   position: absolute;
-  height: 300px;
-  left: 200px;
-  top: 70px;
+  transform: scale(.5);
+  left: 220px;
+  top: -113px;
+}
+
+.smallColumn {
+  position: absolute;
+  transform: scale(.5);
+  left: 420px;
+    top: 113px;
 }
