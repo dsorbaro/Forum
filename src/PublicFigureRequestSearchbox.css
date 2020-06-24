@@ -43,7 +43,7 @@ ul {
   margin-left: 10px;
 }
 
-.form {
+.formcss {
   font-size: 15px;
   font-family: Noto Sans;
   position: relative;
@@ -54,7 +54,7 @@ ul {
   margin-left: 9px;
 }
 
-.form input {
+.formcss input {
   width: 100%;
   height: 100%;
   color: #3c065f;
@@ -65,7 +65,7 @@ ul {
   top: -20px;
 }
 
-.form label {
+.formcss label {
   position: absolute;
   bottom: 0px;
   width: 100%;
@@ -75,7 +75,7 @@ ul {
     margin-bottom: 20px;
 }
 
-.form label::after {
+.formcss label::after {
   content: "";
   position: absolute;
   left: 0px;
@@ -94,12 +94,12 @@ ul {
   transition: all 0.3s ease;
 }
 
-.form input:focus + .label-name .content-name, .form input:valid + .label-name .content-name {
+.formcss input:focus + .label-name .content-name, .formcss input:valid + .label-name .content-name {
   transform: translateY(-150%);
   color: #3c065f;
 }
 
-.form input:focus + .label-name::after,
-.form input:valid + .label-name::after {
+.formcss input:focus + .label-name::after,
+.formcss input:valid + .label-name::after {
   transform: translateX(0%);
 }

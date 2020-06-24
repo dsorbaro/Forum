@@ -9,7 +9,7 @@ class AboutPage extends Component {
 
   render() {
     return (
-      <div class="innerinfotiles">
+      <div>
         <p>I am the about page :) </p>
       </div>
     );

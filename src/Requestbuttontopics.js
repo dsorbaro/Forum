@@ -63,7 +63,7 @@ render() {
           value={this.state.text} onChange={this.onTextChanged}
           type="text" name="name" autocomplete="off" required />
             <label for="name" class= "label-nametwo">
-              <span class="content-nametwo">News Topic</span>
+              <span class="content-nametwo">Headline</span>
             </label>
           </div>
 
