@@ -10,7 +10,6 @@
   position: relative;
 }
 
-
 .breaktheNews {
   position: relative;
   left: 344px;
@@ -122,7 +121,6 @@ h1 {
   height: 90px;
   width: 400px;
   left: 30px;
-  z-index: 1;
 }
 
 .requestboxRow {
@@ -175,7 +173,7 @@ h1 {
 
 .trendingNewstopicstext {
   position: relative;
-  left: 700px;
+  left: 690px;
   top: -58px;
   text: bold;
   font-size: 20px;
@@ -185,7 +183,9 @@ h1 {
 .TrendingNewTopicsBox {
   position: relative;
   left: -35px;
-  top: -200px;
+  top: -220px;
+  width: 550px;
+  z-index: 1;
 }
 
 .bottomhalf {
@@ -224,8 +224,102 @@ h1 {
     top: 98px;
 }
 
-.trendingheadlinestext {
+.trendingheadlinestext h3 {
+  font-size: 17px;
   position: absolute;
-  top: -250px;
-  margin-left: 150px;
+  top: -245px;
+  margin-left: 200px;
+}
+
+
+
+.columnrequestbuttonmedium {
+  height: 66px;
+  width: 60px;
+  transition: all 0.1s ease-in-out 0s;
+  position: absolute;
+  left: 97px;
+  top: 395px;
+
+}
+
+.columnrequestbuttonmedium:hover{
+border: 2px solid #60009E;
+border-radius: 1000px;
+}
+
+
+.columnrequestbuttonbig {
+  height: 66px;
+  width: 60px;
+  position: absolute;
+  transition: all 0.1s ease-in-out 0s;
+  left: 294px;
+  top: 395px;
+
+}
+
+.columnrequestbuttonbig:hover{
+border: 2px solid #60009E;
+border-radius: 1000px;
+}
+
+
+.columnrequestbuttonsmall {
+  height: 66px;
+  width: 60px;
+  position: absolute;
+  transition: all 0.1s ease-in-out 0s;
+  left: 494px;
+  top: 395px;
+
+}
+
+.columnrequestbuttonsmall:hover{
+border: 2px solid #60009E;
+border-radius: 1000px;
+}
+
+
+
+.recentlypostedtext {
+  position: relative;
+  top: 410px;
+  left: 230px;
+  text: bold;
+  font-size: 20px;
+  color: #3c065f;
+}
+
+
+.postedconvologoline {
+  position: absolute;
+  width: 175px;
+  left: -210px;
+  top: 15px;
+  height: 0px;
+    opacity: 50%;
+  border: 1px solid #3c065f;
+}
+
+.postedconvologolineTwo {
+  position: absolute;
+  width: 160px;
+  top: 17px;
+    opacity: 50%;
+  left: 275px;
+  border: 1px solid #3c065f;
+}
+
+.recentlypostedbar{
+    margin-top: -250px;
+    z-index: 2;
+}
+
+.bottomborder {
+  position: relative;
+  width: 700px;
+  top: 1005px;
+  left: 500px;
+  border: 1px solid #3c065f;
 }
