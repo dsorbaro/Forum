@@ -8,6 +8,7 @@ import bigColumn from "./bigColumn.png";
 import mediumColumn from "./mediumColumn.png"
 import smallColumn from "./smallColumn.png"
 import intrViewLogo from "./IntrViewlogo.png"
+import aboutbground from "./aboutbground.jpg"
 import RequestButtons from "./requestButtons";
 import TrendingNewsTopicsPage from "./trendingNews/trendingNewsTopics";
 import RequestButtonTopics from "./Requestbuttontopics";

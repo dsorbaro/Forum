@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./main.css";
-
 class SignUpPage extends Component {
   constructor(props) {
     super(props);
@@ -9,7 +8,7 @@ class SignUpPage extends Component {
 
   render() {
     return (
-      <div class="innerinfotiles">
+      <div>
         <p>I am the sign up page :) </p>
       </div>
     );

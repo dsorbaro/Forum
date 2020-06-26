@@ -1,0 +1,31 @@
+.aboutus {
+  color: #3c065f;
+  font-family: Noto Sans;
+  font-weight: 700;
+    text-align: center;
+}
+
+
+.line {
+  height: 3px;
+width: 30%;
+  background-color: #3c065f;
+margin: auto;
+}
+
+
+.Everyoneisveryangry {
+  margin-left: 10%;
+    margin-right: 10%;
+  margin-top: 3%;
+  color: #3c065f;
+}
+
+
+.maintext {
+  font-family: Noto Sans;
+  margin-left: 10%;
+  margin-right: 10%;
+
+  font-weight: 100;
+}
