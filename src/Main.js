@@ -12,9 +12,11 @@ import RequestButtons from "./requestButtons";
 import TrendingNewsTopicsPage from "./trendingNews/trendingNewsTopics";
 import RequestButtonTopics from "./Requestbuttontopics";
 import NewsTicker from "./newsticker";
-import * as db from './datastore.js';
 import emailjs from 'emailjs-com';
 import SubmitRequestbutton from "./submitrequestbutton";
+import { fetchRequests, createRequest } from './actions';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 const axios = require('axios');
 
 
@@ -66,6 +68,8 @@ class Main extends Component {
            },
          ]
          this.setState({articles: fakeData})
+         this.props.fetchRequests();
+
   }
 
 
@@ -91,15 +95,16 @@ class Main extends Component {
 
     var request =  this.state.person1 + " with " + this.state.person2 + " about " + this.state.topic1;
     var content = {
-      message_html: request,
-      from_name: "testAccount",
-      reply_to: "dsorbaro@gmail.com"
+    	person1: this.state.person1,
+    	person2: this.state.person2,
+    	topic: this.state.person3,
+    	requesterEmail: "Irequested@gmail.com"
     }
 
     console.log(content);
     console.log("^ content above")
 
-    db.addNewRequest(request)
+    this.props.createRequest(content)
 
 
     emailjs.send('userconversationrequests', 'template_3Np8FQNF', content, 'user_k1KwbaOjnzwFgVMuaAyrm')
@@ -118,6 +123,7 @@ class Main extends Component {
       classs = "buttonBlink"
     }
 
+    console.log(this.props.allRequests);
 
 
     return (
@@ -218,4 +224,8 @@ class Main extends Component {
   }
 }
 
-export default Main;
+function mapStateToProps(state) {
+  return { allRequests: state.requests.all };
+}
+
+export default withRouter(connect(mapStateToProps, { fetchRequests, createRequest })(Main));
