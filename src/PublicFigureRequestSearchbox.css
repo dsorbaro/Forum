@@ -20,8 +20,6 @@ ul {
   color: #3c065f;
 }
 
-
-
 .profilesearch {
   height: 5px;
   left: 120px;
@@ -59,9 +57,10 @@ ul {
   height: 100%;
   color: #3c065f;
   padding-top: 10px;
+    font-size: 20px;
   border: 1px black ;
   outline: none;
-  left: -12px;
+  left: -9px;
   top: -20px;
 }
 

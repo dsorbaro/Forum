@@ -7,16 +7,13 @@ import "./submitrequestbutton.css"
 import bigColumn from "./bigColumn.png";
 import mediumColumn from "./mediumColumn.png"
 import smallColumn from "./smallColumn.png"
+import intrViewLogo from "./IntrViewlogo.png"
 import RequestButtons from "./requestButtons";
 import TrendingNewsTopicsPage from "./trendingNews/trendingNewsTopics";
 import RequestButtonTopics from "./Requestbuttontopics";
 import NewsTicker from "./newsticker";
 import * as db from './datastore.js';
-
-
 import emailjs from 'emailjs-com';
-
-
 import SubmitRequestbutton from "./submitrequestbutton";
 const axios = require('axios');
 
@@ -43,8 +40,8 @@ class Main extends Component {
     //      .catch(error => {
     //        console.log(error);
     //      });
-    //
-    //
+
+
 
          var fakeData = [
            {

@@ -40,8 +40,9 @@
   padding-bottom: 0px;
   border: 1px black ;
   outline: none;
-  left: -12px;
+  left: -10px;
   top: -20px;
+  font-size: 20px;
   margin-bottom: 20px;
 }
 
