@@ -191,12 +191,12 @@ export function changeUserStatus(id, status) {
     }
 }
 
-export function voteRequest(id) {
+export function voteRequest(id, fields) {
     return (dispatch) => {
-      axios.put(`${ROOT_URL}/requests/${id}`).then((response) => {
+      axios.put(`${ROOT_URL}/requests/${id}`, fields).then((response) => {
         axios.get(`${ROOT_URL}/requests`)
           .then((response) => {
-            dispatch({ type: ActionTypes.FETCH_REQUESTS, payload: response.data });
+            dispatch({ type: ActionTypes.FETCH_POPULAR_REQUESTS, payload: response.data });
           })
           .catch((error) => {
             dispatch(`failed to fetch posts: ${error}`);
