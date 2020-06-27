@@ -56,17 +56,17 @@ class Main extends Component {
            },
            {
              author: "Person B",
-             title: "Chickensssss",
+             title: "First Egg!",
              url: "www.fakenews.com"
            },
            {
              author: "Bobb",
-             title: "Yes there are two bs",
+             title: "Is dad funny?",
              url: "www.fakenews.com"
            },
            {
              author: "Mav",
-             title: "Should I propose to Henry?",
+             title: "What killed the chickens",
              url: "www.fakenews.com"
            },
          ]

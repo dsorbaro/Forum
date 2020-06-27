@@ -47,10 +47,13 @@ const Nav = (props) => {  var adminLink = props.admin ? (
               <NavLink to="/about">
                     <button class = "aboutnavbarbutton">About</button>
               </NavLink>
-
+              <NavLink to="/profile">
+                <button class = "navbarbutton">Profile</button>
+              </NavLink>
               <NavLink to="/contact">
                 <button class = "navbarbutton">Contact</button>
               </NavLink>
+
               <div class ="newsroomsearchbar">
             <FindyourNewsroomSearch
             />
