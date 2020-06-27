@@ -71,9 +71,9 @@ class OneTrendingRequest extends Component {
         </div>
         <img class="mediumColumn" src={mediumColumn} />
              <div class = "textabovecolumn">
-                  <p class = "requestnumberrow" >Requests {this.props.info.numRequests}</p>
+                  <p class = "requestnumberrow" >Requests: {this.props.info.numRequests}</p>
              </div>
-             <img src={require("./requestbuttonicon.png")} onClick={this.vote} style={{width: '50px', height: '50px'}}/>
+             <img class="trendingrequestbutton" src={require("./requestbuttonicon.png")} onClick={this.vote}/>
 
       </div>
     );

@@ -4,6 +4,7 @@ import { signupUser } from './actions';
 import { connect } from 'react-redux';
 import "./signUp.css";
 import "./signUp.scss";
+import forumCircletwo from "./forumCircletwo.png"
 
 
 class SignUpPage extends Component {
@@ -57,7 +58,8 @@ class SignUpPage extends Component {
       </div>
     )
     return (
-<body class = "background">
+      <div>
+        <img class="signupbckground" src={forumCircletwo} />
       <div class="login-wrap">
       	<div class="login-html">
           <h3 class="initialsignuptext">Sign Up</h3>
@@ -102,7 +104,7 @@ class SignUpPage extends Component {
 
         </div>
       </div>
-      </body>
+</div>
 
     );
   }

@@ -1,9 +1,4 @@
 
-.background {
-  background-color: grey;
-  height: 1065px;
-  margin-top: -112px;
-}
 /*  background and sizing stuff  */
 .initialsignuptext{
 color: #3c065f;
@@ -15,15 +10,30 @@ font-family: Noto Sans;
 .login-wrap {
 
 	width:100%;
+  opacity: 97%;
 	margin:auto;
 	max-width:525px;
 	min-height:900px;
 	position:relative;
   background:url(newparthsignup.png) no-repeat center;
   background-size: 120%;
-  top: 50px;
+  top: 10%;
 	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
 }
+
+
+.signin-wrap {
+width:100%;
+opacity: 97%;
+margin:auto;
+max-width:525px;
+height: 400px;
+position:relative;
+background:url(newparthsignup.png) no-repeat center;
+margin-top: 7%;
+box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+
 
 
 /*  internal positioning  */
@@ -133,3 +143,23 @@ margin-bottom: -50px;}
   .background {
     background-color: grey;
   }
+
+.signupbckground {
+  width: 100%;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  z-index: -1;
+  margin-bottom: -160%;
+}
+
+.signinbckground
+{
+  width: 70%;
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  right: 15%;
+  opacity: 90%;
+  z-index: -1;
+}
