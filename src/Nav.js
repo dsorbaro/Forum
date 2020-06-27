@@ -10,15 +10,19 @@ import logo from "./forumCircle.png";
 
 const Nav = (props) => {
   console.log(props.admin)
+
+
   var adminLink = props.admin ? (
     <NavLink to="/approveDebators" style={{marginTop: '30px'}}>
       <button class = "signupbutton"> Approve Debators</button>
     </NavLink>
   ) : null;
   var loggedIn = props.authenticated ? (
-    <NavLink to="/signIn">
-      <button class = "signupbuttonmain" onClick={()=>{ props.signoutUser(props.history) }}>Sign Out</button>
-    </NavLink>
+    <div>
+      <NavLink to="/signIn">
+        <button class = "signinbutton" onClick={()=>{ props.signoutUser(props.history) }}>Sign Out</button>
+      </NavLink>
+    </div>
   ) :
   (
     <div>
