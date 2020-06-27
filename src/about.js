@@ -10,6 +10,7 @@ class AboutPage extends Component {
 
    render() {
      return (
+       <body class = "abtbackground">
 <div>
 <div class="aboutus">
     <h1>About Us</h1>
@@ -27,17 +28,18 @@ class AboutPage extends Component {
 
 Anger is easy clicks, and easy clicks is easy revenue.</p>
 
-<p>Call it spin. Call it echo chambers. Whatever you want to call it, you better believe they were created intentionally by these multinational entertainment conglomerates for the specific purpose of making you angry at people you don’t even know, and for shutting down any legitimate productive dialogue.
+<p class="callitspin">Call it spin. Call them echo chambers. Whatever you want to call it, you better believe they were created intentionally by these multinational entertainment conglomerates for the specific purpose of making you angry at people you don’t even know, and for shutting down any legitimate productive dialogue.
 
 We need to force those channels of communication back open. We need open dialogue. We need a way to publicly hold people in charge accountable, and alternatively give those people in charge a fair chance to explain themselves.</p>
 
 
-<p>Reportr was founded for the sole reason that some kid (yours truly) got so annoyed by how terrible things have gotten that out of pure spite he created a place where this open dialogue could occur, because that is the only way things will get better. We are independent and non-partisan. Our only allegiance is to open, unfettered, uncut, raw dialogue between anyone anywhere. </p>
+<p class = "wasfounded">Reportr was founded for the sole reason that some kid (yours truly) got so annoyed by how terrible things have gotten that out of pure spite he created a place where this open dialogue could occur, because that is the only way things will get better. We are independent and non-partisan. Our only allegiance is to open, unfettered, uncut, raw dialogue between anyone anywhere. </p>
 
-<p>“When the debate is over, slander becomes the tool of the loser.” – Socrates
+<p class = "quote">“When the debate is over, slander becomes the tool of the loser.” – Socrates
 </p>
 </div>
 </div>
+</body>
      );
    }
  }

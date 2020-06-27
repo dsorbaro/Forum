@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./NewsTicker.scss";
-import * as db from './datastore.js';
+import { fetchRequests } from './actions';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 class NewsTicker extends Component {
   constructor(props) {
@@ -9,7 +11,7 @@ class NewsTicker extends Component {
   }
 
   componentDidMount() {
-    db.fetchRequests(this.setRequests)
+    this.props.fetchRequests()
   }
 
   setRequests = (requests) => {
@@ -18,10 +20,11 @@ class NewsTicker extends Component {
   }
 
   render() {
-    var tickers = this.state.requests == null ? null : (
-      Object.keys(this.state.requests).map((item)=> {
+    var tickers = this.props.allRequests == null ? null : (
+      Object.keys(this.props.allRequests).map((item)=> {
+        console.log(this.props.allRequests[item])
         return (
-          <div class="ticker__item">{this.state.requests[item].request}</div>
+          <div class="ticker__item">{this.props.allRequests[item].person1 + " is requested to debate " + this.props.allRequests[item].person2 + " on " + this.props.allRequests[item].topic}</div>
 
         )
       })
@@ -42,4 +45,8 @@ class NewsTicker extends Component {
 }
 
 
-export default NewsTicker;
+function mapStateToProps(state) {
+  return { allRequests: state.requests.all };
+}
+
+export default withRouter(connect(mapStateToProps, { fetchRequests })(NewsTicker));

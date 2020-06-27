@@ -1,7 +1,21 @@
+.abtbackground{
+  top:-100px;
+   background-image: url("abtbackground.png");
+     background-repeat: no-repeat;
+   position: fixed;
+ top: 0;
+ left: 0;
+ min-width: 100%;
+ min-height: 100%;
+ z-index: -1;
+}
+
 .aboutus {
   color: #3c065f;
   font-family: Noto Sans;
   font-weight: 700;
+  margin-top: 13%;
+
     text-align: center;
 }
 
@@ -18,6 +32,7 @@ margin: auto;
   margin-left: 10%;
     margin-right: 10%;
   margin-top: 3%;
+  margin-bottom: 3%;
   color: #3c065f;
 }
 
@@ -25,7 +40,24 @@ margin: auto;
 .maintext {
   font-family: Noto Sans;
   margin-left: 10%;
-  margin-right: 10%;
 
-  font-weight: 100;
+  margin-right: 20%;
+
+color: white;
+  font-weight: bold;
+}
+
+.callitspin {
+  margin-right: 10%;
+}
+
+.wasfounded {
+  margin-right: 20%;
+}
+
+.quote {
+  margin-left: 1%;
+  margin-right: 10%;
+    color: #3c065f;
+    margin-top: 4%;
 }

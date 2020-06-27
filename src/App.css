@@ -126,7 +126,7 @@
   border: 2px solid #3c065f;
 }
 
-.signupbutton {
+.signupbuttonmain {
   background-color: #3c065f;
   font-family: Noto Sans;
   font-style: bold;
@@ -135,11 +135,16 @@
   width: 120px;
   color: white;
   height: 40px;
-  margin-left: 30px;
+  margin-left: 105%;
+  top: -40px;
   border: 1px solid #3c065f;
 }
 
+.newsroomsearchholder {
+  margin-top: -17px;
+  margin-left: -40px;
 
+}
 
 .App-header {
   background-color: #282c34;

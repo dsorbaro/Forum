@@ -14,7 +14,7 @@ class FindyourNewsroomSearch extends Component {
       <form method="get" action="">
         <div class="tb">
           <div class="td">
-              <div class = "positioned"><input type="text" placeholder="Find your Newsroom..." required/></div>
+              <div class = "positioned"><input class = "newsroomsearchholder" type="text" placeholder="Find your Newsroom..." required/></div>
           </div>
           <div class ="pleasemoveagain">
           <div class="td" id="s-cover">
