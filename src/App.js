@@ -3,6 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Main from "./Main";
 import AboutPage from "./about";
+import ProfilePage from "./profile";
 import ContactPage from "./contact";
 import SignInPage from "./SignInPage";
 import SignUpPage from "./SignUpPage";
@@ -21,6 +22,8 @@ class App extends Component {
             <Route exact path="/" component={Main} />
 
             <Route exact path="/about" component={AboutPage} />
+            <Route exact path="/profile" component={ProfilePage} />
+
             <Route exact path="/contact" component={ContactPage} />
             <Route exact path="/signIn" component={SignInPage} />
             <Route exact path="/signUp" component={SignUpPage} />
