@@ -1,15 +1,17 @@
 .person1row {
   font-family: noto sans;
   font-size: 10px;
-  color: red;
+ color: #3a3a3a;
   width: 150px;
+  font-weight: bold;
 }
 
 .person2row {
     font-family: noto sans;
       font-size: 10px;
         width: 150px;
-  color: blue;
+  color:  #3a3a3a;
+    font-weight: bold;
 
 }
 
@@ -17,15 +19,17 @@
     font-family: noto sans;
       font-size: 10px;
         width: 150px;
-  color: brown;
+  color: #3c065f;
+    font-weight: bold;
 }
 
 
 .requestnumberrow {
     font-family: noto sans;
-      font-size: 10px;
-        width: 150px;
-  color: green;
+    font-size: 10px;
+    width: 150px;
+    color: #3c065f;
+    font-weight: bold;
 }
 
 .mediumColumn {
@@ -34,5 +38,47 @@
 }
 
 .asingleboi {
-  margin-right: -13%;
+  position: relative;
+  display:flex;
+flex-direction: column;
+margin-right: -10%;
+left: 8%;
+}
+
+.textabovecolumn {
+  position: relative;
+  left: -54%;
+  text-align: center;
+  padding-bottom: 2%;
+  line-height: 130%;
+}
+
+.icons {
+  padding-top: 3%;
+  position: absolute;
+  left: -20%;
+  display:flex;
+flex-direction: column;
+}
+
+.putinrowcap {
+  display:flex;
+flex-direction: row;
+}
+
+.profileicontrendone {
+  height: 22px;
+  margin-bottom: 50%;
+  width: 22px;
+}
+
+.newstrendicon {
+  height: 20px;
+    margin-bottom: 40%;
+  width: 20px;
+}
+
+.profileicontrendtwo {
+  height: 22px;
+  width: 22px;
 }
