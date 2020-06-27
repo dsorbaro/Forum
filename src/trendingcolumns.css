@@ -1,0 +1,38 @@
+.person1row {
+  font-family: noto sans;
+  font-size: 10px;
+  color: red;
+  width: 150px;
+}
+
+.person2row {
+    font-family: noto sans;
+      font-size: 10px;
+        width: 150px;
+  color: blue;
+
+}
+
+.topicrow {
+    font-family: noto sans;
+      font-size: 10px;
+        width: 150px;
+  color: brown;
+}
+
+
+.requestnumberrow {
+    font-family: noto sans;
+      font-size: 10px;
+        width: 150px;
+  color: green;
+}
+
+.mediumColumn {
+  width: 75px;
+ height: 200px
+}
+
+.asingleboi {
+  margin-right: -13%;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./main.css";
 import "./App.css";
+import "./trendingcolumns.css"
 import "./submitrequestbutton.css"
 import { voteRequest } from './actions';
 import { connect } from 'react-redux';
@@ -24,13 +25,16 @@ class OneTrendingRequest extends Component {
 
   render() {
     return (
+      <div class = "asingleboi">
+
       <div style={{ display:'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', alignContent: 'center'}}>
-          < p style={{fontSize: '10px'}}> {this.props.info.person1}</p>
-          <p style={{fontSize: '10px'}} >{this.props.info.person2}</p>
-          <p style={{fontSize: '10px'}} > {this.props.info.topic}</p>
-          <p style={{fontSize: '10px'}} > num Requests {this.props.info.numRequests}</p>
-          <img style={{width: '75px', height: '200px'}} src={mediumColumn} />
+          < p class="person1row" > {this.props.info.person1}</p>
+          <p  class="person2row" >{this.props.info.person2}</p>
+          <p class= "topicrow" > {this.props.info.topic}</p>
+          <p class = "requestnumberrow" > num Requests {this.props.info.numRequests}</p>
+          <img class="mediumColumn" src={mediumColumn} />
           <img src={require("./requestbuttonicon.png")} onClick={this.vote} style={{width: '50px', height: '50px'}}/>
+      </div>
       </div>
     );
   }
