@@ -16,7 +16,7 @@ import NewsTicker from "./newsticker";
 import emailjs from 'emailjs-com';
 import SubmitRequestbutton from "./submitrequestbutton";
 import OneTrendingRequest from './oneTrendingRequest'
-import { fetchRequests, createRequest } from './actions';
+import { fetchRequests, createRequest, fetchPopularRequests } from './actions';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 const axios = require('axios');
@@ -72,6 +72,7 @@ class Main extends Component {
          ]
          this.setState({articles: fakeData})
          this.props.fetchRequests();
+         this.props.fetchPopularRequests();
   }
 
 
@@ -128,11 +129,11 @@ class Main extends Component {
     //console.log(this.props.email);
     var error = this.state.notLoggedIn == null ? null : <p> You need to be logged in to submit a request </p>
 
-    var requestColums = this.props.allRequests == null ? <p> no requests </p> : (
-      Object.keys(this.props.allRequests).map((item)=> {
-        console.log(this.props.allRequests[item])
+    var requestColums = this.props.popularRequests == null ? <p> no requests </p> : (
+      Object.keys(this.props.popularRequests).map((item)=> {
+        console.log(this.props.popularRequests[item])
         return (
-          <OneTrendingRequest info={this.props.allRequests[item]}/>
+          <OneTrendingRequest info={this.props.popularRequests[item]}/>
         )
       })
     )
@@ -224,7 +225,7 @@ class Main extends Component {
 }
 
 function mapStateToProps(state) {
-  return { allRequests: state.requests.all, email: state.auth.email };
+  return { allRequests: state.requests.all, email: state.auth.email, popularRequests:state.requests.mostPopular };
 }
 
-export default withRouter(connect(mapStateToProps, { fetchRequests, createRequest })(Main));
+export default withRouter(connect(mapStateToProps, { fetchRequests, createRequest, fetchPopularRequests })(Main));

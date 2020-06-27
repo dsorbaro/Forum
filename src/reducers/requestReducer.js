@@ -1,7 +1,7 @@
 import { ActionTypes } from '../actions/index';
 
 const initialState = {
-  all: [],
+  all: [], mostPopular: [],
 };
 
 export default function (state = initialState, action) {
@@ -11,6 +11,11 @@ export default function (state = initialState, action) {
         ...state,
         all: action.payload,
       };
+      case ActionTypes.FETCH_POPULAR_REQUESTS:
+        return {
+          ...state,
+          mostPopular: action.payload,
+        };
     default:
       return state;
   }
