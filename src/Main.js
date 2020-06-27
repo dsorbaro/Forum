@@ -25,7 +25,7 @@ const axios = require('axios');
 class Main extends Component {
   constructor(props) {
     super(props);
-    this.state = {articles: null, person1: "", topic1: "", person2:''};
+    this.state = {articles: null, person1: "", topic1: "", person2:'', notLoggedIn:null};
   }
 
 
@@ -100,7 +100,7 @@ class Main extends Component {
     	person1: this.state.person1,
     	person2: this.state.person2,
     	topic: this.state.topic1,
-    	requesterEmail: "Irequested@gmail.com"
+    	requesterEmail: this.props.email,
     }
 
     // console.log(content);
@@ -125,8 +125,8 @@ class Main extends Component {
       classs = "buttonBlink"
     }
 
-    console.log(this.props.allRequests);
-
+    console.log(this.props.email);
+    var error = this.state.notLoggedIn == null ? null : <p> You need to be logged in to submit a request </p>
 
     return (
 
@@ -169,10 +169,11 @@ class Main extends Component {
                             <div class="SubmitRequestbuttonlocation">
                             <SubmitRequestbutton
                               bclass={classs}
-                              emailFunctionVariable={this.sendEmail}
+                              emailFunctionVariable={() => {if(this.props.email != null) {this.sendEmail()} else {this.setState({notLoggedIn:true})}}}
                             />
-                                  </div>
+                        </div>
                       </div>
+                      {error}
 
                   </div>
                 </div>
@@ -227,7 +228,7 @@ class Main extends Component {
 }
 
 function mapStateToProps(state) {
-  return { allRequests: state.requests.all };
+  return { allRequests: state.requests.all, email: state.auth.email };
 }
 
 export default withRouter(connect(mapStateToProps, { fetchRequests, createRequest })(Main));
