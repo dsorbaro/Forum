@@ -9,7 +9,7 @@ import "./signUp.scss";
 class SignUpPage extends Component {
   constructor(props) {
     super(props);
-    this.state = {email: '', password: '', firstName: '', lastName: '', school: '', preview:null};
+    this.state = {bio: '', checked: false, email: '', password: '', firstName: '', lastName: '', school: '', preview:null};
   }
 
   onEmailChange = (event) => {
@@ -27,6 +27,12 @@ class SignUpPage extends Component {
   onSchoolChange = (event) => {
     this.setState({ school: event.target.value });
   }
+  onBioChange = (event) => {
+    this.setState({ bio: event.target.value });
+  }
+  handleCheck = () => {
+	   this.setState({checked: !this.state.checked});
+  }
 
   signUp = () => {
     var fields = {
@@ -35,12 +41,21 @@ class SignUpPage extends Component {
       email: this.state.email,
       password: this.state.password,
       school: this.state.school,
+      bio: this.state.bio,
+      debateApp: this.state.checked,
     }
     this.props.signupUser(fields, this.props.history);
   }
 
 
   render() {
+    console.log(this.state.checked)
+    var bioField = !this.state.checked ? null : (
+      <div class="group">
+        <label for="pass" class="labelbox">Bio</label>
+        <input class= "input" onChange={this.onBioChange} placeholder="Enter Bio" value={this.state.bio}/>
+      </div>
+    )
     return (
 <body class = "background">
       <div class="login-wrap">
@@ -73,10 +88,11 @@ class SignUpPage extends Component {
               </div>
               <div>
                 <label class="togglelabel"> Would you like to enter the conversation as a Public Figure?</label>
-                <input type="checkbox" id="switch" /><label class="willitwork" for="switch">Toggle</label>
+                <input type="checkbox" id="switch" onChange={this.handleCheck} /><label class="willitwork" for="switch">Toggle</label>
                 <div class = "toggledescription>">
                 <p>If yes, your account will be entered into the pool of users that other users can request discuss topics on the site via video. As a Public Figure, your conversations and conversation forfeits will be noted on your profile.</p>
               </div>
+              {bioField}
               </div>
               <div>
               <button class = "signupbutton" onClick={this.signUp}> Sign Up </button>
