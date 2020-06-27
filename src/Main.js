@@ -91,9 +91,9 @@ class Main extends Component {
 
 
   sendEmail = () => {
-    console.log("I was clicked")
+  //  console.log("I was clicked")
 
-    var request =  this.state.person1 + " with " + this.state.person2 + " about " + this.state.topic1;
+    //var request =  this.state.person1 + " with " + this.state.person2 + " about " + this.state.topic1;
     var content = {
     	person1: this.state.person1,
     	person2: this.state.person2,
@@ -101,15 +101,15 @@ class Main extends Component {
     	requesterEmail: "Irequested@gmail.com"
     }
 
-    console.log(content);
-    console.log("^ content above")
+    // console.log(content);
+    // console.log("^ content above")
 
     this.props.createRequest(content)
 
 
     emailjs.send('userconversationrequests', 'template_3Np8FQNF', content, 'user_k1KwbaOjnzwFgVMuaAyrm')
       .then((result) => {
-          console.log(result.text);
+        //  console.log(result.text);
       }, (error) => {
           console.log(error.text);
       });

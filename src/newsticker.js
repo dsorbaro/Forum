@@ -16,13 +16,12 @@ class NewsTicker extends Component {
 
   setRequests = (requests) => {
     this.setState({requests: requests})
-
   }
 
   render() {
     var tickers = this.props.allRequests == null ? null : (
       Object.keys(this.props.allRequests).map((item)=> {
-        console.log(this.props.allRequests[item])
+      //  console.log(this.props.allRequests[item])
         return (
           <div class="ticker__item">{this.props.allRequests[item].person1 + " is requested to debate " + this.props.allRequests[item].person2 + " on " + this.props.allRequests[item].topic}</div>
 

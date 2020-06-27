@@ -12,7 +12,7 @@ class RequestButtonTopics extends Component {
 
 
     onTextChanged = (e) => {
-      console.log(this.props.articles)
+    //  console.log(this.props.articles)
 
       var items = [];
       if(this.props.articles !=null){
@@ -38,7 +38,7 @@ class RequestButtonTopics extends Component {
 
     renderData = () => {
       const { data } = this.state;
-      console.log(data)
+    //  console.log(data)
       if(data==null || this.state.text === ''){
         return null;
       }
@@ -54,7 +54,7 @@ class RequestButtonTopics extends Component {
 
 
 render() {
-  console.log(this.state.data)
+//  console.log(this.state.data)
   return (
     <div class="topicsrequestText">
       <div class="searchrowtwo">

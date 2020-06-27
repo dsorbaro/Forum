@@ -2,11 +2,10 @@ import React, { Component } from "react";
 import { signupUser } from './actions';
 import { connect } from 'react-redux';
 
-
 class SignUpPage extends Component {
   constructor(props) {
     super(props);
-    this.state = {email: '', password: '', firstName: '', lastName: '', school: ''};
+    this.state = {email: '', password: '', firstName: '', lastName: '', school: '', preview:null};
   }
 
   onEmailChange = (event) => {
@@ -26,11 +25,6 @@ class SignUpPage extends Component {
   }
 
   signUp = () => {
-    console.log(this.state.email)
-    console.log(this.state.password)
-    console.log(this.state.firstName)
-    console.log(this.state.lastName)
-    console.log(this.state.school)
     var fields = {
       firstName: this.state.firstName,
       lastName: this.state.lastName,
@@ -39,9 +33,8 @@ class SignUpPage extends Component {
       school: this.state.school,
     }
     this.props.signupUser(fields, this.props.history);
-
-
   }
+
 
   render() {
     return (
@@ -52,6 +45,7 @@ class SignUpPage extends Component {
         <input onChange={this.onFirstNameChange} placeholder="Enter FirstName" value={this.state.firstName} />
         <input onChange={this.onLastNameChange} placeholder="Enter Last name" value={this.state.lastName}/>
         <input onChange={this.onSchoolChange} placeholder="Enter School" value={this.state.school}/>
+
         <button onClick={this.signUp}> Sign Up </button>
       </div>
     );
