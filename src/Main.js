@@ -15,6 +15,7 @@ import RequestButtonTopics from "./Requestbuttontopics";
 import NewsTicker from "./newsticker";
 import emailjs from 'emailjs-com';
 import SubmitRequestbutton from "./submitrequestbutton";
+import OneTrendingRequest from './oneTrendingRequest'
 import { fetchRequests, createRequest } from './actions';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
@@ -71,7 +72,6 @@ class Main extends Component {
          ]
          this.setState({articles: fakeData})
          this.props.fetchRequests();
-
   }
 
 
@@ -128,13 +128,22 @@ class Main extends Component {
     //console.log(this.props.email);
     var error = this.state.notLoggedIn == null ? null : <p> You need to be logged in to submit a request </p>
 
+    var requestColums = this.props.allRequests == null ? <p> no requests </p> : (
+      Object.keys(this.props.allRequests).map((item)=> {
+        console.log(this.props.allRequests[item])
+        return (
+          <OneTrendingRequest info={this.props.allRequests[item]}/>
+        )
+      })
+    )
+
     return (
 
       <div>
 
       <div class="backgroundofsite">
       <div>
-          <NewsTicker
+          <NewsTicker requests={this.props.allRequests}
           />
       </div>
           <div class = "indexone">
@@ -193,22 +202,9 @@ class Main extends Component {
                                   <div class="TrendingNewTopicsBox"><TrendingNewsTopicsPage articles={this.state.articles}/></div>
                                 </div>
                   </div>
-                        <div class="trendingvoterRectangle">
-                        <div class="columncolumn">
-                            <img class="mediumColumn" src={mediumColumn} />
-                            <img src={require("./requestbuttonicon.png")} class="columnrequestbuttonmedium"/>
-                        </div>
-                        <div class="columncolumn">
-                            <img class="bigColumn" src={bigColumn} />
-
-                                  <img src={require("./requestbuttonicon.png")} class="columnrequestbuttonbig"/>
-
-                        </div>
-                        <div class="columncolumn">
-                            <img class="smallColumn" src={smallColumn} />
-                            <img src={require("./requestbuttonicon.png")} class="columnrequestbuttonsmall"/>
-                        </div>
-                        </div>
+                    <div class="trendingvoterRectangle" style={{display: 'flex', flexDirection:'row'}}>
+                      {requestColums}
+                    </div>
             </div>
         </div>
         </div>

@@ -175,3 +175,20 @@ export function changeUserStatus(id, status) {
         }));
     }
 }
+
+export function voteRequest(id) {
+    return (dispatch) => {
+      axios.put(`${ROOT_URL}/requests/${id}`).then((response) => {
+        axios.get(`${ROOT_URL}/requests`)
+          .then((response) => {
+            dispatch({ type: ActionTypes.FETCH_REQUESTS, payload: response.data });
+          })
+          .catch((error) => {
+            dispatch(`failed to fetch posts: ${error}`);
+          });
+      })
+        .catch(((error) => {
+
+        }));
+    }
+}
