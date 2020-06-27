@@ -99,7 +99,7 @@ class Main extends Component {
     var content = {
     	person1: this.state.person1,
     	person2: this.state.person2,
-    	topic: this.state.person3,
+    	topic: this.state.topic1,
     	requesterEmail: "Irequested@gmail.com"
     }
 

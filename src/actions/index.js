@@ -8,6 +8,8 @@ export const ActionTypes = {
   ERROR_SET: 'ERROR_SET',
   ERROR_CLEAR: 'ERROR_CLEAR',
   FETCH_PENDING_DEBATORS: 'FETCH_PENDING_DEBATORS',
+  FETCH_APPROVED_DEBATORS: 'FETCH_APPROVED_DEBATORS',
+  CREATE_POST: 'CREATE_POST',
 };
 
 const ROOT_URL = 'https://forum-debate.herokuapp.com/api';
@@ -56,11 +58,12 @@ export function fetchRequests() {
 }
 
 export function createRequest(props) {
+  console.log(props)
   return (dispatch) => {
     axios.post(`${ROOT_URL}/requests`, props )
       .then((response) => {
       //  console.log(`created: ${response}`);
-        // dispatch({ type: ActionTypes.CREATE_POST, payload: response.data });
+         dispatch({ type: ActionTypes.CREATE_POST, payload: response.data });
       //  history.push('/');
       })
       .catch((error) => {
@@ -128,6 +131,18 @@ export function getPendingDebators() {
         console.log(response)
         console.log("made it into then statement")
         dispatch({ type: ActionTypes.FETCH_PENDING_DEBATORS, payload: response.data });
+      })
+      .catch((error) => {
+        dispatch(`failed to fetch posts: ${error}`);
+      });
+  };
+}
+
+export function getApprovedDebators() {
+  return (dispatch) => {
+    axios.get(`${ROOT_URL}/getApproved`)
+      .then((response) => {
+        dispatch({ type: ActionTypes.FETCH_APPROVED_DEBATORS, payload: response.data });
       })
       .catch((error) => {
         dispatch(`failed to fetch posts: ${error}`);
