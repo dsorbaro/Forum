@@ -473,7 +473,7 @@ class RequestButtons extends Component {
 
   renderData = () => {
     const { data } = this.state;
-    console.log(data)
+  //  console.log(data)
     if(data==null || this.state.text === ''){
       return null;
     }
@@ -492,7 +492,7 @@ class RequestButtons extends Component {
   // }
 
   render() {
-    console.log(this.state.data)
+  //  console.log(this.state.data)
     return (
       <div class="publicfigurerequestBoxtext">
         <div class="searchrow">

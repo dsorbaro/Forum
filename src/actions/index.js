@@ -7,6 +7,7 @@ export const ActionTypes = {
   AUTH_ERROR: 'AUTH_ERROR',
   ERROR_SET: 'ERROR_SET',
   ERROR_CLEAR: 'ERROR_CLEAR',
+  FETCH_PENDING_DEBATORS: 'FETCH_PENDING_DEBATORS',
 };
 
 const ROOT_URL = 'https://forum-debate.herokuapp.com/api';
@@ -58,7 +59,7 @@ export function createRequest(props) {
   return (dispatch) => {
     axios.post(`${ROOT_URL}/requests`, props )
       .then((response) => {
-        console.log(`created: ${response}`);
+      //  console.log(`created: ${response}`);
         // dispatch({ type: ActionTypes.CREATE_POST, payload: response.data });
       //  history.push('/');
       })
@@ -69,16 +70,16 @@ export function createRequest(props) {
 }
 
 export function signinUser(fields, history) {
-  console.log("made it into sign in")
-  console.log("fields below")
-  console.log(fields)
+  // console.log("made it into sign in")
+  // console.log("fields below")
+  // console.log(fields)
   return (dispatch) => {
-    console.log("pre axious")
+    // console.log("pre axious")
     axios.post(`${ROOT_URL}/signin`, fields)
       .then((response) => {
-        console.log(
-          "made it to dispatch"
-        )
+        // console.log(
+        //   "made it to dispatch"
+        // )
         dispatch({ type: ActionTypes.AUTH_USER,  email: response.data.email });
         localStorage.setItem('token', response.data.token);
         localStorage.setItem('email', response.data.email);
@@ -92,11 +93,11 @@ export function signinUser(fields, history) {
 
 
 export function signupUser(fields, history) {
-  console.log("in signup user")
+//  console.log("in signup user")
   return (dispatch) => {
     axios.post(`${ROOT_URL}/signup`, fields)
       .then((response) => {
-        console.log("Made it to dispatch")
+      //  console.log("Made it to dispatch")
         dispatch({ type: ActionTypes.AUTH_USER, email: response.data.email, fields: fields});
         localStorage.setItem('token', response.data.token);
         localStorage.setItem('email', response.data.email);
@@ -117,4 +118,45 @@ export function signoutUser(history) {
     dispatch({ type: ActionTypes.DEAUTH_USER });
     history.push('/');
   };
+}
+
+export function getPendingDebators() {
+  console.log("getting pending debators in index js")
+  return (dispatch) => {
+    axios.get(`${ROOT_URL}/getPending`)
+      .then((response) => {
+        console.log(response)
+        console.log("made it into then statement")
+        dispatch({ type: ActionTypes.FETCH_PENDING_DEBATORS, payload: response.data });
+      })
+      .catch((error) => {
+        dispatch(`failed to fetch posts: ${error}`);
+      });
+  };
+}
+
+export function changeUserStatus(id, status) {
+    var statusField = {
+      status
+    }
+    return (dispatch) => {
+
+      console.log("ehreeeee in change status")
+      axios.put(`${ROOT_URL}/getPending/${id}`, statusField).then((response) => {
+        axios.get(`${ROOT_URL}/getPending`)
+          .then((response) => {
+            console.log(response)
+            console.log("made it into then statement")
+            dispatch({ type: ActionTypes.FETCH_PENDING_DEBATORS, payload: response.data });
+          })
+          .catch((error) => {
+            dispatch(`failed to fetch posts: ${error}`);
+          });
+        //dispatch({ type: ActionTypes.FETCH_PENDING_DEBATORS, payload: response.data });
+      })
+        .catch(((error) => {
+        //  dispatch({ type: 'ERROR', payload: { error: error.message } });
+        console.log("error")
+        }));
+    }
 }

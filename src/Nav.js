@@ -9,7 +9,12 @@ import logo from "./forumCircle.png";
 
 
 const Nav = (props) => {
-  console.log(props.authenticated)
+  console.log(props.admin)
+  var adminLink = props.admin ? (
+    <NavLink to="/approveDebators" style={{marginTop: '30px'}}>
+      <button class = "signupbutton"> Approve Debators</button>
+    </NavLink>
+  ) : null;
   var loggedIn = props.authenticated ? (
     <NavLink to="/signIn">
       <button class = "signupbuttonmain" onClick={()=>{ props.signoutUser(props.history) }}>Sign Out</button>
@@ -38,6 +43,7 @@ const Nav = (props) => {
             </div>
       </div>
       <div class= "navbarRow">
+
               <NavLink to="/about">
                     <button class = "aboutnavbarbutton">About</button>
               </NavLink>
@@ -51,12 +57,14 @@ const Nav = (props) => {
             </div>
             {loggedIn}
             </div>
+            {adminLink}
+
     </div>
   );
 };
 
 function mapStateToProps(state) {
-  return { authenticated: state.auth.authenticated };
+  return { authenticated: state.auth.authenticated, admin: state.auth.admin };
 }
 
 export default withRouter(connect(mapStateToProps, {  signoutUser })(Nav));

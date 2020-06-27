@@ -6,6 +6,7 @@ import AboutPage from "./about";
 import ContactPage from "./contact";
 import SignInPage from "./SignInPage";
 import SignUpPage from "./SignUpPage";
+import ApproveDebators from "./ApproveDebatorsPage"
 import Nav from "./Nav"
 
 
@@ -23,6 +24,7 @@ class App extends Component {
             <Route exact path="/contact" component={ContactPage} />
             <Route exact path="/signIn" component={SignInPage} />
             <Route exact path="/signUp" component={SignUpPage} />
+            <Route exact path="/approveDebators" component={ApproveDebators} />
 
           </div>
         </div>

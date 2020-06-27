@@ -7,12 +7,20 @@ import reducers from './reducers';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
+import { ActionTypes } from './actions';
 
 
 const store = createStore(reducers, {}, compose(
   applyMiddleware(thunk),
   window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : (f) => f,
 ));
+
+const token = localStorage.getItem('token');
+const email = localStorage.getItem('email');
+
+if (token) {
+  store.dispatch({ type: ActionTypes.AUTH_USER, email });
+}
 
 ReactDOM.render(
   <Provider store={store}>

@@ -6,11 +6,10 @@ import "./signUp.css";
 import "./signUp.scss";
 
 
-
 class SignUpPage extends Component {
   constructor(props) {
     super(props);
-    this.state = {email: '', password: '', firstName: '', lastName: '', school: ''};
+    this.state = {email: '', password: '', firstName: '', lastName: '', school: '', preview:null};
   }
 
   onEmailChange = (event) => {
@@ -30,11 +29,6 @@ class SignUpPage extends Component {
   }
 
   signUp = () => {
-    console.log(this.state.email)
-    console.log(this.state.password)
-    console.log(this.state.firstName)
-    console.log(this.state.lastName)
-    console.log(this.state.school)
     var fields = {
       firstName: this.state.firstName,
       lastName: this.state.lastName,
@@ -44,6 +38,7 @@ class SignUpPage extends Component {
     }
     this.props.signupUser(fields, this.props.history);
   }
+
 
   render() {
     return (
@@ -88,8 +83,6 @@ class SignUpPage extends Component {
 
               </div>
             </div>
-<div>
-</div>
 
         </div>
       </div>
