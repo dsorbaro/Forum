@@ -22,10 +22,38 @@ class OneTrendingRequest extends Component {
   // }
 
   vote = () => {
-    this.props.voteRequest(this.props.info._id)
+    if(this.props.email !=null){
+      var email = {
+        email: this.props.email,
+      }
+      this.props.voteRequest(this.props.info._id, email)
+
+    }
   }
 
   render() {
+    console.log(this.props.info.requestUsers);
+    var requestedAlready = false;
+    for(var i = 0; i < this.props.info.requestUsers.length; i++){
+      if(this.props.info.requestUsers[i].email === this.props.email){
+        requestedAlready = true;
+      }
+    }
+
+
+
+    var vote = null;
+    if(this.props.email == null){
+      vote= <p> You need to log in to vote </p>
+    }
+    else if(requestedAlready){
+      vote= <p> You have already voted for this request </p>
+    }
+    else {
+      vote= <img src={require("./requestbuttonicon.png")} onClick={this.vote} style={{width: '50px', height: '50px'}}/>
+    }
+
+
     return (
       <div class = "asingleboi">
       <div class = "putinrowcap">
@@ -54,7 +82,7 @@ class OneTrendingRequest extends Component {
 
 
 function mapStateToProps(state) {
-  return { allRequests: state.requests.all };
+  return { allRequests: state.requests.all, email: state.auth.email };
 }
 
 export default withRouter(connect(mapStateToProps, { voteRequest })(OneTrendingRequest));
