@@ -173,7 +173,7 @@ h1 {
 
 .trendingNewstopicstext {
   position: relative;
-  left: 690px;
+  left: 990px;
   top: -58px;
   text: bold;
   font-size: 20px;
@@ -203,26 +203,6 @@ h1 {
   border-radius: 36px;
 }
 
-.mediumColumn {
-  position: absolute;
-  transform: scale(.4);
-  margin-left: 22px;
-  top: -7px;
-}
-
-.bigColumn {
-  position: absolute;
-  transform: scale(.4);
-  left: 220px;
-  top: -112px;
-}
-
-.smallColumn {
-  position: absolute;
-  transform: scale(.4);
-  left: 420px;
-    top: 98px;
-}
 
 .trendingheadlinestext h3 {
   font-size: 17px;
