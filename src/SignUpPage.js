@@ -49,7 +49,7 @@ class SignUpPage extends Component {
 
 
   render() {
-    console.log(this.state.checked)
+    //console.log(this.state.checked)
     var bioField = !this.state.checked ? null : (
       <div class="group">
         <label for="pass" class="labelbox">Bio</label>

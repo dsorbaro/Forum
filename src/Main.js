@@ -125,7 +125,7 @@ class Main extends Component {
       classs = "buttonBlink"
     }
 
-    console.log(this.props.email);
+    //console.log(this.props.email);
     var error = this.state.notLoggedIn == null ? null : <p> You need to be logged in to submit a request </p>
 
     return (

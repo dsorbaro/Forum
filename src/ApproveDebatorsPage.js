@@ -19,7 +19,7 @@ class ApproveDebators extends Component {
   }
 
   approveDebators = (id) => {
-    console.log(id)
+  //  console.log(id)
     this.props.changeUserStatus(id, "APPROVED");
   }
 
@@ -28,7 +28,7 @@ class ApproveDebators extends Component {
   }
 
 render() {
-    console.log(this.props.pendingDebators)
+  //  console.log(this.props.pendingDebators)
     if(!this.props.admin){
       return(
         <div>
@@ -39,7 +39,7 @@ render() {
 
     var allPending = this.props.pendingDebators == null ? null :
       Object.keys(this.props.pendingDebators).map((item)=> {
-        console.log(this.props.pendingDebators[item])
+    //    console.log(this.props.pendingDebators[item])
         return (
         <OnePendingDebator  rejectDebators={this.rejectDebators} approveDebators={this.approveDebators} fields={this.props.pendingDebators[item]}/>
       )

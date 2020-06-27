@@ -29,6 +29,8 @@ class NewsTicker extends Component {
       })
     )
 
+    console.log(this.props.allRequests)
+
     return (
       <div class = "tickindex">
       <div class="ticker-wrap">
