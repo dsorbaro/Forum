@@ -51,12 +51,12 @@ class Main extends Component {
          var fakeData = [
            {
              author: "Person A",
-             title: "I love David Jr",
+             title: "Henry should give David his lamp",
              url: "www.fakenews.com"
            },
            {
              author: "Person B",
-             title: "First Egg!",
+             title: "First Egg! Will there be more?",
              url: "www.fakenews.com"
            },
            {
@@ -66,7 +66,7 @@ class Main extends Component {
            },
            {
              author: "Mav",
-             title: "What killed the chickens",
+             title: "What killed the chickens?",
              url: "www.fakenews.com"
            },
          ]

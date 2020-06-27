@@ -44,10 +44,10 @@ class OneTrendingRequest extends Component {
 
     var vote = null;
     if(this.props.email == null){
-      vote= <p> You need to log in to vote </p>
+      vote= <p class ="youalreadyrequested"> You need to log in to vote </p>
     }
     else if(requestedAlready){
-      vote= <p> You have already voted for this request </p>
+      vote= <p class = "youalreadyrequested">You have already requested this</p>
     }
     else {
       vote= <img src={require("./requestbuttonicon.png")} onClick={this.vote} style={{width: '50px', height: '50px'}}/>
@@ -57,18 +57,19 @@ class OneTrendingRequest extends Component {
     return (
       <div class = "asingleboi">
       <div class = "putinrowcap">
-      <div class = "icons">
-        <img class="profileicontrendone" src={profileicontrend} />
-          <img class="newstrendicon" src={newstrendicon} />
-          <img class="profileicontrendtwo" src={profileicontrend} />
-      </div>
+        <div class = "icons">
+          <img class="profileicontrendone" src={profileicontrend} />
+            <img class="newstrendicon" src={newstrendicon} />
+            <img class="profileicontrendtwo" src={profileicontrend} />
+        </div>
 
         <div class = "textabovecolumn">
             <p class="person1row" > {this.props.info.person1}</p>
             <p class= "topicrow" > {this.props.info.topic}</p>
             <p  class="person2row" >{this.props.info.person2}</p>
         </div>
-        </div>
+
+      </div>
         <img class="mediumColumn" src={mediumColumn} />
              <div class = "textabovecolumn">
                   <p class = "requestnumberrow" >Requests: {this.props.info.numRequests}</p>
