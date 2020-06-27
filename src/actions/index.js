@@ -10,6 +10,7 @@ export const ActionTypes = {
   FETCH_PENDING_DEBATORS: 'FETCH_PENDING_DEBATORS',
   FETCH_APPROVED_DEBATORS: 'FETCH_APPROVED_DEBATORS',
   CREATE_POST: 'CREATE_POST',
+  FETCH_POPULAR_REQUESTS: 'FETCH_POPULAR_REQUESTS',
 };
 
 const ROOT_URL = 'https://forum-debate.herokuapp.com/api';
@@ -50,6 +51,20 @@ export function fetchRequests() {
     axios.get(`${ROOT_URL}/requests`)
       .then((response) => {
         dispatch({ type: ActionTypes.FETCH_REQUESTS, payload: response.data });
+      })
+      .catch((error) => {
+        dispatch(`failed to fetch posts: ${error}`);
+      });
+  };
+}
+
+export function fetchPopularRequests() {
+  // ActionCreator returns a function
+  // that gets called with dispatch
+  return (dispatch) => {
+    axios.get(`${ROOT_URL}/requestsByVotes`)
+      .then((response) => {
+        dispatch({ type: ActionTypes.FETCH_POPULAR_REQUESTS, payload: response.data });
       })
       .catch((error) => {
         dispatch(`failed to fetch posts: ${error}`);
