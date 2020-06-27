@@ -508,7 +508,7 @@ class RequestButtons extends Component {
   // }
 
   render() {
-    console.log(this.props.approvedDebators)
+    //console.log(this.props.approvedDebators)
     return (
       <div class="publicfigurerequestBoxtext">
         <div class="searchrow">

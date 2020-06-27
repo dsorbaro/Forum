@@ -7,16 +7,16 @@ import { withRouter } from 'react-router-dom';
 class NewsTicker extends Component {
   constructor(props) {
     super(props);
-    this.state={requests: null}
+    this.state={}
   }
 
-  componentDidMount() {
-    this.props.fetchRequests()
-  }
+  // componentDidMount() {
+  //   this.props.fetchRequests()
+  // }
 
-  setRequests = (requests) => {
-    this.setState({requests: requests})
-  }
+  // setRequests = (requests) => {
+  //   this.setState({requests: requests})
+  // }
 
   render() {
     var tickers = this.props.allRequests == null ? null : (
@@ -28,6 +28,8 @@ class NewsTicker extends Component {
         )
       })
     )
+
+    console.log(this.props.allRequests)
 
     return (
       <div class = "tickindex">

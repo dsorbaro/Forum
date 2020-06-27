@@ -58,7 +58,7 @@ export function fetchRequests() {
 }
 
 export function createRequest(props) {
-  console.log(props)
+  //console.log(props)
   return (dispatch) => {
     axios.post(`${ROOT_URL}/requests`, props )
       .then((response) => {
@@ -124,12 +124,12 @@ export function signoutUser(history) {
 }
 
 export function getPendingDebators() {
-  console.log("getting pending debators in index js")
+  //console.log("getting pending debators in index js")
   return (dispatch) => {
     axios.get(`${ROOT_URL}/getPending`)
       .then((response) => {
-        console.log(response)
-        console.log("made it into then statement")
+        //console.log(response)
+      //  console.log("made it into then statement")
         dispatch({ type: ActionTypes.FETCH_PENDING_DEBATORS, payload: response.data });
       })
       .catch((error) => {
@@ -156,12 +156,12 @@ export function changeUserStatus(id, status) {
     }
     return (dispatch) => {
 
-      console.log("ehreeeee in change status")
+      //console.log("ehreeeee in change status")
       axios.put(`${ROOT_URL}/getPending/${id}`, statusField).then((response) => {
         axios.get(`${ROOT_URL}/getPending`)
           .then((response) => {
-            console.log(response)
-            console.log("made it into then statement")
+            // console.log(response)
+            // console.log("made it into then statement")
             dispatch({ type: ActionTypes.FETCH_PENDING_DEBATORS, payload: response.data });
           })
           .catch((error) => {
@@ -171,7 +171,24 @@ export function changeUserStatus(id, status) {
       })
         .catch(((error) => {
         //  dispatch({ type: 'ERROR', payload: { error: error.message } });
-        console.log("error")
+        //console.log("error")
+        }));
+    }
+}
+
+export function voteRequest(id) {
+    return (dispatch) => {
+      axios.put(`${ROOT_URL}/requests/${id}`).then((response) => {
+        axios.get(`${ROOT_URL}/requests`)
+          .then((response) => {
+            dispatch({ type: ActionTypes.FETCH_REQUESTS, payload: response.data });
+          })
+          .catch((error) => {
+            dispatch(`failed to fetch posts: ${error}`);
+          });
+      })
+        .catch(((error) => {
+
         }));
     }
 }

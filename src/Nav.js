@@ -8,11 +8,7 @@ import logo from "./forumCircle.png";
 
 
 
-const Nav = (props) => {
-  console.log(props.admin)
-
-
-  var adminLink = props.admin ? (
+const Nav = (props) => {  var adminLink = props.admin ? (
     <NavLink to="/approveDebators" style={{marginTop: '30px'}}>
       <button class = "signupbutton"> Approve Debators</button>
     </NavLink>
