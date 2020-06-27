@@ -165,6 +165,18 @@ export function getApprovedDebators() {
   };
 }
 
+export function getUserFromEmail(email) {
+  return (dispatch) => {
+    axios.post(`${ROOT_URL}/getUser`, email)
+      .then((response) => {
+        dispatch({ type: ActionTypes.AUTH_USER, email: response.data[0].email, fields: response.data[0]});
+      })
+      .catch((error) => {
+        dispatch(`failed to fetch posts: ${error}`);
+      });
+  };
+}
+
 export function changeUserStatus(id, status) {
     var statusField = {
       status
