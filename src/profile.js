@@ -10,7 +10,6 @@ class ProfilePage extends Component {
     }
 
     componentDidMount(){
-      console.log(this.props.email)
       if(this.props.email!=null){
         this.props.getUserFromEmail({email: this.props.email});
 
@@ -18,7 +17,6 @@ class ProfilePage extends Component {
     }
 
    render() {
-     console.log(this.props.fields)
      if(this.props.fields == null){
        return (<p> Loading</p>)
      }

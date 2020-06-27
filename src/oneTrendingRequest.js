@@ -73,8 +73,7 @@ class OneTrendingRequest extends Component {
              <div class = "textabovecolumn">
                   <p class = "requestnumberrow" >Requests: {this.props.info.numRequests}</p>
              </div>
-             <img class="trendingrequestbutton" src={require("./requestbuttonicon.png")} onClick={this.vote}/>
-
+             {vote}
       </div>
     );
   }
