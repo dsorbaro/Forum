@@ -7,6 +7,7 @@ class RequestButtonTopics extends Component {
     this.state = {
       data: null,
       text: '',
+      resetNeeded: false,
     };
   }
 
@@ -55,6 +56,9 @@ class RequestButtonTopics extends Component {
 
 render() {
 //  console.log(this.state.data)
+if(this.props.textFromParent === '' && this.state.text!=null && this.state.resetNeeded){
+  this.setState({text: '', resetNeeded:false})
+}
   return (
     <div class="topicsrequestText">
       <div class="searchrowtwo">
