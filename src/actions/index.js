@@ -213,7 +213,7 @@ export function changeUserStatus(id, status) {
 export function voteRequest(id, fields) {
     return (dispatch) => {
       axios.put(`${ROOT_URL}/requests/${id}`, fields).then((response) => {
-        axios.get(`${ROOT_URL}/requests`)
+        axios.get(`${ROOT_URL}/requestsByVotes`)
           .then((response) => {
             dispatch({ type: ActionTypes.FETCH_POPULAR_REQUESTS, payload: response.data });
           })

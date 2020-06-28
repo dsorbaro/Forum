@@ -69,6 +69,11 @@ class Main extends Component {
              title: "What killed the chickens?",
              url: "www.fakenews.com"
            },
+           {
+             author: "Mav",
+             title: "Should Jayla and Stephen get Married?",
+             url: "www.fakenews.com"
+           },
          ]
          this.setState({articles: fakeData})
          this.props.fetchRequests();
