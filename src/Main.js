@@ -26,7 +26,7 @@ const axios = require('axios');
 class Main extends Component {
   constructor(props) {
     super(props);
-    this.state = {articles: null, person1: "", topic1: "", person2:'', notLoggedIn:null};
+    this.state = {articles: null, person1: "", topic1: "", person2:'', notLoggedIn:null, person1Email: '', person2Email:''};
   }
 
 
@@ -79,12 +79,12 @@ class Main extends Component {
 
 
 
-  changePerson1 = (name) => {
-    this.setState({person1: name})
+  changePerson1 = (item) => {
+    this.setState({person1: item.name, person1Email: item.email})
   }
 
-  changePerson2 = (name) => {
-    this.setState({person2: name})
+  changePerson2 = (item) => {
+    this.setState({person2: item.name, person2Email: item.email})
   }
 
 
@@ -100,6 +100,8 @@ class Main extends Component {
     var content = {
     	person1: this.state.person1,
     	person2: this.state.person2,
+      person1Email: this.state.person1Email,
+      person2Email: this.state.person2Email,
     	topic: this.state.topic1,
     	requesterEmail: this.props.email,
     }
@@ -116,6 +118,8 @@ class Main extends Component {
       }, (error) => {
           console.log(error.text);
       });
+      this.setState ({person1: "", topic1: "", person2:'', person1Email: '', person2Email:''})
+
   }
 
 
@@ -131,7 +135,7 @@ class Main extends Component {
 
     var requestColums = this.props.popularRequests == null ? <p> no requests </p> : (
       Object.keys(this.props.popularRequests).map((item)=> {
-        console.log(this.props.popularRequests[item])
+      //  console.log(this.props.popularRequests[item])
         return (
           <OneTrendingRequest info={this.props.popularRequests[item]}/>
         )
@@ -155,6 +159,7 @@ class Main extends Component {
                           <div class="publicFigurerequstBox">
                           <RequestButtons
                             title="Public Figure"
+                            text={this.state.person1}
                             changePerson1={this.changePerson1}
                             changePerson2={null}
                           />

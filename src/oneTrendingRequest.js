@@ -33,7 +33,7 @@ class OneTrendingRequest extends Component {
   }
 
   render() {
-    console.log(this.props.info.requestUsers);
+  //  console.log(this.props.info.requestUsers);
     var requestedAlready = false;
     for(var i = 0; i < this.props.info.requestUsers.length; i++){
       if(this.props.info.requestUsers[i].email === this.props.email){
@@ -56,26 +56,27 @@ class OneTrendingRequest extends Component {
 
 
     return (
-      <div class = "asingleboi">
-      <div class = "putinrowcap">
-        <div class = "icons">
-          <img class="profileicontrendone" src={profileicontrend} />
-            <img class="newstrendicon" src={newstrendicon} />
-            <img class="profileicontrendtwo" src={profileicontrend} />
-        </div>
+      <div>
 
+
+<div class = "containter">
         <div class = "textabovecolumn">
-            <p class="person1row" > {this.props.info.person1}</p>
-            <p class= "topicrow" > {this.props.info.topic}</p>
-            <p  class="person2row" >{this.props.info.person2}</p>
-        </div>
+
+
+              <p class="person1row" > {this.props.info.person1}</p>
+              <p class= "topicrow" > {this.props.info.topic}</p>
+              <p  class="person2row" >{this.props.info.person2}</p>
+
+
 
       </div>
         <img class="mediumColumn" src={mediumColumn} />
-             <div class = "textabovecolumn">
+      <div>
+
                   <p class = "requestnumberrow" >Requests: {this.props.info.numRequests}</p>
              </div>
              {vote}
+      </div>
       </div>
     );
   }

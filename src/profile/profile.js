@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { getUserFromEmail } from './actions';
+import { getUserFromEmail, getUsersRequestedDebates } from '../actions';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-import "./profile.css"
-
+import { withRouter } from 'react-router-dom';import "./profile.css"
+import RequestedDebatesForUser from "./requestedDebatesForUser"
+import profilecolumn from './profilecolumn.png'
 class ProfilePage extends Component {
   constructor(props) {
     super(props);
@@ -13,7 +13,7 @@ class ProfilePage extends Component {
     componentDidMount(){
       if(this.props.email!=null){
         this.props.getUserFromEmail({email: this.props.email});
-
+  //      this.props.getUsersRequestedDebates({email: this.props.email})
       }
     }
 
@@ -30,7 +30,7 @@ class ProfilePage extends Component {
        status = (
          <div>
          <p> Status: You are an approved debator </p>
-
+         <RequestedDebatesForUser />
          </div>
        )
      }
@@ -43,11 +43,15 @@ class ProfilePage extends Component {
        <div>
           <div class = "profileinfoformat">
           <p class = "profilename">{this.props.fields.firstName} {this.props.fields.lastName}</p>
-          <div class = "profilestatus"> {status} </div>
           <p class = "profileschool"> {this.props.fields.school} </p>
-             <p> Bio: {this.props.fields.bio} </p>
-          <p> Email: {this.props.fields.email} </p>
-          </div>
+          <div class = "profilestatus"> {status} </div>
+          <p class= "profilebio"> {this.props.fields.bio} </p>
+              <div class = "toptextrow">
+                <div class = "participatedtoptext">Past Debates</div>
+                <div class = "currentrequeststoptext">Current Requests</div>
+                <div class = "forfeitstoptext">Forfeited Debates</div>
+              </div>
+      </div>
 
 
        </div>
@@ -58,4 +62,4 @@ class ProfilePage extends Component {
    return { fields: state.auth.fields, email:state.auth.email };
  }
 
- export default withRouter(connect(mapStateToProps, { getUserFromEmail })(ProfilePage));
+ export default withRouter(connect(mapStateToProps, { getUserFromEmail, getUsersRequestedDebates })(ProfilePage));

@@ -1,0 +1,111 @@
+.profileinfoformat {
+  border: 5px solid blue;
+  display: flex;
+  height: 800px;
+  width: 800px;
+ margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profilename {
+  position: relative;
+  text-align: center;
+  font-family: noto-sans;
+  width: 100%;
+  font-size: 400%;
+  margin-top: 12%;
+  color: #3c065f;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.toptextrow {
+  position: absolute;
+  display: flex;
+  top: 1000px;
+  border: 5px solid red;
+  height: 200px;
+  width: 600px;
+ margin: 0 auto;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+
+.participatedtoptext {
+  position: relative;
+  font-family: noto-sans;
+  font-size: 40%;
+  margin-top: 12%;
+  width: 100%;
+  color: #3c065f;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.currentrequeststoptext {
+  position: relative;
+  font-family: noto-sans;
+  font-size: 40%;
+  margin-top: 12%;
+  width: 100%;
+  color: #3c065f;
+  font-weight: bold;
+  justify-content: center;
+}
+
+
+.forfeitstoptext {
+  position: relative;
+  font-family: noto-sans;
+  font-size: 40%;
+  margin-top: 12%;
+  width: 100%;
+  color: #3c065f;
+  font-weight: bold;
+  justify-content: center;
+}
+
+
+
+.profileschool {
+    position: relative;
+      text-align: center;
+    margin-top: -10%;
+    font-family: noto-sans;
+    width: 100%;
+    font-size: 300%;
+    color: #3c065f;
+    font-weight: bold;
+    justify-content: center;
+}
+
+
+.profilestatus {
+    padding-top: 1%;
+    position: relative;
+  color: #530096;
+    font-family: noto-sans;
+      font-weight: bold;
+        font-size: 100%;
+        margin-top: -10%;
+}
+
+.profilebio {
+  position: relative;
+  margin-top: -40%;
+color: blue;
+  font-family: noto-sans;
+    font-weight: bold;
+}
+
+
+.totalrequests {
+  margin-left: 100%;
+}
+
+.profilerequests {
+  margin-left: 100%;
+  color: green;
+}

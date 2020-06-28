@@ -461,24 +461,29 @@ class RequestButtons extends Component {
     if(this.props.approvedDebators != null){
       items = Object.keys(this.props.approvedDebators).map((item)=> {
           return (
-            this.props.approvedDebators[item].firstName + " " + this.props.approvedDebators[item].lastName
+            {
+            name: this.props.approvedDebators[item].firstName + " " + this.props.approvedDebators[item].lastName,
+            email: this.props.approvedDebators[item].email,
+          }
           )
         })
     }
 
+    //var test = [{name: "string"}]
 
     const { value } = e.target;
 
     let data = [];
     if (value!= '' && value.length > 0) {
       const regex = new RegExp(`^${value}`, 'i');
-      data = items.sort().filter((v) => regex.test(v));
+      data = items.sort().filter((v) => { return (regex.test(v.name))});
     }
     this.setState(() => ({ data, text: value, collapse: true }));
   }
 
   clickedItem = (item) => {
-    this.setState({text: item, collapse: false})
+  //  console.log(item);
+    this.setState({text: item.name, collapse: false})
     if(this.props.changePerson1 != null ){
       this.props.changePerson1(item)
     }
@@ -498,7 +503,7 @@ class RequestButtons extends Component {
     }
     return (
       <ul>
-        {data.map((item) => <li className="dropDown" onClick={() => {this.clickedItem(item)}}>{item}</li>)}
+        {data.map((item) => <li className="dropDown" onClick={() => {this.clickedItem(item)}}>{item.name}</li>)}
       </ul>
     );
   }
