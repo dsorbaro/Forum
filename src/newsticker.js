@@ -29,7 +29,7 @@ class NewsTicker extends Component {
       })
     )
 
-    console.log(this.props.allRequests)
+  //  console.log(this.props.allRequests)
 
     return (
       <div class = "tickindex">

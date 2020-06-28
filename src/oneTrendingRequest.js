@@ -32,7 +32,7 @@ class OneTrendingRequest extends Component {
   }
 
   render() {
-    console.log(this.props.info.requestUsers);
+  //  console.log(this.props.info.requestUsers);
     var requestedAlready = false;
     for(var i = 0; i < this.props.info.requestUsers.length; i++){
       if(this.props.info.requestUsers[i].email === this.props.email){

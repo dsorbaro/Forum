@@ -11,6 +11,7 @@ export const ActionTypes = {
   FETCH_APPROVED_DEBATORS: 'FETCH_APPROVED_DEBATORS',
   CREATE_POST: 'CREATE_POST',
   FETCH_POPULAR_REQUESTS: 'FETCH_POPULAR_REQUESTS',
+  USERS_REQUESTED_DEBATES: 'USERS_REQUESTED_DEBATES',
 };
 
 const ROOT_URL = 'https://forum-debate.herokuapp.com/api';
@@ -218,4 +219,17 @@ export function voteRequest(id, fields) {
 
         }));
     }
+}
+
+
+export function getUsersRequestedDebates(email) {
+  return (dispatch) => {
+    axios.post(`${ROOT_URL}/getUserRequests`, email)
+      .then((response) => {
+        dispatch({ type: ActionTypes.USERS_REQUESTED_DEBATES, payload: response.data});
+      })
+      .catch((error) => {
+        dispatch(`failed to fetch posts: ${error}`);
+      });
+  };
 }

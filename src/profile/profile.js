@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { getUserFromEmail } from './actions';
+import { getUserFromEmail, getUsersRequestedDebates } from '../actions';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import RequestedDebatesForUser from "./requestedDebatesForUser"
 
 class ProfilePage extends Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class ProfilePage extends Component {
     componentDidMount(){
       if(this.props.email!=null){
         this.props.getUserFromEmail({email: this.props.email});
-
+  //      this.props.getUsersRequestedDebates({email: this.props.email})
       }
     }
 
@@ -30,6 +31,7 @@ class ProfilePage extends Component {
          <div>
          <p> Status: You are an approved debator </p>
          <p> Bio: {this.props.fields.bio} </p>
+         <RequestedDebatesForUser />
          </div>
        )
      }
@@ -52,4 +54,4 @@ class ProfilePage extends Component {
    return { fields: state.auth.fields, email:state.auth.email };
  }
 
- export default withRouter(connect(mapStateToProps, { getUserFromEmail })(ProfilePage));
+ export default withRouter(connect(mapStateToProps, { getUserFromEmail, getUsersRequestedDebates })(ProfilePage));
