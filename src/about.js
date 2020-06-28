@@ -1,7 +1,7 @@
 
 import React, { Component } from "react";
 import "./about.css"
-import aboutbground from "./aboutbground.jpg"
+import abtbackground from "./abtbackground.png"
 class AboutPage extends Component {
   constructor(props) {
     super(props);
@@ -10,21 +10,23 @@ class AboutPage extends Component {
 
    render() {
      return (
-       <body class = "abtbackground">
+       <div>
+       <img src = {abtbackground} class = "abtbackground"/>
 <div>
 <div class="aboutus">
     <h1>About Us</h1>
 </div>
   <div class = "line">
+
   </div>
          <h2 class ="Everyoneisveryangry">Everyone is very angry.</h2>
+  <div class ="maintext">
 
-<div class ="maintext">
-<p>The Age of Information was supposed to bring us closer together, but we’re more polarized, disconnected, and disillusioned than ever. Why? Are we just all just naturally pissed at each other? Destined to spend our lives scrolling through Twitter, Reddit, and Facebook getting angrier and angrier at those who shout the loudest?  Doomed to have no alternative to the shit-show that has become the entire mainstream news?</p>
+<p class ="theageof">The Age of Information was supposed to bring us closer together, but we’re more polarized, disconnected, and disillusioned than ever. Why? Are we just all just naturally pissed at each other? Destined to spend our lives scrolling through Twitter, Reddit, and Facebook getting angrier and angrier at those who shout the loudest?  Doomed to have no alternative to the shit-show that has become the entire mainstream news?</p>
 
-<p>Maybe.</p>
+<p>Yea, maybe.</p>
 
-<p>Or, maybe the Age of Information was hijacked. Throughout the past decade, social media platforms and news-networks have realized that you, dear reader, are a revenue source. And that revenue comes in the form of views, and more specifically clicks. So, having no regard for the potential impact on society, these folks decided to turn you into a click machine.
+<p class = "ormaybe">Or, maybe the Age of Information was hijacked. Throughout the past decade, social media platforms and news-networks have realized that you, dear reader, are a lucrative revenue source. And that revenue comes in the form of views, and more specifically clicks. So, having no regard for the potential impact on society, these folks decided to turn you into a click machine.
 
 Anger is easy clicks, and easy clicks is easy revenue.</p>
 
@@ -39,7 +41,7 @@ We need to force those channels of communication back open. We need open dialogu
 </p>
 </div>
 </div>
-</body>
+</div>
      );
    }
  }

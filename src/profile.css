@@ -1,0 +1,36 @@
+.profilename {
+  position: relative;
+  font-family: noto-sans;
+  font-size: 600%;
+  margin-top: -3%;
+  color: #3c065f;
+  font-weight: bold;
+}
+
+.profileschool {
+  padding-top: 4%;
+    position: relative;
+  font-family: noto-sans;
+  font-size: 500%;
+  margin-top: -3%;
+  color: #3c065f;
+  font-weight: bold;
+}
+
+
+.profilestatus {
+    padding-top: 4%;
+    position: relative;
+  color: #530096;
+    font-family: noto-sans;
+      font-weight: bold;
+        font-size: 100%;
+        margin-top: -10%;
+}
+
+
+.profileinfoformat {
+    position: relative;
+  display: flex;
+  flex-direction: column;
+}

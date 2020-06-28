@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { getUserFromEmail } from './actions';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import "./profile.css"
 
 class ProfilePage extends Component {
   constructor(props) {
@@ -29,7 +30,7 @@ class ProfilePage extends Component {
        status = (
          <div>
          <p> Status: You are an approved debator </p>
-         <p> Bio: {this.props.fields.bio} </p>
+
          </div>
        )
      }
@@ -40,10 +41,15 @@ class ProfilePage extends Component {
      }
      return (
        <div>
-          <p> Name: {this.props.fields.firstName} {this.props.fields.lastName}</p>
+          <div class = "profileinfoformat">
+          <p class = "profilename">{this.props.fields.firstName} {this.props.fields.lastName}</p>
+          <div class = "profilestatus"> {status} </div>
+          <p class = "profileschool"> {this.props.fields.school} </p>
+             <p> Bio: {this.props.fields.bio} </p>
           <p> Email: {this.props.fields.email} </p>
-          <p> school: {this.props.fields.school} </p>
-          {status}
+          </div>
+
+
        </div>
      );
    }

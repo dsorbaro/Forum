@@ -9,6 +9,7 @@
 .youalreadyrequested {
   position: relative;
 left: -128px;
+width: 60%;
   color: #3c065f;
   font-family: noto sans;
   font-style: italic;
@@ -74,6 +75,24 @@ border: 4px solid #60009E;
   animation: ring 1.5s infinite;
 }
 
+
+.requestbuttoniconclicked {
+  height: 50px;
+  width: 47px;
+  margin-left: 4%;
+}
+
+.requestbuttonicon {
+width: 50px;
+height: 50px;
+  margin-left: 4%;
+}
+
+.requestbuttonicon:hover {
+   border: 5px solid #3c065f;
+   border-radius: 1000px;
+       transition: 0.5s ease all;
+}
 
 @keyframes ring {
   0% {

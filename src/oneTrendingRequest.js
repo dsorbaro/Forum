@@ -9,6 +9,7 @@ import { withRouter } from 'react-router-dom';
 import mediumColumn from "./mediumColumn.png"
 import profileicontrend from "./profileicontrend.png"
 import newstrendicon from "./newstrendicon.png"
+import alreadyclicked from "./alreadyclicked.png"
 
 
 class OneTrendingRequest extends Component {
@@ -47,10 +48,10 @@ class OneTrendingRequest extends Component {
       vote= <p class ="youalreadyrequested"> You need to log in to vote </p>
     }
     else if(requestedAlready){
-      vote= <p class = "youalreadyrequested">You have already requested this</p>
+      vote= <img src={require("./alreadyclicked.png")} class = "requestbuttoniconclicked"/>
     }
     else {
-      vote= <img src={require("./requestbuttonicon.png")} onClick={this.vote} style={{width: '50px', height: '50px'}}/>
+      vote= <img src={require("./requestbuttonicon.png")} class = "requestbuttonicon" onClick={this.vote}/>
     }
 
 

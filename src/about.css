@@ -1,63 +1,64 @@
 .abtbackground{
-  top:-100px;
-   background-image: url("abtbackground.png");
-     background-repeat: no-repeat;
-   position: fixed;
- top: 0;
- left: 0;
- min-width: 100%;
- min-height: 100%;
- z-index: -1;
+
+     width: 100%;
+     position: absolute;
+     top: 10%;
+     left: 0;
+     z-index: -1;
+
 }
 
 .aboutus {
   color: #3c065f;
   font-family: Noto Sans;
   font-weight: 700;
-  margin-top: 13%;
-
+margin-right: 25%;
     text-align: center;
 }
 
 
 .line {
   height: 3px;
-width: 30%;
+width: 20%;
+margin-left: 28%;
   background-color: #3c065f;
-margin: auto;
+
 }
 
+ .maintext {
+   color: white;
+   font-weight: bold;
+   margin-left: 7%;
+   font-family: Noto Sans;
+}
 
 .Everyoneisveryangry {
-  margin-left: 10%;
+  margin-left: 8%;
     margin-right: 10%;
-  margin-top: 3%;
   margin-bottom: 3%;
   color: #3c065f;
 }
 
 
-.maintext {
-  font-family: Noto Sans;
-  margin-left: 10%;
+.theageof {
+  margin-right: 44%;
+}
 
-  margin-right: 20%;
-
-color: white;
-  font-weight: bold;
+.ormaybe {
+    margin-right: 43%;
 }
 
 .callitspin {
-  margin-right: 10%;
+  margin-right: 47%;
 }
 
 .wasfounded {
-  margin-right: 20%;
+  margin-right: 56%;
 }
 
 .quote {
   margin-left: 1%;
   margin-right: 10%;
     color: #3c065f;
-    margin-top: 4%;
+    margin-top: 1%;
 }
