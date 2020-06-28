@@ -14,7 +14,9 @@ export const ActionTypes = {
   USERS_REQUESTED_DEBATES: 'USERS_REQUESTED_DEBATES',
 };
 
-const ROOT_URL = 'https://forum-debate.herokuapp.com/api';
+//const ROOT_URL = 'https://forum-debate.herokuapp.com/api';
+
+const ROOT_URL = 'http://localhost:9090/api';
 
 const ERROR_TIMEOUT = 5000;
 
@@ -78,9 +80,13 @@ export function createRequest(props) {
   return (dispatch) => {
     axios.post(`${ROOT_URL}/requests`, props )
       .then((response) => {
-      //  console.log(`created: ${response}`);
-         dispatch({ type: ActionTypes.CREATE_POST, payload: response.data });
-      //  history.push('/');
+        axios.get(`${ROOT_URL}/requestsByVotes`)
+          .then((res) => {
+            dispatch({ type: ActionTypes.FETCH_POPULAR_REQUESTS, payload: res.data });
+          })
+          .catch((error) => {
+            dispatch(`failed to fetch posts: ${error}`);
+          });
       })
       .catch((error) => {
         dispatch(`failed to create post: ${error}`);
