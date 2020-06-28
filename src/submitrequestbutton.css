@@ -6,6 +6,14 @@
   justify-content: center;
 }
 
+.youalreadyrequested {
+  position: relative;
+left: -128px;
+  color: #3c065f;
+  font-family: noto sans;
+  font-style: italic;
+}
+
 .buttonicon{
   height: 80px;
   background-color: none;
