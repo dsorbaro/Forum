@@ -46,10 +46,11 @@ class RequestedDebatesForUser extends Component {
 
           <div class= "asinglerequest">
           <div>
-                <button type="submit" class="acceptbutton">
-                <h1 class = "interioracceptbuttontext">Accept</h1></button>
-                <button type="submit" class="forfeitbutton">
-                <h1 class = "interiorforfeitbuttontext">Forfeit</h1></button>
+
+
+                      <button class ="acceptbutton" onClick={() => {this.approve(this.props.requestedDebatesForUser[item])}}>   <h1 class = "interioracceptbuttontext">Accept</h1> </button>
+                      <button class ="forfeitbutton" onClick={() => {this.reject(this.props.requestedDebatesForUser[item])}}> <h1 class = "interiorforfeitbuttontext">Forfeit</h1> </button>
+                      
           <div>
           <div class = "iconrow">
             <img class = "personprofileicon" src={personprofileicon} />
@@ -65,8 +66,8 @@ class RequestedDebatesForUser extends Component {
                 <p class = "currentrequestspf"> {this.props.requestedDebatesForUser[item].requestID.person1ID.firstName} </p>
             </div>
             <p class = "currentrequestsnumber"> Number of Requests: {this.props.requestedDebatesForUser[item].requestID.numRequests} </p>
-            <button style={{backgroundColor: 'blue', marginBottom: '10px'}} onClick={() => {this.approve(this.props.requestedDebatesForUser[item])}}> approve </button>
-            <button style={{backgroundColor: 'blue'}} onClick={() => {this.reject(this.props.requestedDebatesForUser[item])}}> reject </button>
+
+
             <div class ="borderline">
             </div>
           </div>

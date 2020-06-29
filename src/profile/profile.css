@@ -358,7 +358,7 @@ font-weight: 500;
 .acceptbutton {
   position: absolute;
   z-index: 1;
-  margin-left: 240px;
+  margin-left: 280px;
   width: 150px;
   height: 60px;
   margin-top: 2%;
@@ -407,7 +407,7 @@ font-weight: 500;
 .forfeitbutton {
   border: 3px solid #3c065f;
   position: absolute;
-  margin-left: 240px;
+  margin-left: 280px;
   width: 150px;
   height: 60px;
   margin-top: 8%;

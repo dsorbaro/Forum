@@ -72,23 +72,31 @@ class ProfilePage extends Component {
       <img class = "parthenonprofile" src ={parthenonprofile}/>
       <img class = "cliffline" src = {cliffline} />
         <div class = "toptextrow">
+
+
             <div class= "toptextnumbercolumn">
               <div class ="participatedtoptextnumber">10</div>
               <button onClick={this.pastDebatespage} class = "participatedtoptext">Past Debates</button>
             </div>
+
               <div class ="seperatingline"> </div>
+
+              <div class= "toptextnumbercolumn">
+                <div class ="forfeiteddebatestoptextnumber">10</div>
+                <button onClick={this.forfeitedDebatespage} class = "forfeitstoptext">Forfeited Debates</button>
+              </div>
+
+
+
+              <div class ="seperatingline"> </div>
+
+
 
             <div class= "toptextnumbercolumn">
               <div class ="currentrequesttoptextnumber">10</div>
               <button onClick={this.currentRequestspage} class = "currentrequeststoptext">Current Requests</button>
             </div>
-
-              <div class ="seperatingline"> </div>
-
-            <div class= "toptextnumbercolumn">
-              <div class ="forfeiteddebatestoptextnumber">10</div>
-              <button onClick={this.forfeitedDebatespage} class = "forfeitstoptext">Forfeited Debates</button>
-            </div>
+            
             <div class ="seperatingline"> </div>
 
             <div class= "toptextnumbercolumn">
