@@ -85,11 +85,13 @@ class Main extends Component {
 
 
   changePerson1 = (item) => {
-    this.setState({person1: item.name, person1Email: item.email})
+    console.log(item);
+    console.log("I am item ^")
+    this.setState({person1: item.name, person1Email: item.email, person1ID: item.id})
   }
 
   changePerson2 = (item) => {
-    this.setState({person2: item.name, person2Email: item.email})
+    this.setState({person2: item.name, person2Email: item.email, person2ID: item.id})
   }
 
 
@@ -109,7 +111,10 @@ class Main extends Component {
       person2Email: this.state.person2Email,
     	topic: this.state.topic1,
     	requesterEmail: this.props.email,
+      person2ID: this.state.person2ID,
+      person1ID: this.state.person1ID,
     }
+    console.log(content);
 
     // console.log(content);
     // console.log("^ content above")

@@ -465,6 +465,7 @@ class RequestButtons extends Component {
             {
             name: this.props.approvedDebators[item].firstName + " " + this.props.approvedDebators[item].lastName,
             email: this.props.approvedDebators[item].email,
+            id: this.props.approvedDebators[item]._id,
           }
           )
         })

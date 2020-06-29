@@ -1,6 +1,6 @@
 import { ActionTypes } from '../actions';
 
-export default function (state = { authenticated: false, admin: false, requestedDebatesForUser: null }, action) {
+export default function (state = { authenticated: false, admin: false, requestedDebatesForUser: null, rejectedDebatesForUser: null }, action) {
   switch (action.type) {
     case ActionTypes.AUTH_USER:
       if(action.email === "msorbaro@gmail.com" || action.email === "davidjsorbaro@gmail.com"){
@@ -23,6 +23,11 @@ export default function (state = { authenticated: false, admin: false, requested
       return {
         ...state, requestedDebatesForUser: action.payload,
       };
+    case ActionTypes.USERS_REJECTED_DEBATES:
+        return {
+          ...state,
+          rejectedDebatesForUser: action.payload,
+    };
     default:
       return state;
   }
