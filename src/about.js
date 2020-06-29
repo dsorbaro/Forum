@@ -20,14 +20,6 @@ class AboutPage extends Component {
 <div class = "twotypesofuser">Two Types of User</div>
 
 
-
-
-
-
-
-
-
-
 <div class="letterfromthefounder">
          <h2 class ="Everyoneisveryangry">Everyone is very angry.</h2>
   <div class ="maintext">

@@ -3,20 +3,16 @@ import { getUserFromEmail, getUsersRequestedDebates } from '../actions';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';import "./profile.css"
 import RequestedDebatesForUser from "./requestedDebatesForUser"
-import profilecolumn from './profilecolumn.png'
+import ActiveDebatespage from "./ActiveDebatespage.js"
 import parthenonprofile from './parthenonprofile.png'
-import ruinsprofile from './ruinsprofile.png'
-import doublecolumnprofile from './doublecolumnprofile.png'
 import cliffline from "./cliffline.png"
 import PastDebatespage from './PastDebatespage.js'
 import CurrentRequestspage from './CurrentRequestspage.js'
 import ForfeitedDebatespage from './ForfeitedDebatespage.js'
-
-
 class ProfilePage extends Component {
   constructor(props) {
     super(props);
-        this.state = {varNoInfo: true, PastDebatespage: false, CurrentRequestspage: false, ForfeitedDebatespage:false};
+        this.state = {varNoInfo: true, PastDebatespage: false, CurrentRequestspage: false, ForfeitedDebatespage:false, ActiveDebatespage: false};
     }
 
     componentDidMount(){
@@ -28,15 +24,18 @@ class ProfilePage extends Component {
 
 // <button class = "" onClick= ({this.state.PastDebatespage}  === true)>
     pastDebatespage = () => {
-      this.setState({PastDebatespage: true, CurrentRequestspage: false, ForfeitedDebatespage:false})
+      this.setState({PastDebatespage: true, CurrentRequestspage: false, ForfeitedDebatespage:false, ActiveDebatespage:false})
     }
 
     currentRequestspage = () => {
-      this.setState({CurrentRequestspage: true, PastDebatespage: false, ForfeitedDebatespage:false})
+      this.setState({CurrentRequestspage: true, PastDebatespage: false, ForfeitedDebatespage:false, ActiveDebatespage:false})
     }
 
     forfeitedDebatespage = () => {
-      this.setState({ForfeitedDebatespage: true, PastDebatespage: false, CurrentRequestspage: false})
+      this.setState({ForfeitedDebatespage: true, PastDebatespage: false, CurrentRequestspage: false, ActiveDebatespage:false})
+    }
+    activeDebatespage = () => {
+      this.setState ({ActiveDebatespage:true, CurrentRequestspage: false, ForfeitedDebatespage:false, PastDebatespage:false})
     }
 
    render() {
@@ -75,6 +74,8 @@ class ProfilePage extends Component {
      {
        profileOption =  (<ForfeitedDebatespage  />)
      }
+     else if (this.state.ActiveDebatespage === true)
+      profileOption = (<ActiveDebatespage />)
      return (
 
 
@@ -106,7 +107,12 @@ class ProfilePage extends Component {
               <div class ="forfeiteddebatestoptextnumber">10</div>
               <button onClick={this.forfeitedDebatespage} class = "forfeitstoptext">Forfeited Debates</button>
             </div>
+            <div class ="seperatingline"> </div>
 
+            <div class= "toptextnumbercolumn">
+              <div class ="activedebatestoptextnumber">10</div>
+              <button onClick={this.activeDebatespage} class ="activetoptext">Active Debates</button>
+            </div>
         </div>
 
             <div>

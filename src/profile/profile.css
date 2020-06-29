@@ -114,6 +114,13 @@ padding-right: 30px;
   font-size: 300%;
 }
 
+.activedebatestoptextnumber {
+  justify-content: center;
+  color: #404040;
+  font-weight: bold;
+  font-size: 300%;
+}
+
 .currentrequeststoptext {
   position: relative;
   font-style: noto sans;
@@ -132,6 +139,28 @@ padding-right: 30px;
   margin-top: 12%;
   width: 100%;
   color: #a2a2a3;
+  font-weight: bold;
+  justify-content: center;
+}
+
+
+.activetoptext {
+  position: relative;
+  font-size: 120%;
+    font-style: noto sans;
+  margin-top: 12%;
+  width: 100%;
+  color: #a2a2a3;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.activetoptext:hover {
+  position: relative;
+  font-size: 120%;
+  margin-top: 12%;
+  width: 100%;
+  color: #3c065f;
   font-weight: bold;
   justify-content: center;
 }
