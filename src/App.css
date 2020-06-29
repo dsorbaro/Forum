@@ -81,6 +81,7 @@
   height: 40px;
   border-top-style: none;
   border-bottom-style: none;
+
   border-right: 2px solid #3c065f;
   border-left: 2px solid #3c065f;
 }
@@ -124,6 +125,21 @@
   height: 40px;
   margin-left: 330px;
   border: 2px solid #3c065f;
+}
+.signoutbutton {
+  z-index: 1;
+  position: absolute;
+  background-color: white;
+  font-family: Noto Sans;
+  font-style: bold;
+  font-size: 20px;
+  font-weight: 800;
+  width: 120px;
+  color: #3c065f;
+  height: 40px;
+  margin-left: 70px;
+  border: 2px solid #3c065f;
+
 }
 
 .signupbuttonmain {
@@ -370,4 +386,14 @@ button span:before, button span:after
   border-radius: 4px;
   box-shadow: 0 10px 20px -5px rgba(255, 117, 117, 0.86);
   z-index: 125;
+}
+
+.profilenavbar {
+  position: absolute;
+  height: 100px;
+  z-index: 4;
+  width: 100px;
+  background-image: url("navbarprofile.png");
+  z-index: 1;
+
 }

@@ -69,6 +69,11 @@ class Main extends Component {
              title: "What killed the chickens?",
              url: "www.fakenews.com"
            },
+           {
+             author: "Mav",
+             title: "Should Jayla and Stephen get Married?",
+             url: "www.fakenews.com"
+           },
          ]
          this.setState({articles: fakeData})
          this.props.fetchRequests();
@@ -118,7 +123,8 @@ class Main extends Component {
       }, (error) => {
           console.log(error.text);
       });
-      this.setState ({person1: "", topic1: "", person2:'', person1Email: '', person2Email:''})
+
+      this.setState({person1: "", topic1: "", person2:'', person1Email: '', person2Email:''});
 
   }
 
@@ -162,6 +168,7 @@ class Main extends Component {
                             text={this.state.person1}
                             changePerson1={this.changePerson1}
                             changePerson2={null}
+                            textFromParent={this.state.person1}
                           />
                          </div>
                       </div>
@@ -171,6 +178,7 @@ class Main extends Component {
                       title="Debate Topic"
                       changeTopic1={this.changeTopic1}
                       articles={this.state.articles}
+                      textFromParent={this.state.topic}
                       />
                       </div>
                       <div class="publicFigurerequstBoxRight">
@@ -179,6 +187,7 @@ class Main extends Component {
                           title="Public Figure"
                           changePerson1={null}
                           changePerson2={this.changePerson2}
+                          textFromParent={this.state.person2}
                           />
                           </div>
                             <div class="SubmitRequestbuttonlocation">

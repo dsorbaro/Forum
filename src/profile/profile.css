@@ -1,65 +1,155 @@
 .profileinfoformat {
-  border: 5px solid blue;
+
   display: flex;
   height: 800px;
   width: 800px;
  margin: 0 auto;
   flex-direction: column;
   align-items: center;
+  align-content: center;
 }
 
 .profilename {
   position: relative;
   text-align: center;
-  font-family: noto-sans;
+  margin-left: -0%;
   width: 100%;
   font-size: 400%;
-  margin-top: 12%;
+  margin-top: -2%;
   color: #3c065f;
   font-weight: bold;
-  justify-content: center;
+ justify-content: center;
 }
 
+
+.pastdebatestext {
+  position: relative;
+  text-align: center;
+  margin-left: -38%;
+  width: 100%;
+  font-size: 150%;
+  margin-top: 10%;
+  color: #3c065f;
+  font-weight: bold;
+ justify-content: center;
+}
+.forfeiteddebatestext {
+  position: relative;
+  text-align: center;
+  margin-left: -33%;
+  width: 100%;
+  font-size: 150%;
+  margin-top: 9%;
+  color: #3c065f;
+  font-weight: bold;
+ justify-content: center;
+}
+.currentrequeststext {
+  position: relative;
+  text-align: center;
+  margin-left: -50%;
+  width: 100%;
+  font-size: 150%;
+  margin-top: 11%;
+  color: #3c065f;
+  font-weight: bold;
+ justify-content: center;
+}
+
+
+
 .toptextrow {
-  position: absolute;
+  position: relative;
   display: flex;
-  top: 1000px;
-  border: 5px solid red;
-  height: 200px;
+  top: 2%;
+  margin-left: 6%;
+  margin-top: -30%;
+  height: 150px;
   width: 600px;
- margin: 0 auto;
   flex-direction: row;
   align-items: center;
   text-align: center;
 }
 
-.participatedtoptext {
-  position: relative;
-  font-family: noto-sans;
-  font-size: 40%;
+.toptextnumbercolumn {
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+padding-left: 30px;
+padding-right: 30px;
+}
+
+.seperatingline {
+  height: 50px;
+  width: 2px;
+  border: 1px solid #a2a2a3;
+  align-content: center;
   margin-top: 12%;
-  width: 100%;
-  color: #3c065f;
-  font-weight: bold;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+.participatedtoptextnumber {
+  font-style: noto sans;
   justify-content: center;
+  color: #404040;
+  font-weight: bold;
+  font-size: 300%;
+}
+
+.currentrequesttoptextnumber {
+  justify-content: center;
+  color: #404040;
+  font-weight: bold;
+  font-size: 300%;
+}
+
+.forfeiteddebatestoptextnumber {
+  justify-content: center;
+  color: #404040;
+  font-weight: bold;
+  font-size: 300%;
 }
 
 .currentrequeststoptext {
   position: relative;
-  font-family: noto-sans;
-  font-size: 40%;
+  font-style: noto sans;
+  font-size: 120%;
   margin-top: 12%;
   width: 100%;
-  color: #3c065f;
+  color: #a2a2a3;
   font-weight: bold;
   justify-content: center;
 }
-
 
 .forfeitstoptext {
   position: relative;
-  font-family: noto-sans;
-  font-size: 40%;
+  font-size: 120%;
+    font-style: noto sans;
+  margin-top: 12%;
+  width: 100%;
+  color: #a2a2a3;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.participatedtoptext {
+  position: relative;
+  font-size: 120%;
+  margin-top: 12%;
+  width: 100%;
+  color: #a2a2a3;
+  font-weight: bold;
+  justify-content: center;
+}
+
+
+.currentrequeststoptext:hover {
+  position: relative;
+  font-size: 120%;
   margin-top: 12%;
   width: 100%;
   color: #3c065f;
@@ -67,13 +157,31 @@
   justify-content: center;
 }
 
+.forfeitstoptext:hover {
+  position: relative;
+  font-size: 120%;
+  margin-top: 12%;
+  width: 100%;
+  color: #3c065f;
+  font-weight: bold;
+  justify-content: center;
+}
 
+.participatedtoptext:hover {
+  position: relative;
+  font-size: 120%;
+  margin-top: 12%;
+  width: 100%;
+  color: #3c065f;
+  font-weight: bold;
+  justify-content: center;
+}
 
 .profileschool {
     position: relative;
-      text-align: center;
-    margin-top: -10%;
-    font-family: noto-sans;
+    text-align: center;
+    margin-top: -16%;
+      margin-left: -0%;
     width: 100%;
     font-size: 300%;
     color: #3c065f;
@@ -83,21 +191,19 @@
 
 
 .profilestatus {
-    padding-top: 1%;
-    position: relative;
+  padding-top: 4%;
+  position: relative;
   color: #530096;
-    font-family: noto-sans;
-      font-weight: bold;
-        font-size: 100%;
-        margin-top: -10%;
+  font-weight: bold;
+  font-size: 100%;
+
 }
 
 .profilebio {
   position: relative;
-  margin-top: -40%;
-color: blue;
-  font-family: noto-sans;
-    font-weight: bold;
+  margin-top: 1%;
+  color: grey;
+  font-weight: bold;
 }
 
 
@@ -108,4 +214,92 @@ color: blue;
 .profilerequests {
   margin-left: 100%;
   color: green;
+}
+
+.asinglerequest {
+  margin-top:15%;
+  margin-left: -20%;
+}
+
+.currentrequestspf{
+  color: #404040;
+  font-size:100%;
+font-weight: 500;
+  margin-left: 5%;
+}
+
+.currentrequeststopic {
+  color: #3c065f;
+  font-size: 100%;
+  margin-left: 5%;
+}
+
+.currentrequestsnumber {
+  color: #3c065f;
+  font-size: 100%;
+  margin-left: -10%;
+  font-weight: bold;
+}
+
+.currentrequesticoncolumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsprofileicon {
+  position: relative;
+  margin-left: -9%;
+  margin-top: 4.2%;
+  height:30px;
+}
+
+.personprofileicon {
+  position: relative;
+  margin-left: -9%;
+  margin-top: 5%;
+  height:30px;
+
+}
+
+.personprofileicontwo {
+  position: relative;
+  margin-left: -9%;
+  margin-top: 3%;
+  height: 30px;
+
+}
+
+
+
+
+.iconrow {
+    display: flex;
+    flex-direction: row;
+}
+
+.parthenonprofile {
+  position: relative;
+  z-index: -1;
+  height: 150px;
+  margin-left: 110%;
+  opacity: 60%;
+  margin-top: -30%;
+}
+
+
+.cliffline {
+    position: relative;
+    z-index: -1;
+    opacity: 60%;
+    margin-left: -115%;
+    margin-top: 15%;
+    width: 370px;
+}
+
+.borderline {
+  border: 1px solid #3c065f;
+  border-style: dashed;
+  height: 1px;
+  width: 200px;
+  margin-left: -12%;
 }

@@ -11,6 +11,7 @@ class RequestButtons extends Component {
       data: null,
       text: '',
       collapse: true,
+      resetNeeded: false,
     };
   }
 
@@ -483,7 +484,7 @@ class RequestButtons extends Component {
 
   clickedItem = (item) => {
   //  console.log(item);
-    this.setState({text: item.name, collapse: false})
+    this.setState({text: item.name, collapse: false, resetNeeded: true})
     if(this.props.changePerson1 != null ){
       this.props.changePerson1(item)
     }
@@ -513,7 +514,10 @@ class RequestButtons extends Component {
   // }
 
   render() {
-    //console.log(this.props.approvedDebators)
+
+    if(this.props.textFromParent === '' && this.state.text!=null && this.state.resetNeeded){
+      this.setState({text: '', resetNeeded:false})
+    }
     return (
       <div class="publicfigurerequestBoxtext">
         <div class="searchrow">

@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import { signoutUser } from './actions';
 import FindyourNewsroomSearch from "./FindyourNewsroomSearch";
 import logo from "./forumCircle.png";
+import navbarprofile from "./navbarprofile.png"
+import "./App.css"
 
 
 
@@ -16,7 +18,7 @@ const Nav = (props) => {  var adminLink = props.admin ? (
   var loggedIn = props.authenticated ? (
     <div>
       <NavLink to="/signIn">
-        <button class = "signinbutton" onClick={()=>{ props.signoutUser(props.history) }}>Sign Out</button>
+        <button class = "signoutbutton" onClick={()=>{ props.signoutUser(props.history) }}>Sign Out</button>
       </NavLink>
     </div>
   ) :
@@ -47,17 +49,14 @@ const Nav = (props) => {  var adminLink = props.admin ? (
               <NavLink to="/about">
                     <button class = "aboutnavbarbutton">About</button>
               </NavLink>
-              <NavLink to="/profile">
-                <button class = "navbarbutton">Profile</button>
-              </NavLink>
+
+
               <NavLink to="/contact">
                 <button class = "navbarbutton">Contact</button>
               </NavLink>
-
-              <div class ="newsroomsearchbar">
-            <FindyourNewsroomSearch
-            />
-            </div>
+              <NavLink to="/profile">
+                <button class = "profilenavbar"></button>
+              </NavLink>
             {loggedIn}
             </div>
             {adminLink}

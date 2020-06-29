@@ -16,6 +16,8 @@ export const ActionTypes = {
 
 const ROOT_URL = 'https://forum-debate.herokuapp.com/api';
 
+//const ROOT_URL = 'http://localhost:9090/api';
+
 const ERROR_TIMEOUT = 5000;
 
 
@@ -78,9 +80,13 @@ export function createRequest(props) {
   return (dispatch) => {
     axios.post(`${ROOT_URL}/requests`, props )
       .then((response) => {
-      //  console.log(`created: ${response}`);
-         dispatch({ type: ActionTypes.CREATE_POST, payload: response.data });
-      //  history.push('/');
+        axios.get(`${ROOT_URL}/requestsByVotes`)
+          .then((res) => {
+            dispatch({ type: ActionTypes.FETCH_POPULAR_REQUESTS, payload: res.data });
+          })
+          .catch((error) => {
+            dispatch(`failed to fetch posts: ${error}`);
+          });
       })
       .catch((error) => {
         dispatch(`failed to create post: ${error}`);
@@ -207,7 +213,7 @@ export function changeUserStatus(id, status) {
 export function voteRequest(id, fields) {
     return (dispatch) => {
       axios.put(`${ROOT_URL}/requests/${id}`, fields).then((response) => {
-        axios.get(`${ROOT_URL}/requests`)
+        axios.get(`${ROOT_URL}/requestsByVotes`)
           .then((response) => {
             dispatch({ type: ActionTypes.FETCH_POPULAR_REQUESTS, payload: response.data });
           })

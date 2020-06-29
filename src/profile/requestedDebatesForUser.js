@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import { getUsersRequestedDebates } from '../actions';
 import { connect } from 'react-redux';
+import "./profile.css"
+import newsprofileicon from "./newsprofileicon.png"
+import personprofileicon from "./personprofileicon.png"
+
 import { withRouter } from 'react-router-dom';
 
 
@@ -22,18 +26,36 @@ class RequestedDebatesForUser extends Component {
        Object.keys(this.props.requestedDebatesForUser).map((item)=> {
        //  console.log(this.props.allRequests[item])
          return (
-
-          <div>
-            <p> Person 1 {this.props.requestedDebatesForUser[item].person1} </p>
-            <p> Topic {this.props.requestedDebatesForUser[item].topic} </p>
-            <p> Person 2 {this.props.requestedDebatesForUser[item].person2} </p>
-            <p class = "totalrequests"> Total Requests {this.props.requestedDebatesForUser[item].numRequests} </p>
+          <div class= "asinglerequest">
+          <div class ="borderline">
           </div>
+          <div>
+          <div class = "iconrow">
+            <img class = "personprofileicon" src={personprofileicon} />
+            <p class = "currentrequestspf">{this.props.requestedDebatesForUser[item].person1} </p>
+          </div>
+              <div class = "iconrow">
+              <img class = "newsprofileicon" src={newsprofileicon} />
+            <p class = "currentrequeststopic">{this.props.requestedDebatesForUser[item].topic} </p>
+            </div>
+
+            <div class = "iconrow">
+                <img class = "personprofileicontwo" src={personprofileicon} />
+                <p class = "currentrequestspf"> {this.props.requestedDebatesForUser[item].person2} </p>
+            </div>
+            <p class = "currentrequestsnumber"> Number of Requests: {this.props.requestedDebatesForUser[item].numRequests} </p>
+            <div class ="borderline">
+            </div>
+          </div>
+          </div>
+
          )
        })
      )
      return (
       <div>
+
+
       {debateRequests}
       </div>
      );
