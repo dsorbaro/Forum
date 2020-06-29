@@ -15,9 +15,9 @@ export const ActionTypes = {
   USERS_REJECTED_DEBATES: 'USERS_REJECTED_DEBATES',
 };
 
-const ROOT_URL = 'https://forum-debate.herokuapp.com/api';
+//const ROOT_URL = 'https://forum-debate.herokuapp.com/api';
 
-//const ROOT_URL = 'http://localhost:9090/api';
+const ROOT_URL = 'http://localhost:9090/api';
 
 const ERROR_TIMEOUT = 5000;
 

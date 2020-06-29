@@ -9,6 +9,8 @@ import SignInPage from "./SignInPage";
 import SignUpPage from "./SignUpPage";
 import ApproveDebators from "./ApproveDebatorsPage"
 import MorganTest from './debates/morganTest'
+import Faq from './FAQ/faq'
+
 import Nav from "./Nav"
 
 
@@ -25,6 +27,7 @@ class App extends Component {
             <Route exact path="/about" component={AboutPage} />
             <Route exact path="/profile" component={ProfilePage} />
             <Route exact path="/morganTestAndChill" component={MorganTest} />
+            <Route exact path="/faq" component={Faq} />
 
             <Route exact path="/contact" component={ContactPage} />
             <Route exact path="/signIn" component={SignInPage} />
