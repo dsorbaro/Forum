@@ -38,7 +38,7 @@ class RequestedDebatesForUser extends Component {
        this.props.editDebateStatus(item._id, fields)
     }
    render() {
-  //   console.log(this.props.requestedDebatesForUser)
+     console.log(this.props.requestedDebatesForUser)
      var debateRequests = this.props.requestedDebatesForUser == null ? <p> No one wants to debate you :( </p> : (
        Object.keys(this.props.requestedDebatesForUser).map((item)=> {
          console.log(this.props.requestedDebatesForUser[item])
@@ -50,7 +50,7 @@ class RequestedDebatesForUser extends Component {
 
                       <button class ="acceptbutton" onClick={() => {this.approve(this.props.requestedDebatesForUser[item])}}>   <h1 class = "interioracceptbuttontext">Accept</h1> </button>
                       <button class ="forfeitbutton" onClick={() => {this.reject(this.props.requestedDebatesForUser[item])}}> <h1 class = "interiorforfeitbuttontext">Forfeit</h1> </button>
-                      
+
           <div>
           <div class = "iconrow">
             <img class = "personprofileicon" src={personprofileicon} />
@@ -63,7 +63,7 @@ class RequestedDebatesForUser extends Component {
 
             <div class = "iconrow">
                 <img class = "personprofileicontwo" src={personprofileicon} />
-                <p class = "currentrequestspf"> {this.props.requestedDebatesForUser[item].requestID.person1ID.firstName} </p>
+                <p class = "currentrequestspf"> {this.props.requestedDebatesForUser[item].requestID.person2ID.firstName} </p>
             </div>
             <p class = "currentrequestsnumber"> Number of Requests: {this.props.requestedDebatesForUser[item].requestID.numRequests} </p>
 

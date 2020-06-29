@@ -39,7 +39,7 @@ class PastDebatespage extends Component {
 
             <div class = "iconrow">
                 <img class = "personprofileicontwo" src={personprofileicon} />
-                <p class = "currentrequestspf"> {this.props.rejectedDebatesForUser[item].requestID.person1ID.firstName} </p>
+                <p class = "currentrequestspf"> {this.props.rejectedDebatesForUser[item].requestID.person2ID.firstName} </p>
             </div>
             <p class = "currentrequestsnumber"> Number of Requests: {this.props.rejectedDebatesForUser[item].requestID.numRequests} </p>
             <div class ="borderline">

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { getUserFromEmail } from '../actions';
+import { getUserFromEmail, getActiveDebatesForUser,getRejectedDebatesForUser, getPendingDebatesForUser } from '../actions';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';import "./profile.css"
 import RequestedDebatesForUser from "./requestedDebatesForUser"
@@ -18,7 +18,10 @@ class ProfilePage extends Component {
     componentDidMount(){
       if(this.props.email!=null){
         this.props.getUserFromEmail({email: this.props.email});
+        this.props.getActiveDebatesForUser({email: this.props.email})
+        this.props.getRejectedDebatesForUser({email: this.props.email})
   //      this.props.getUsersRequestedDebates({email: this.props.email})
+        this.props.getPendingDebatesForUser({email: this.props.email})
       }
     }
 
@@ -82,7 +85,7 @@ class ProfilePage extends Component {
               <div class ="seperatingline"> </div>
 
               <div class= "toptextnumbercolumn">
-                <div class ="forfeiteddebatestoptextnumber">10</div>
+                <div class ="forfeiteddebatestoptextnumber">{this.props.rejectedDebatesForUser == null ? "?" : this.props.rejectedDebatesForUser.length}</div>
                 <button onClick={this.forfeitedDebatespage} class = "forfeitstoptext">Forfeited Debates</button>
               </div>
 
@@ -93,14 +96,14 @@ class ProfilePage extends Component {
 
 
             <div class= "toptextnumbercolumn">
-              <div class ="currentrequesttoptextnumber">10</div>
+              <div class ="currentrequesttoptextnumber">{this.props.requestedDebatesForUser == null ? "?" : this.props.requestedDebatesForUser.length}</div>
               <button onClick={this.currentRequestspage} class = "currentrequeststoptext">Current Requests</button>
             </div>
-            
+
             <div class ="seperatingline"> </div>
 
             <div class= "toptextnumbercolumn">
-              <div class ="activedebatestoptextnumber">10</div>
+              <div class ="activedebatestoptextnumber">{this.props.activeDebatesForUser == null ? "?" : this.props.activeDebatesForUser.length}</div>
               <button onClick={this.activeDebatespage} class ="activetoptext">Active Debates</button>
             </div>
         </div>
@@ -118,7 +121,7 @@ class ProfilePage extends Component {
 
 
  function mapStateToProps(state) {
-   return { fields: state.auth.fields, email:state.auth.email };
+   return { fields: state.auth.fields, email:state.auth.email, activeDebatesForUser: state.auth.activeDebatesForUser, rejectedDebatesForUser: state.auth.rejectedDebatesForUser, requestedDebatesForUser: state.auth.requestedDebatesForUser };
  }
 
- export default withRouter(connect(mapStateToProps, { getUserFromEmail })(ProfilePage));
+ export default withRouter(connect(mapStateToProps, { getUserFromEmail, getActiveDebatesForUser,getRejectedDebatesForUser, getPendingDebatesForUser })(ProfilePage));

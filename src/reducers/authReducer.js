@@ -1,6 +1,6 @@
 import { ActionTypes } from '../actions';
 
-export default function (state = { authenticated: false, admin: false, requestedDebatesForUser: null, rejectedDebatesForUser: null }, action) {
+export default function (state = { authenticated: false, admin: false, requestedDebatesForUser: null, rejectedDebatesForUser: null, activeDebatesForUser: null }, action) {
   switch (action.type) {
     case ActionTypes.AUTH_USER:
       if(action.email === "msorbaro@gmail.com" || action.email === "davidjsorbaro@gmail.com"){
@@ -13,11 +13,11 @@ export default function (state = { authenticated: false, admin: false, requested
       };
     case ActionTypes.DEAUTH_USER:
       return {
-        ...state, authenticated: false,  email: '', fields: {}, admin: false,
+        ...state, authenticated: false,  email: '', fields: {}, admin: false, requestedDebatesForUser: null, rejectedDebatesForUser: null, activeDebatesForUser: null
       };
     case ActionTypes.AUTH_ERROR:
       return {
-        ...state, authenticated: false, email: '', fields: {}, admin: false
+        ...state, authenticated: false, email: '', fields: {}, admin: false, requestedDebatesForUser: null, rejectedDebatesForUser: null, activeDebatesForUser: null
       };
     case ActionTypes.USERS_REQUESTED_DEBATES:
       return {
@@ -28,7 +28,13 @@ export default function (state = { authenticated: false, admin: false, requested
           ...state,
           rejectedDebatesForUser: action.payload,
     };
+    case ActionTypes.USERS_ACTIVE_DEBATES:
+        return {
+          ...state,
+          activeDebatesForUser: action.payload,
+    };
     default:
       return state;
   }
+
 }
