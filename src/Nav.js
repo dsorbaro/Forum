@@ -18,9 +18,13 @@ const Nav = (props) => {  var adminLink = props.admin ? (
   var loggedIn = props.authenticated ? (
     <div>
       <NavLink to="/signIn">
-        <button class = "signoutbutton" onClick={()=>{ props.signoutUser(props.history) }}>Sign Out</button>
+        <button class = "signoutbutton" style={{marginLeft: '140px'}} onClick={()=>{ props.signoutUser(props.history) }}>Sign Out</button>
+      </NavLink>
+      <NavLink to="/profile">
+        <button class ="profilenavbar"></button>
       </NavLink>
     </div>
+
   ) :
   (
     <div>
@@ -31,6 +35,7 @@ const Nav = (props) => {  var adminLink = props.admin ? (
       <NavLink to="/signUp">
         <button class = "signupbuttonmain">Sign Up</button>
       </NavLink>
+
     </div>
   )
   return (
@@ -49,14 +54,10 @@ const Nav = (props) => {  var adminLink = props.admin ? (
               <NavLink to="/about">
                     <button class = "aboutnavbarbutton">About</button>
               </NavLink>
-
-
               <NavLink to="/contact">
                 <button class = "navbarbutton">Contact</button>
               </NavLink>
-              <NavLink to="/profile">
-                <button class = "profilenavbar"></button>
-              </NavLink>
+
             {loggedIn}
             </div>
             {adminLink}

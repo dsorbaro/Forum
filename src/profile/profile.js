@@ -52,7 +52,7 @@ class ProfilePage extends Component {
        status = (
          <div>
          <p> Status: You are an approved debator </p>
-         <RequestedDebatesForUser />
+
          </div>
        )
      }

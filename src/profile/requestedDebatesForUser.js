@@ -5,6 +5,7 @@ import "./profile.css"
 import newsprofileicon from "./newsprofileicon.png"
 import personprofileicon from "./personprofileicon.png"
 
+
 import { withRouter } from 'react-router-dom';
 
 
@@ -26,9 +27,13 @@ class RequestedDebatesForUser extends Component {
        Object.keys(this.props.requestedDebatesForUser).map((item)=> {
        //  console.log(this.props.allRequests[item])
          return (
+
           <div class= "asinglerequest">
-          <div class ="borderline">
-          </div>
+          <div>
+                <button type="submit" class="acceptbutton">
+                <h1 class = "interioracceptbuttontext">Accept</h1></button>
+                <button type="submit" class="forfeitbutton">
+                <h1 class = "interiorforfeitbuttontext">Forfeit</h1></button>
           <div>
           <div class = "iconrow">
             <img class = "personprofileicon" src={personprofileicon} />
@@ -46,6 +51,7 @@ class RequestedDebatesForUser extends Component {
             <p class = "currentrequestsnumber"> Number of Requests: {this.props.requestedDebatesForUser[item].numRequests} </p>
             <div class ="borderline">
             </div>
+          </div>
           </div>
           </div>
 

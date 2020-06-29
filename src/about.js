@@ -1,7 +1,8 @@
 
 import React, { Component } from "react";
 import "./about.css"
-import abtbackground from "./abtbackground.png"
+import abtbackground from "./abtbackground.png";
+import howitworksgraphic from "./howitworksgraphic.png"
 class AboutPage extends Component {
   constructor(props) {
     super(props);
@@ -10,15 +11,24 @@ class AboutPage extends Component {
 
    render() {
      return (
-       <div>
-       <img src = {abtbackground} class = "abtbackground"/>
-<div>
-<div class="aboutus">
-    <h1>About Us</h1>
-</div>
-  <div class = "line">
 
-  </div>
+
+
+<div class = "howitworks">
+<div class = "howitworkstext">How it Works:</div>
+<img class = "howitworksgraphic" src = {howitworksgraphic} />
+<div class = "twotypesofuser">Two Types of User</div>
+
+
+
+
+
+
+
+
+
+
+<div class="letterfromthefounder">
          <h2 class ="Everyoneisveryangry">Everyone is very angry.</h2>
   <div class ="maintext">
 
@@ -42,6 +52,7 @@ We need to force those channels of communication back open. We need open dialogu
 </div>
 </div>
 </div>
+
      );
    }
  }

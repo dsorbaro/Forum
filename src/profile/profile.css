@@ -297,9 +297,106 @@ font-weight: 500;
 }
 
 .borderline {
+  position: absolute;
   border: 1px solid #3c065f;
   border-style: dashed;
+  margin-top: .5%;
   height: 1px;
-  width: 200px;
-  margin-left: -12%;
+  width: 450px;
+  margin-left: -3%;
+}
+
+
+
+
+
+
+
+
+.interioracceptbuttontext {
+  position: absolute;
+  color: #FFFFFF;
+  top: -14px;
+  left: 20px;
+  font-weight: bold;
+  font-family: noto sans;
+  font-size: 30px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.acceptbutton {
+  position: absolute;
+  z-index: 1;
+  margin-left: 240px;
+  width: 150px;
+  height: 60px;
+  margin-top: 2%;
+  background-color: #3c065f;
+  -webkit-border-radius: 10px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+
+@-webkit-keyframes glowing {
+  0% { background-color: #3c065f; -webkit-box-shadow: 0 0 3px #3c065f; }
+  50% { background-color: #3c065f; -webkit-box-shadow: 0 0 20px #3c065f; }
+  100% { background-color: #3c065f; -webkit-box-shadow: 0 0 3px #3c065f; }
+}
+
+@-moz-keyframes glowing {
+  0% { background-color: #3c065f; -moz-box-shadow: 0 0 3px #3c065f; }
+  50% { background-color: #3c065f; -moz-box-shadow: 0 0 20px #3c065f; }
+  100% { background-color: #3c065f; -moz-box-shadow: 0 0 3px #3c065f; }
+}
+
+@-o-keyframes glowing {
+  0% { background-color: #3c065f; box-shadow: 0 0 3px #3c065f; }
+  50% { background-color: #3c065f; box-shadow: 0 0 20px #3c065f; }
+  100% { background-color: #3c065f; box-shadow: 0 0 3px #3c065f; }
+}
+
+@keyframes glowing {
+  0% { background-color: #3c065f; box-shadow: 0 0 3px #3c065f; }
+  50% { background-color: #3c065f; box-shadow: 0 0 20px #3c065f; }
+  100% { background-color: #3c065f; box-shadow: 0 0 3px #3c065f; }
+}
+
+.acceptbutton {
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}
+
+
+
+.forfeitbutton {
+  border: 3px solid #3c065f;
+  position: absolute;
+  margin-left: 240px;
+  width: 150px;
+  height: 60px;
+  margin-top: 8%;
+  background-color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 10px 20px;
+    z-index: 1;
+}
+.interiorforfeitbuttontext {
+  position: absolute;
+  color: #3c065f;
+  top: -16px;
+  left: 19px;
+  font-weight: bold;
+  font-family: noto sans;
+  font-size: 30px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
 }
