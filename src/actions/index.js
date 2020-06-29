@@ -290,9 +290,11 @@ export function getAllDebates(){
 }
 
 export function getPendingDebatesForUser(email){
+  console.log(email)
   return (dispatch) => {
-    axios.get(`${ROOT_URL}/userDebates`,email)
+    axios.get(`${ROOT_URL}/userDebates`, email)
       .then((response) => {
+        console.log(response)
         dispatch({ type: ActionTypes.USERS_REQUESTED_DEBATES, payload: response.data});
       })
       .catch((error) => {

@@ -1,34 +1,76 @@
-.abtbackground{
-  height: 100vh;
-width: 100vw;
-     position: absolute;
-     top: 10%;
-     z-index: -1;
 
-}
+.abttallback {
+  /* The image used */
+  background-image: url("abttallback.png");
 
-.letterfromthefounder {
-  margin-top: 30%;
+  /* Set a specific height */
+  min-height: 400px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .howitworks {
+  position: absolute;
   display: flex;
   flex-direction: column;
 }
 
 .howitworkstext{
+  position: relative;
   font-family: Noto Sans;
   font-weight: 600;
-  font-size: 200%;
+  font-size: 500%;
   color: #3c065f;
   margin-left: 20%;
-  margin-top: -5%;
+  margin-top: -2%;
+  z-index: -1;
 }
 
+
+.twotypesofuserrow{
+  padding-top: 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.typeofusercolumn{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.publicfiguretitle {
+padding-right: 20%;
+width: 100%;
+margin-left:40%;
+}
+
+
+.generalusertitle {
+  width: 100%;
+  padding-left: 20%;
+  margin-left: 15%;
+}
+
+.generaluserdescripton{
+  margin-right: 10%;
+
+}
+
+.publicfiigurerdescripton{
+
+    margin-left: 25%;
+}
 .twotypesofuser {
   font-family: Noto Sans;
   font-weight: 600;
-  font-size: 200%;
+  font-size: 300%;
   color: #3c065f;
   margin: auto;
   margin-top: 2%;
@@ -36,6 +78,7 @@ width: 100vw;
 .howitworksgraphic {
   margin: auto;
   padding-top: 2%;
+  padding-bottom: 60px;
 }
 
  .maintext {

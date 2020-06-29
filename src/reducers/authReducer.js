@@ -13,11 +13,11 @@ export default function (state = { authenticated: false, admin: false, requested
       };
     case ActionTypes.DEAUTH_USER:
       return {
-        ...state, authenticated: false,  email: '', fields: {}, admin: false,
+        ...state, authenticated: false,  email: '', fields: {}, admin: false, requestedDebatesForUser: null, rejectedDebatesForUser: null,
       };
     case ActionTypes.AUTH_ERROR:
       return {
-        ...state, authenticated: false, email: '', fields: {}, admin: false
+        ...state, authenticated: false, email: '', fields: {}, admin: false, requestedDebatesForUser: null, rejectedDebatesForUser: null
       };
     case ActionTypes.USERS_REQUESTED_DEBATES:
       return {
