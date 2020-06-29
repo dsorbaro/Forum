@@ -5,6 +5,7 @@ import "./profile.css"
 import newsprofileicon from "./newsprofileicon.png"
 import personprofileicon from "./personprofileicon.png"
 
+
 import { withRouter } from 'react-router-dom';
 
 
@@ -42,9 +43,13 @@ class RequestedDebatesForUser extends Component {
        Object.keys(this.props.requestedDebatesForUser).map((item)=> {
          console.log(this.props.requestedDebatesForUser[item])
          return (
+
           <div class= "asinglerequest">
-          <div class ="borderline">
-          </div>
+          <div>
+                <button type="submit" class="acceptbutton">
+                <h1 class = "interioracceptbuttontext">Accept</h1></button>
+                <button type="submit" class="forfeitbutton">
+                <h1 class = "interiorforfeitbuttontext">Forfeit</h1></button>
           <div>
           <div class = "iconrow">
             <img class = "personprofileicon" src={personprofileicon} />
@@ -64,6 +69,7 @@ class RequestedDebatesForUser extends Component {
             <button style={{backgroundColor: 'blue'}} onClick={() => {this.reject(this.props.requestedDebatesForUser[item])}}> reject </button>
             <div class ="borderline">
             </div>
+          </div>
           </div>
           </div>
 

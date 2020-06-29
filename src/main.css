@@ -303,3 +303,12 @@ border-radius: 1000px;
   left: 500px;
   border: 1px solid #3c065f;
 }
+
+.youneedtobeloggedintext{
+  position: absolute;
+  color: #3c065f;
+  font-family: noto sans;
+  font-weight: bold;
+  top: -10%;
+  margin-left: 77%;
+}

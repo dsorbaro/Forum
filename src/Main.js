@@ -142,7 +142,7 @@ class Main extends Component {
     }
 
     //console.log(this.props.email);
-    var error = this.state.notLoggedIn == null ? null : <p> You need to be logged in to submit a request </p>
+    var error = this.state.notLoggedIn == null ? null : <p class = "youneedtobeloggedintext"> You need to be signed in to submit a request</p>
 
     var requestColums = this.props.popularRequests == null ? <p> no requests </p> : (
       Object.keys(this.props.popularRequests).map((item)=> {

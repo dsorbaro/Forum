@@ -1,5 +1,4 @@
 .abtbackground{
-
   height: 100vh;
 width: 100vw;
      position: absolute;
@@ -8,25 +7,39 @@ width: 100vw;
 
 }
 
-.aboutus {
-  color: #3c065f;
-  font-family: Noto Sans;
-  font-weight: 700;
-margin-right: 25%;
-    text-align: center;
+.letterfromthefounder {
+  margin-top: 30%;
 }
 
+.howitworks {
+  display: flex;
+  flex-direction: column;
+}
 
-.line {
-  height: 3px;
-width: 20%;
-margin-left: 28%;
-  background-color: #3c065f;
+.howitworkstext{
+  font-family: Noto Sans;
+  font-weight: 600;
+  font-size: 200%;
+  color: #3c065f;
+  margin-left: 20%;
+  margin-top: -5%;
+}
 
+.twotypesofuser {
+  font-family: Noto Sans;
+  font-weight: 600;
+  font-size: 200%;
+  color: #3c065f;
+  margin: auto;
+  margin-top: 2%;
+}
+.howitworksgraphic {
+  margin: auto;
+  padding-top: 2%;
 }
 
  .maintext {
-   color: white;
+   color: black;
    font-weight: bold;
    margin-left: 7%;
    font-family: Noto Sans;

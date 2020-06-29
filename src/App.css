@@ -390,10 +390,12 @@ button span:before, button span:after
 
 .profilenavbar {
   position: absolute;
-  height: 100px;
+    background-image: url("navbarprofile.png");
+background-repeat: no-repeat;
+  background-size: 32px 35px;
+  padding-bottom: 10px;
+top: -20px;
+margin-left: 80%;
   z-index: 4;
-  width: 100px;
-  background-image: url("navbarprofile.png");
-  z-index: 1;
 
 }
