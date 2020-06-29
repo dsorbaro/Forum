@@ -12,11 +12,12 @@ export const ActionTypes = {
   CREATE_POST: 'CREATE_POST',
   FETCH_POPULAR_REQUESTS: 'FETCH_POPULAR_REQUESTS',
   USERS_REQUESTED_DEBATES: 'USERS_REQUESTED_DEBATES',
+  USERS_REJECTED_DEBATES: 'USERS_REJECTED_DEBATES',
 };
 
-const ROOT_URL = 'https://forum-debate.herokuapp.com/api';
+// const ROOT_URL = 'https://forum-debate.herokuapp.com/api';
 
-//const ROOT_URL = 'http://localhost:9090/api';
+const ROOT_URL = 'http://localhost:9090/api';
 
 const ERROR_TIMEOUT = 5000;
 
@@ -53,6 +54,7 @@ export function fetchRequests() {
   return (dispatch) => {
     axios.get(`${ROOT_URL}/requests`)
       .then((response) => {
+        console.log(response)
         dispatch({ type: ActionTypes.FETCH_REQUESTS, payload: response.data });
       })
       .catch((error) => {
@@ -227,15 +229,86 @@ export function voteRequest(id, fields) {
     }
 }
 
+export function editDebateStatus(id, fields) {
+    return (dispatch) => {
+      console.log("hereee")
+      axios.put(`${ROOT_URL}/editDebateStatus/${id}`, fields).then((response) => {
+        axios.get(`${ROOT_URL}/userDebates`, fields)
+          .then((response) => {
+            dispatch({ type: ActionTypes.USERS_REQUESTED_DEBATES, payload: response.data});
+          })
+          .catch((error) => {
+            dispatch(`failed to create post: ${error}`);
+          });
+      })
+        .catch(((error) => {
 
-export function getUsersRequestedDebates(email) {
+        }));
+    }
+}
+
+
+// export function getUsersRequestedDebates(email) {
+//   return (dispatch) => {
+//     axios.post(`${ROOT_URL}/getUserRequests`, email)
+//       .then((response) => {
+//         dispatch({ type: ActionTypes.USERS_REQUESTED_DEBATES, payload: response.data});
+//       })
+//       .catch((error) => {
+//         dispatch(`failed to fetch posts: ${error}`);
+//       });
+//   };
+// }
+
+// export function createDebate(){
+//   var fields = {
+//   	requestID: "5ef8e027f8d0cc095f34a01c",
+//   	person1ID: "5ef8d80f482b4a05aea9acc0",
+//   	person2ID: "5ef8df7b482b4a05aea9acc1"
+//   }
+//   return (dispatch) => {
+//     axios.post(`${ROOT_URL}/debates`, fields )
+//       .then((response) => {
+//         console.log(response);
+//       })
+//       .catch((error) => {
+//         dispatch(`failed to create post: ${error}`);
+//       });
+//   };
+// }
+
+export function getAllDebates(){
   return (dispatch) => {
-    axios.post(`${ROOT_URL}/getUserRequests`, email)
+    axios.get(`${ROOT_URL}/debates`)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        dispatch(`failed to create post: ${error}`);
+      });
+  };
+}
+
+export function getPendingDebatesForUser(email){
+  return (dispatch) => {
+    axios.get(`${ROOT_URL}/userDebates`,email)
       .then((response) => {
         dispatch({ type: ActionTypes.USERS_REQUESTED_DEBATES, payload: response.data});
       })
       .catch((error) => {
-        dispatch(`failed to fetch posts: ${error}`);
+        dispatch(`failed to create post: ${error}`);
+      });
+  };
+}
+
+export function getRejectedDebatesForUser(email){
+  return (dispatch) => {
+    axios.get(`${ROOT_URL}/userRejectedDebates`,email)
+      .then((response) => {
+        dispatch({ type: ActionTypes.USERS_REJECTED_DEBATES, payload: response.data});
+      })
+      .catch((error) => {
+        dispatch(`failed to create post: ${error}`);
       });
   };
 }

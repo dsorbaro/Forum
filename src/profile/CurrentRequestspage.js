@@ -13,8 +13,7 @@ class CurrentRequestspage extends Component {
      return (
 
        <div>
-        <RequestedDebatesForUser
-        />
+        <RequestedDebatesForUser />
        </div>
 
 

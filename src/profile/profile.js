@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { getUserFromEmail, getUsersRequestedDebates } from '../actions';
+import { getUserFromEmail } from '../actions';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';import "./profile.css"
 import RequestedDebatesForUser from "./requestedDebatesForUser"
@@ -42,24 +42,6 @@ class ProfilePage extends Component {
    render() {
      if(this.props.fields == null){
        return (<p> Loading</p>)
-     }
-
-     var status = null;
-     if(this.props.fields.status === "PENDING"){
-       status = <p> Status: You are pending approval to be a debator </p>
-     }
-     else if (this.props.fields.status === "APPROVED"){
-       status = (
-         <div>
-         <p> Status: You are an approved debator </p>
-         <RequestedDebatesForUser />
-         </div>
-       )
-     }
-     else if (this.props.fields.status === "REJECTED"){
-       status = (
-         <p> Status: You are not a Public Figure</p>
-       )
      }
 
    var profileOption = null;
@@ -125,4 +107,4 @@ class ProfilePage extends Component {
    return { fields: state.auth.fields, email:state.auth.email };
  }
 
- export default withRouter(connect(mapStateToProps, { getUserFromEmail, getUsersRequestedDebates })(ProfilePage));
+ export default withRouter(connect(mapStateToProps, { getUserFromEmail })(ProfilePage));

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { getUsersRequestedDebates } from '../actions';
+import { getPendingDebatesForUser,editDebateStatus } from '../actions';
 import { connect } from 'react-redux';
 import "./profile.css"
 import newsprofileicon from "./newsprofileicon.png"
@@ -16,15 +16,31 @@ class RequestedDebatesForUser extends Component {
 
     componentDidMount() {
       if(this.props.email!=null){
-        this.props.getUsersRequestedDebates({email: this.props.email})
+        this.props.getPendingDebatesForUser({email: this.props.email})
       }
     }
 
+    approve = (item) => {
+       console.log(item);
+        const fields = {
+          email: this.props.email,
+          status: "ACCEPTED"
+        }
+         this.props.editDebateStatus(item._id, fields)
+    }
+
+    reject = (item) => {
+      const fields = {
+        email: this.props.email,
+        status: "REJECTED"
+      }
+       this.props.editDebateStatus(item._id, fields)
+    }
    render() {
   //   console.log(this.props.requestedDebatesForUser)
      var debateRequests = this.props.requestedDebatesForUser == null ? <p> No one wants to debate you :( </p> : (
        Object.keys(this.props.requestedDebatesForUser).map((item)=> {
-       //  console.log(this.props.allRequests[item])
+         console.log(this.props.requestedDebatesForUser[item])
          return (
           <div class= "asinglerequest">
           <div class ="borderline">
@@ -32,18 +48,20 @@ class RequestedDebatesForUser extends Component {
           <div>
           <div class = "iconrow">
             <img class = "personprofileicon" src={personprofileicon} />
-            <p class = "currentrequestspf">{this.props.requestedDebatesForUser[item].person1} </p>
+            <p class = "currentrequestspf">{this.props.requestedDebatesForUser[item].requestID.person1ID.firstName} </p>
           </div>
               <div class = "iconrow">
               <img class = "newsprofileicon" src={newsprofileicon} />
-            <p class = "currentrequeststopic">{this.props.requestedDebatesForUser[item].topic} </p>
+            <p class = "currentrequeststopic">{this.props.requestedDebatesForUser[item].requestID.topic} </p>
             </div>
 
             <div class = "iconrow">
                 <img class = "personprofileicontwo" src={personprofileicon} />
-                <p class = "currentrequestspf"> {this.props.requestedDebatesForUser[item].person2} </p>
+                <p class = "currentrequestspf"> {this.props.requestedDebatesForUser[item].requestID.person1ID.firstName} </p>
             </div>
-            <p class = "currentrequestsnumber"> Number of Requests: {this.props.requestedDebatesForUser[item].numRequests} </p>
+            <p class = "currentrequestsnumber"> Number of Requests: {this.props.requestedDebatesForUser[item].requestID.numRequests} </p>
+            <button style={{backgroundColor: 'blue', marginBottom: '10px'}} onClick={() => {this.approve(this.props.requestedDebatesForUser[item])}}> approve </button>
+            <button style={{backgroundColor: 'blue'}} onClick={() => {this.reject(this.props.requestedDebatesForUser[item])}}> reject </button>
             <div class ="borderline">
             </div>
           </div>
@@ -65,4 +83,4 @@ class RequestedDebatesForUser extends Component {
    return { email:state.auth.email, requestedDebatesForUser: state.auth.requestedDebatesForUser  };
  }
 
- export default withRouter(connect(mapStateToProps, { getUsersRequestedDebates })(RequestedDebatesForUser));
+ export default withRouter(connect(mapStateToProps, { getPendingDebatesForUser, editDebateStatus })(RequestedDebatesForUser));
