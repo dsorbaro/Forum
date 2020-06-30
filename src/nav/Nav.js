@@ -11,8 +11,8 @@ import "../App.css"
 
 
 const Nav = (props) => {  var adminLink = props.admin ? (
-    <NavLink to="/approveDebators" style={{marginTop: '30px'}}>
-      <button class = "signupbutton"> Approve Debators</button>
+    <NavLink to="/approveDebators">
+      <button class = "approveDebatorsbutton">Approve Debators</button>
     </NavLink>
   ) : null;
   var loggedIn = props.authenticated ? (

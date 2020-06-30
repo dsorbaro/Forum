@@ -142,6 +142,21 @@
 
 }
 
+.approveDebatorsbutton{
+  position: absolute;
+  font-weight: bold;
+    font-family: Noto Sans;
+  background-color: white;
+font-size: 15px;
+  border: 3px solid #3c065f;
+  width: 70px;
+  height: 40px;
+  width: 150px;
+  left: 940px;
+  top: 41px;
+  color: #3c065f;
+}
+
 .signupbuttonmain {
   background-color: #3c065f;
   font-family: Noto Sans;
