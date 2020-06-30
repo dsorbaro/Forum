@@ -16,9 +16,9 @@ import NewsTicker from "./newsticker";
 import emailjs from 'emailjs-com';
 import SubmitRequestbutton from "./submitrequestbutton";
 import OneTrendingRequest from './oneTrendingRequest'
-import { fetchRequests, createRequest, fetchPopularRequests } from './actions';
+import { fetchRequests, createRequest, fetchPopularRequests, getAllCompletedDebates } from './actions';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 const axios = require('axios');
 
 
@@ -78,6 +78,7 @@ class Main extends Component {
          this.setState({articles: fakeData})
          this.props.fetchRequests();
          this.props.fetchPopularRequests();
+         this.props.getAllCompletedDebates()
   }
 
 
@@ -85,8 +86,8 @@ class Main extends Component {
 
 
   changePerson1 = (item) => {
-    console.log(item);
-    console.log("I am item ^")
+    // console.log(item);
+    // console.log("I am item ^")
     this.setState({person1: item.name, person1Email: item.email, person1ID: item.id})
   }
 
@@ -114,7 +115,7 @@ class Main extends Component {
       person2ID: this.state.person2ID,
       person1ID: this.state.person1ID,
     }
-    console.log(content);
+  //  console.log(content);
 
     // console.log(content);
     // console.log("^ content above")
@@ -146,9 +147,22 @@ class Main extends Component {
 
     var requestColums = this.props.popularRequests == null ? <p> no requests </p> : (
       Object.keys(this.props.popularRequests).map((item)=> {
-      //  console.log(this.props.popularRequests[item])
         return (
           <OneTrendingRequest info={this.props.popularRequests[item]}/>
+        )
+      })
+    )
+
+    var recentDebates = this.props.debates == null ? <p> no debates </p> : (
+      Object.keys(this.props.debates).map((item)=> {
+        console.log(this.props.debates[item])
+        return (
+          <div>
+            <p> Debate title: {this.props.debates[item].requestID.topic}</p>
+            <p> Person1: {this.props.debates[item].requestID.person1}</p>
+            <p> person2: {this.props.debates[item].requestID.person2}</p>
+            <button> <Link to={`/debate/${this.props.debates[item]._id}`}>Click to See Debate</Link> </button>
+          </div>
         )
       })
     )
@@ -235,6 +249,7 @@ class Main extends Component {
             <div class ="postedconvologoline"></div>
             <div class ="postedconvologolineTwo"></div>
             </div>
+            {recentDebates}
           </div>
         </div>
         <div class ="bottomborder"></div>
@@ -244,7 +259,7 @@ class Main extends Component {
 }
 
 function mapStateToProps(state) {
-  return { allRequests: state.requests.all, email: state.auth.email, popularRequests:state.requests.mostPopular };
+  return { allRequests: state.requests.all, email: state.auth.email, popularRequests:state.requests.mostPopular, debates: state.debate.all };
 }
 
-export default withRouter(connect(mapStateToProps, { fetchRequests, createRequest, fetchPopularRequests })(Main));
+export default withRouter(connect(mapStateToProps, { getAllCompletedDebates, fetchRequests, createRequest, fetchPopularRequests })(Main));

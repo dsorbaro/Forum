@@ -22,7 +22,7 @@ class RequestedDebatesForUser extends Component {
     }
 
     approve = (item) => {
-       console.log(item);
+      // console.log(item);
         const fields = {
           email: this.props.email,
           status: "ACCEPTED"
@@ -38,10 +38,10 @@ class RequestedDebatesForUser extends Component {
        this.props.editDebateStatus(item._id, fields)
     }
    render() {
-     console.log(this.props.requestedDebatesForUser)
+  //   console.log(this.props.requestedDebatesForUser)
      var debateRequests = this.props.requestedDebatesForUser == null ? <p> No one wants to debate you :( </p> : (
        Object.keys(this.props.requestedDebatesForUser).map((item)=> {
-         console.log(this.props.requestedDebatesForUser[item])
+         //console.log(this.props.requestedDebatesForUser[item])
          return (
 
           <div class= "asinglerequest">

@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import "./profile.css"
 import newsprofileicon from "./newsprofileicon.png"
 import personprofileicon from "./personprofileicon.png"
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import { getCompletedDebatesForUser } from '../actions';
 import { connect } from 'react-redux';
 
@@ -22,7 +22,7 @@ class PastDebatespage extends Component {
    render() {
      var debateRequests = this.props.completedDebatesForUser == null ? <p class = "nocurrentrequeststext">No current debate requests</p> : (
        Object.keys(this.props.completedDebatesForUser).map((item)=> {
-         console.log(this.props.completedDebatesForUser[item])
+      //   console.log(this.props.completedDebatesForUser[item])
          return (
           <div class= "asinglerequest">
           <div class ="borderline">
@@ -42,6 +42,7 @@ class PastDebatespage extends Component {
                 <p class = "currentrequestspf"> {this.props.completedDebatesForUser[item].requestID.person2ID.firstName} </p>
             </div>
             <p class = "currentrequestsnumber"> Number of Requests: {this.props.completedDebatesForUser[item].requestID.numRequests} </p>
+            <button style={{backgroundColor: 'black'}}> <Link to={`/debate/${this.props.completedDebatesForUser[item]._id}`}>View Debate</Link> </button>
             <div class ="borderline">
             </div>
           </div>

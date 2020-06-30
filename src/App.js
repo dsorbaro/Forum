@@ -8,8 +8,8 @@ import ContactPage from "./contact";
 import SignInPage from "./SignInPage";
 import SignUpPage from "./SignUpPage";
 import ApproveDebators from "./ApproveDebatorsPage"
-import MorganTest from './debates/morganTest'
 import CreateDebate from './debates/createDebate'
+import FinalDebate from './debates/finalDebate'
 
 import Faq from './FAQ/faq'
 
@@ -28,9 +28,9 @@ class App extends Component {
 
             <Route exact path="/about" component={AboutPage} />
             <Route exact path="/profile" component={ProfilePage} />
-            <Route exact path="/morganTestAndChill" component={MorganTest} />
             <Route exact path="/faq" component={Faq} />
-            <Route exact path="/createDebate/:id" component={CreateDebate} />
+            <Route exact path="/createDebate/:id" component={CreateDebate} />\
+            <Route exact path="/debate/:id" component={FinalDebate} />
             <Route exact path="/contact" component={ContactPage} />
             <Route exact path="/signIn" component={SignInPage} />
             <Route exact path="/signUp" component={SignUpPage} />

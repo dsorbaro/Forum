@@ -1,7 +1,7 @@
 import { ActionTypes } from '../actions/index';
 
 const initialState = {
-  oneDebate: null,
+  oneDebate: null, all: null
 };
 
 export default function (state = initialState, action) {
@@ -11,6 +11,11 @@ export default function (state = initialState, action) {
         ...state,
         oneDebate: action.payload,
       };
+      case ActionTypes.ALL_DEBATES:
+        return {
+          ...state,
+          all: action.payload,
+        };
     default:
       return state;
   }

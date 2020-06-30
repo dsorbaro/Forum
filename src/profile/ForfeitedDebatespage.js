@@ -22,7 +22,7 @@ class ForfitedDebatespage extends Component {
    render() {
      var debateRequests = this.props.rejectedDebatesForUser == null ? <p class = "nocurrentrequeststext">No current debate requests</p> : (
        Object.keys(this.props.rejectedDebatesForUser).map((item)=> {
-         console.log(this.props.rejectedDebatesForUser[item])
+        // console.log(this.props.rejectedDebatesForUser[item])
          return (
           <div class= "asinglerequest">
           <div class ="borderline">

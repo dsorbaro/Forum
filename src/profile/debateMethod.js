@@ -12,10 +12,10 @@ export function thisUsersTurn(currentDebate, email) {
   else {
     nextDebate = 4;
   }
-  console.log(nextDebate)
-  console.log("figuring out next debate^ ")
+  // console.log(nextDebate)
+  // console.log("figuring out next debate^ ")
   var thisUsersTurn = false;
-  console.log(email);
+//  console.log(email);
   if (email === currentDebate.personAcceptedFirst && nextDebate % 2 ===1){
     thisUsersTurn = true
   }

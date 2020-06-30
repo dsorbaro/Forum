@@ -16,11 +16,12 @@ export const ActionTypes = {
   USERS_ACTIVE_DEBATES: 'USERS_ACTIVE_DEBATES',
   ONE_DEBATE: 'ONE_DEBATE',
   USERS_COMPLETED_DEBATES: 'USERS_COMPLETED_DEBATES',
+  ALL_DEBATES: 'ALL_DEBATES',
 };
 
- const ROOT_URL = 'https://forum-debate.herokuapp.com/api';
+const ROOT_URL = 'https://forum-debate.herokuapp.com/api';
 
-//const ROOT_URL = 'http://localhost:9090/api';
+// const ROOT_URL = 'http://localhost:9090/api';
 
 const ERROR_TIMEOUT = 5000;
 
@@ -57,7 +58,7 @@ export function fetchRequests() {
   return (dispatch) => {
     axios.get(`${ROOT_URL}/requests`)
       .then((response) => {
-        console.log(response)
+      //  console.log(response)
         dispatch({ type: ActionTypes.FETCH_REQUESTS, payload: response.data });
       })
       .catch((error) => {
@@ -234,7 +235,7 @@ export function voteRequest(id, fields) {
 
 export function editDebateStatus(id, fields) {
     return (dispatch) => {
-      console.log("hereee")
+    //  console.log("hereee")
       axios.put(`${ROOT_URL}/editDebateStatus/${id}`, fields).then((response) => {
         axios.post(`${ROOT_URL}/userDebates`, fields)
           .then((response) => {
@@ -252,7 +253,7 @@ export function editDebateStatus(id, fields) {
             });
             axios.post(`${ROOT_URL}/userActiveDebates`,fields)
               .then((response) => {
-                console.log(response);
+            //     console.log(response);
                 dispatch({ type: ActionTypes.USERS_ACTIVE_DEBATES, payload: response.data});
               })
               .catch((error) => {
@@ -295,11 +296,12 @@ export function editDebateStatus(id, fields) {
 //   };
 // }
 
-export function getAllDebates(){
+export function getAllCompletedDebates(){
   return (dispatch) => {
     axios.get(`${ROOT_URL}/debates`)
       .then((response) => {
         console.log(response);
+        dispatch({ type: ActionTypes.ALL_DEBATES, payload: response.data});
       })
       .catch((error) => {
         dispatch(`failed to create post: ${error}`);
@@ -308,12 +310,12 @@ export function getAllDebates(){
 }
 
 export function getPendingDebatesForUser(email){
-  console.log(email)
+//  console.log(email)
   return (dispatch) => {
     axios.post(`${ROOT_URL}/userDebates`,email)
       .then((response) => {
-        console.log(response);
-        console.log("my pendng debates ^")
+        // console.log(response);
+        // console.log("my pendng debates ^")
         dispatch({ type: ActionTypes.USERS_REQUESTED_DEBATES, payload: response.data});
       })
       .catch((error) => {
@@ -349,8 +351,8 @@ export function getActiveDebatesForUser(email){
 
 
 export function getOneDebate(id){
-  console.log("In axios");
-  console.log(id)
+  // console.log("In axios");
+  // console.log(id)
   return (dispatch) => {
     axios.get(`${ROOT_URL}/oneDebate/${id}`)
       .then((response) => {
@@ -366,8 +368,8 @@ export function getOneDebate(id){
 export function goToNextDebate(id, fields, history) {
     return (dispatch) => {
       axios.put(`${ROOT_URL}/oneDebate/${id}`, fields).then((response) => {
-          console.log("axiosed in next debate!")
-          console.log(response)
+          // console.log("axiosed in next debate!")
+          // console.log(response)
           dispatch({ type: ActionTypes.ONE_DEBATE, payload: response.data });
           history.push("/profile");
       })
