@@ -165,6 +165,7 @@ width: 60%;
 .socrates {
   position: relative;
 margin-left: 43%;
-top: 1750px;
+top: 1800px;
 height: 900px;
+z-index: -1;
 }
