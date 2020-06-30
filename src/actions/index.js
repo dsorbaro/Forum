@@ -292,6 +292,7 @@ export function getAllDebates(){
 }
 
 export function getPendingDebatesForUser(email){
+  console.log(email)
   return (dispatch) => {
     axios.post(`${ROOT_URL}/userDebates`,email)
       .then((response) => {

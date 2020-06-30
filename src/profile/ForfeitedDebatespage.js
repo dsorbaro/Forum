@@ -20,7 +20,7 @@ class PastDebatespage extends Component {
       }
     }
    render() {
-     var debateRequests = this.props.rejectedDebatesForUser == null ? <p> No one wants to debate you :( </p> : (
+     var debateRequests = this.props.rejectedDebatesForUser == null ? <p class = "nocurrentrequeststext">No current debate requests</p> : (
        Object.keys(this.props.rejectedDebatesForUser).map((item)=> {
          console.log(this.props.rejectedDebatesForUser[item])
          return (

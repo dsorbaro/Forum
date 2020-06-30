@@ -1,34 +1,87 @@
-.abtbackground{
-  height: 100vh;
-width: 100vw;
-     position: absolute;
-     top: 10%;
-     z-index: -1;
 
-}
+.abttallback {
+  /* The image used */
+  background-image: url("abttallback.png");
 
-.letterfromthefounder {
-  margin-top: 30%;
+  /* Set a specific height */
+  min-height: 400px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+
+  margin-top: 10%;
 }
 
 .howitworks {
+  position: absolute;
   display: flex;
   flex-direction: column;
 }
 
 .howitworkstext{
+  position: relative;
   font-family: Noto Sans;
   font-weight: 600;
-  font-size: 200%;
+  font-size: 500%;
   color: #3c065f;
   margin-left: 20%;
-  margin-top: -5%;
+  margin-top: -2%;
+  z-index: -1;
+}
+
+
+.twotypesofuserrow{
+  padding-top: 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.typeofusercolumn{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.publicfiguretitle {
+padding-right: 20%;
+width: 100%;
+margin-left:40%;
+}
+
+
+.generalusertitle {
+  width: 100%;
+  margin-top: -1%;
+  padding-left: 20%;
+  margin-left: 15%;
+}
+
+.generaluserdescripton{
+  position: relative;
+  margin-right: 10%;
+    line-height: 2;
+    margin-top: 8%;
+width: 60%;
+}
+
+.publicfiigurerdescripton{
+  position: relative;
+  margin-right: 10%;
+    line-height: 2;
+    margin-top: 8%;
+width: 60%;
+  margin-left: 22%;
 }
 
 .twotypesofuser {
   font-family: Noto Sans;
   font-weight: 600;
-  font-size: 200%;
+  font-size: 300%;
   color: #3c065f;
   margin: auto;
   margin-top: 2%;
@@ -36,42 +89,83 @@ width: 100vw;
 .howitworksgraphic {
   margin: auto;
   padding-top: 2%;
+  padding-bottom: 60px;
 }
 
  .maintext {
    color: black;
    font-weight: bold;
-   margin-left: 7%;
+   position: relative;
    font-family: Noto Sans;
+   margin-top: 10%;
 }
 
 .Everyoneisveryangry {
   margin-left: 8%;
-    margin-right: 10%;
+    margin-right: 12%;
   margin-bottom: 3%;
   color: #3c065f;
+     margin-top: 2%;
+
 }
 
+.anotefromthefounder {
+  position: relative;
+  margin-left: 12%;
+    margin-right: 10%;
+  color: #3c065f;
+     margin-top: 5%;
+}
+
+.headingline {
+  position: relative;
+  border-top: 3px solid #3c065f;
+  width: 500px;
+  margin-left: 8%;
+}
 
 .theageof {
-  margin-right: 44%;
+  margin-right: 46%;
+  margin-top: -11.5%;
 }
 
 .ormaybe {
-    margin-right: 43%;
+    margin-right: 45%;
 }
 
 .callitspin {
-  margin-right: 47%;
+  margin-right: 51%;
 }
 
 .wasfounded {
-  margin-right: 56%;
+  margin-right: 60%;
 }
 
 .quote {
   margin-left: 1%;
-  margin-right: 10%;
+  margin-right: 20%;
     color: #3c065f;
-    margin-top: 1%;
+    margin-top: 2%;
+    font-weight:bolder;
+    width: 50%;
+}
+
+.justworkplease{
+  position: absolute;
+
+  top: 700px;
+}
+
+.justworkpleasetwo{
+  position: absolute;
+  top: 700px;
+    margin-left: 3%;
+}
+
+.socrates {
+  position: relative;
+margin-left: 43%;
+top: 1800px;
+height: 900px;
+z-index: -1;
 }

@@ -429,3 +429,11 @@ font-weight: 500;
   text-align: center;
   text-decoration: none;
 }
+
+.nocurrentrequeststext {
+  color: #3c065f;
+  font-size: 100%;
+  font-family: noto sans;
+  font-weight: bold;
+  margin-top: 5%;
+}
