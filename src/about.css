@@ -10,7 +10,9 @@
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  width: 100%;
+
+  margin-top: 10%;
 }
 
 .howitworks {
@@ -54,19 +56,28 @@ margin-left:40%;
 
 .generalusertitle {
   width: 100%;
+  margin-top: -1%;
   padding-left: 20%;
   margin-left: 15%;
 }
 
 .generaluserdescripton{
+  position: relative;
   margin-right: 10%;
-
+    line-height: 2;
+    margin-top: 8%;
+width: 60%;
 }
 
 .publicfiigurerdescripton{
-
-    margin-left: 25%;
+  position: relative;
+  margin-right: 10%;
+    line-height: 2;
+    margin-top: 8%;
+width: 60%;
+  margin-left: 22%;
 }
+
 .twotypesofuser {
   font-family: Noto Sans;
   font-weight: 600;
@@ -84,37 +95,75 @@ margin-left:40%;
  .maintext {
    color: black;
    font-weight: bold;
-   margin-left: 7%;
+   position: relative;
    font-family: Noto Sans;
+   margin-top: 10%;
 }
 
 .Everyoneisveryangry {
   margin-left: 8%;
-    margin-right: 10%;
+    margin-right: 12%;
   margin-bottom: 3%;
   color: #3c065f;
+     margin-top: 2%;
+
 }
 
+.anotefromthefounder {
+  position: relative;
+  margin-left: 12%;
+    margin-right: 10%;
+  color: #3c065f;
+     margin-top: 5%;
+}
+
+.headingline {
+  position: relative;
+  border-top: 3px solid #3c065f;
+  width: 500px;
+  margin-left: 8%;
+}
 
 .theageof {
-  margin-right: 44%;
+  margin-right: 46%;
+  margin-top: -10%;
 }
 
 .ormaybe {
-    margin-right: 43%;
+    margin-right: 45%;
 }
 
 .callitspin {
-  margin-right: 47%;
+  margin-right: 51%;
 }
 
 .wasfounded {
-  margin-right: 56%;
+  margin-right: 60%;
 }
 
 .quote {
   margin-left: 1%;
-  margin-right: 10%;
+  margin-right: 20%;
     color: #3c065f;
     margin-top: 1%;
+    width: 50%;
+}
+
+.justworkplease{
+  position: absolute;
+
+  top: 700px;
+}
+
+.justworkpleasetwo{
+  position: absolute;
+  top: 700px;
+    margin-left: 3%;
+}
+
+.socrates {
+  position: relative;
+margin-left: 43%;
+top: 1750px;
+height: 900px;
 }

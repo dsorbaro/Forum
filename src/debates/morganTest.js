@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import { NavLink, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { getAllDebates, fetchRequests, getPendingDebatesForUser, editDebateStatus } from '../actions';
+import { getAllDebates, fetchRequests, getActiveDebatesForUser, editDebateStatus } from '../actions';
 
 class MorganTest extends Component {
   constructor(props) {
@@ -16,12 +16,13 @@ class MorganTest extends Component {
    //  this.props.getPendingDebatesForUser({email: "msorbaro@gmail.com"});
      const fakeFields = {
        email: "msorbaro@gmail.com",
-       status: "ACCEPTED"
      }
-      this.props.editDebateStatus('5efa23dcdf4405c92269a302', fakeFields)
+        // this.props.editDebateStatus('5efa23dcdf4405c92269a302', fakeFields)
+      this.props.getActiveDebatesForUser(fakeFields)
     }
 
    render() {
+     console.log(this.props.activeDebatesForUser)
      return (
       <p> Morgan Page </p>
      );
@@ -29,7 +30,7 @@ class MorganTest extends Component {
  }
 
  function mapStateToProps(state) {
-   return {admin: state.auth.admin, pendingDebators: state.pendingDebators.all };
+   return {admin: state.auth.admin, activeDebatesForUser: state.auth.activeDebatesForUser };
  }
 
- export default withRouter(connect(mapStateToProps, { getAllDebates, fetchRequests, getPendingDebatesForUser, editDebateStatus })(MorganTest));
+ export default withRouter(connect(mapStateToProps, { getAllDebates, fetchRequests, getActiveDebatesForUser, editDebateStatus })(MorganTest));

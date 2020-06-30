@@ -2,7 +2,9 @@
 import React, { Component } from "react";
 import "./about.css"
 import abttallback from "./abttallback.png";
-import howitworksgraphic from "./howitworksgraphic.png"
+import howitworksgraphic from "./howitworksgraphic.png";
+import "./about.scss";
+import socrates from "./socrates.png"
 class AboutPage extends Component {
   constructor(props) {
     super(props);
@@ -17,22 +19,51 @@ class AboutPage extends Component {
 <div class = "howitworks">
 <div class = "howitworkstext">How it Works:</div>
 <img class = "howitworksgraphic" src = {howitworksgraphic} />
-<div class="abttallback"></div>
 <div class = "twotypesofuser">Two Types of User</div>
 
 
 
 <div class = "twotypesofuserrow">
       <div class ="typeofusercolumn">
-          <h1 class = "publicfiguretitle">Public Figures</h1>
+
+
+<div class = "justworkpleasetwo">
+    <div class="container">
+  <a href="https://twitter.com/Dave_Conner" class="btn btn-1">
+    <svg>
+      <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+    </svg>
+   Public Figures
+  </a>
+  </div>
+</div>
+
+
           <p class = "publicfiigurerdescripton">Reportr defines Public Figures as folks who are leaders in their community in any capacity. Reportr gives these Public Figures the opportunity to advocate for the people in their community, discuss topics with Public Figures who have different views on a given headline, and clarify their own positions on issues. Public Figures receive requests from other users to have conversations with other requested Public Figures - they can either accept or forfeit those requests. Accepted requests launch a conversation between these two figures, which is then posted on the front page of the site.</p>
       </div>
 
       <div class ="typeofusercolumn">
-          <h1 class = "generalusertitle">General Users</h1>
+
+<div class = "justworkplease">
+    <div class="container">
+        <a href="https://twitter.com/Dave_Conner" class="btn btn-1">
+          <svg>
+            <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+          </svg>
+         General Users
+        </a>
+    </div>
+</div>
+
+
           <p class = "generaluserdescripton">General users on Reportr have the power to hold Public Figures accountable by facilitating conversations. By casting requests, general users force Public Figures to the table and force a conversation about a given trending news headline. By submitting these requests, general users not only facilitate conversation, but they can expose which Public Figures are afraid to publicly defend their ideas. If a Public Figure forfeits the conversation you requested, that’s pretty telling. General users also can vote on segments of posted conversations, giving you the ability to directly interact with whatever is being said.</p>
       </div>
 </div>
+
+<div class="abttallback"></div>
+
+<h1 class ="anotefromthefounder">A note from the Founder</h1>
+<div class = "headingline"></div>
 
          <h2 class ="Everyoneisveryangry">Everyone is very angry.</h2>
   <div class ="maintext">
@@ -56,6 +87,11 @@ We need to force those channels of communication back open. We need open dialogu
 </p>
 </div>
 
+
+</div>
+
+<div>
+<img class = "socrates" src = {socrates} />
 </div>
 </div>
 

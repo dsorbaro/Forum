@@ -1,0 +1,71 @@
+
+
+
+.container {
+    margin-left: 15%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+    width: 500px;
+}
+
+
+.btn {
+  color: #3c065f;
+  font-weight: bold;
+  cursor: pointer;
+  // display: block;
+  font-size:30px;
+  font-style: noto sans;
+  font-weight: bold;
+  line-height: 45px;
+  margin: 0 0 2em;
+  width: 600px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+
+
+
+
+  @media(min-width: 600px) {
+
+    margin: 0 1em 2em;
+  }
+
+  &:hover { text-decoration: none; }
+
+}
+
+
+
+  svg {
+      height: 450px;
+    left: 0;
+    position: absolute;
+
+    top: 0;
+    width: 100%;
+  }
+
+  rect {
+    fill: none;
+    stroke: #3c065f;
+    stroke-width: 3;
+    stroke-dasharray: 422, 0;
+    transition: all 0.35s linear;
+  }
+
+.btn-1:hover {
+  background: white;
+
+  rect {
+    stroke-width: 10;
+    stroke-dasharray: 15, 310;
+    stroke-dashoffset: 48;
+    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+}

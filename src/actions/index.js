@@ -13,6 +13,7 @@ export const ActionTypes = {
   FETCH_POPULAR_REQUESTS: 'FETCH_POPULAR_REQUESTS',
   USERS_REQUESTED_DEBATES: 'USERS_REQUESTED_DEBATES',
   USERS_REJECTED_DEBATES: 'USERS_REJECTED_DEBATES',
+  USERS_ACTIVE_DEBATES: 'USERS_ACTIVE_DEBATES',
 };
 
 const ROOT_URL = 'https://forum-debate.herokuapp.com/api';
@@ -233,7 +234,7 @@ export function editDebateStatus(id, fields) {
     return (dispatch) => {
       console.log("hereee")
       axios.put(`${ROOT_URL}/editDebateStatus/${id}`, fields).then((response) => {
-        axios.get(`${ROOT_URL}/userDebates`, fields)
+        axios.post(`${ROOT_URL}/userDebates`, fields)
           .then((response) => {
             dispatch({ type: ActionTypes.USERS_REQUESTED_DEBATES, payload: response.data});
           })
@@ -292,9 +293,10 @@ export function getAllDebates(){
 export function getPendingDebatesForUser(email){
   console.log(email)
   return (dispatch) => {
-    axios.get(`${ROOT_URL}/userDebates`, email)
+    axios.post(`${ROOT_URL}/userDebates`,email)
       .then((response) => {
-        console.log(response)
+        console.log(response);
+        console.log("my pendng debates ^")
         dispatch({ type: ActionTypes.USERS_REQUESTED_DEBATES, payload: response.data});
       })
       .catch((error) => {
@@ -305,9 +307,22 @@ export function getPendingDebatesForUser(email){
 
 export function getRejectedDebatesForUser(email){
   return (dispatch) => {
-    axios.get(`${ROOT_URL}/userRejectedDebates`,email)
+    axios.post(`${ROOT_URL}/userRejectedDebates`,email)
       .then((response) => {
         dispatch({ type: ActionTypes.USERS_REJECTED_DEBATES, payload: response.data});
+      })
+      .catch((error) => {
+        dispatch(`failed to create post: ${error}`);
+      });
+  };
+}
+
+export function getActiveDebatesForUser(email){
+  return (dispatch) => {
+    axios.post(`${ROOT_URL}/userActiveDebates`,email)
+      .then((response) => {
+        console.log(response);
+        dispatch({ type: ActionTypes.USERS_ACTIVE_DEBATES, payload: response.data});
       })
       .catch((error) => {
         dispatch(`failed to create post: ${error}`);
