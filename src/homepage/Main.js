@@ -1,22 +1,22 @@
 import React, { Component } from "react";
-import logo from "./forumCircle.png";
+import logo from "../images/forumCircle.png";
 import buttonicon from "./requestbuttonicon.png";
 import "./main.css";
-import "./App.css";
+import "../App.css";
 import "./submitrequestbutton.css"
-import bigColumn from "./bigColumn.png";
-import mediumColumn from "./mediumColumn.png"
-import smallColumn from "./smallColumn.png"
-import intrViewLogo from "./IntrViewlogo.png"
-import aboutbground from "./aboutbground.jpg"
+import bigColumn from "../images/bigColumn.png";
+import mediumColumn from "../images/mediumColumn.png"
+import smallColumn from "../images/smallColumn.png"
+import intrViewLogo from "../images/IntrViewlogo.png"
+import aboutbground from "../images/aboutbground.jpg"
 import RequestButtons from "./requestButtons";
-import TrendingNewsTopicsPage from "./trendingNews/trendingNewsTopics";
+import TrendingNewsTopicsPage from "../trendingNews/trendingNewsTopics.js";
 import RequestButtonTopics from "./Requestbuttontopics";
-import NewsTicker from "./newsticker";
+import NewsTicker from "../newsticker/newsticker";
 import emailjs from 'emailjs-com';
 import SubmitRequestbutton from "./submitrequestbutton";
 import OneTrendingRequest from './oneTrendingRequest'
-import { fetchRequests, createRequest, fetchPopularRequests, getAllCompletedDebates } from './actions';
+import { fetchRequests, createRequest, fetchPopularRequests, getAllCompletedDebates } from '../actions';
 import { connect } from 'react-redux';
 import { withRouter, Link } from 'react-router-dom';
 const axios = require('axios');

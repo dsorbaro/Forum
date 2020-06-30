@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import "./main.css";
-import "./App.css";
+import "../App.css";
 import "./trendingcolumns.css"
 import "./submitrequestbutton.css"
-import { voteRequest } from './actions';
+import { voteRequest } from '../actions';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import mediumColumn from "./mediumColumn.png"
-import profileicontrend from "./profileicontrend.png"
-import newstrendicon from "./newstrendicon.png"
-import alreadyclicked from "./alreadyclicked.png"
+import mediumColumn from "../images/mediumColumn.png"
+import profileicontrend from "../images/profileicontrend.png"
+import newstrendicon from "../images/newstrendicon.png"
+import alreadyclicked from "../images/alreadyclicked.png";
 
 
 class OneTrendingRequest extends Component {
@@ -48,7 +48,7 @@ class OneTrendingRequest extends Component {
       vote= <p class ="youalreadyrequested"> You need to log in to vote </p>
     }
     else if(requestedAlready){
-      vote= <img src={require("./alreadyclicked.png")} class = "requestbuttoniconclicked"/>
+      vote= <img src={require("../images/alreadyclicked.png")} class = "requestbuttoniconclicked"/>
     }
     else {
       vote= <img src={require("./requestbuttonicon.png")} class = "requestbuttonicon" onClick={this.vote}/>

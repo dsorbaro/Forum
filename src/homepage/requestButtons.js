@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./PublicFigureRequestSearchbox.css";
-import { getApprovedDebators } from './actions';
+import { getApprovedDebators } from '../actions';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 

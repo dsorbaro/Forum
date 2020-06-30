@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import "./TopicRequestSearchbox.css";
+import "../homepage/TopicRequestSearchbox.css";
 import { NavLink, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { getPendingDebators,changeUserStatus } from './actions';
+import { getPendingDebators,changeUserStatus } from '../actions';
 import OnePendingDebator from './onePendingDebator';
 
 class ApproveDebators extends Component {

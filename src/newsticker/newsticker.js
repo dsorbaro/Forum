@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./NewsTicker.scss";
-import { fetchRequests } from './actions';
+import { fetchRequests } from '../actions';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 

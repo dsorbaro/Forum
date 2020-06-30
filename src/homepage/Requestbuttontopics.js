@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./TopicRequestSearchbox.css";
-import TrendingNewsTopicsPage from "./trendingNews/trendingNewsTopics";
+import "./newspapericon.png";
+import TrendingNewsTopicsPage from "../trendingNews/trendingNewsTopics";
 class RequestButtonTopics extends Component {
   constructor(props) {
     super(props);

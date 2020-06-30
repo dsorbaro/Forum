@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import "./main.css";
+import "../homepage/main.css";
 import { connect } from 'react-redux';
 import { withRouter, Link } from 'react-router-dom';
-import { signinUser } from './actions';
+import { signinUser } from '../actions';
 import "./signUp.css";
-import forumCircletwo from "./forumCircletwo.png"
+import forumCircletwo from "../images/forumCircletwo.png"
+import newparthsignup from "./newparthsignup.png"
 
 class SignInPage extends Component {
   constructor(props) {

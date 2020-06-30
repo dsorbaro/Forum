@@ -1,19 +1,19 @@
 import React, { Component } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Main from "./Main";
-import AboutPage from "./about";
+import Main from "./homepage/Main";
+import AboutPage from "./about/about";
 import ProfilePage from "./profile/profile";
-import ContactPage from "./contact";
-import SignInPage from "./SignInPage";
-import SignUpPage from "./SignUpPage";
-import ApproveDebators from "./ApproveDebatorsPage"
+//import ContactPage from "./contact";
+import SignInPage from "./signinsignup/SignInPage";
+import SignUpPage from "./signinsignup/SignUpPage";
+import ApproveDebators from "./approveDebators/ApproveDebatorsPage"
 import CreateDebate from './debates/createDebate'
 import FinalDebate from './debates/finalDebate'
 
 import Faq from './FAQ/faq'
 
-import Nav from "./Nav"
+import Nav from "./nav/Nav"
 
 
 class App extends Component {
@@ -31,7 +31,6 @@ class App extends Component {
             <Route exact path="/faq" component={Faq} />
             <Route exact path="/createDebate/:id" component={CreateDebate} />\
             <Route exact path="/debate/:id" component={FinalDebate} />
-            <Route exact path="/contact" component={ContactPage} />
             <Route exact path="/signIn" component={SignInPage} />
             <Route exact path="/signUp" component={SignUpPage} />
             <Route exact path="/approveDebators" component={ApproveDebators} />

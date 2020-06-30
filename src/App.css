@@ -390,7 +390,7 @@ button span:before, button span:after
 
 .profilenavbar {
   position: relative;
-    background-image: url("navbarprofile.png");
+    background-image: url("./images/navbarprofile.png");
     background-repeat: no-repeat;
     background-size: 32px 35px;
     padding-bottom: 10px;

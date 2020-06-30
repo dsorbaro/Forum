@@ -1,7 +1,7 @@
 
 .abttallback {
   /* The image used */
-  background-image: url("abttallback.png");
+  background-image: url("./../images/abttallback.png");
 
   /* Set a specific height */
   min-height: 400px;

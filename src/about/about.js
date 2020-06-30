@@ -1,10 +1,10 @@
 
 import React, { Component } from "react";
 import "./about.css"
-import abttallback from "./abttallback.png";
-import howitworksgraphic from "./howitworksgraphic.png";
+import abttallback from "./../images/abttallback.png";
+import howitworksgraphic from "./../images/howitworksgraphic.png";
 import "./about.scss";
-import socrates from "./socrates.png"
+import socrates from "./../images/socrates.png"
 class AboutPage extends Component {
   constructor(props) {
     super(props);

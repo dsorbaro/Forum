@@ -2,11 +2,11 @@
 import React from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { signoutUser } from './actions';
+import { signoutUser } from '../actions';
 import FindyourNewsroomSearch from "./FindyourNewsroomSearch";
-import logo from "./forumCircle.png";
-import navbarprofile from "./navbarprofile.png"
-import "./App.css"
+import logo from "../images/forumCircle.png";
+import navbarprofile from "../images/navbarprofile.png"
+import "../App.css"
 
 
 

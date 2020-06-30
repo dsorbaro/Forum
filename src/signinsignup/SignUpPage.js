@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import "./main.css";
-import { signupUser } from './actions';
+import "../homepage/main.css";
+import { signupUser } from '../actions';
 import { connect } from 'react-redux';
 import "./signUp.css";
 import "./signUp.scss";
-import forumCircletwo from "./forumCircletwo.png"
+import forumCircletwo from "../images/forumCircletwo.png"
+import newparthsignup from "./newparthsignup.png"
 
 
 class SignUpPage extends Component {
