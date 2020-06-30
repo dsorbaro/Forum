@@ -14,11 +14,12 @@ export const ActionTypes = {
   USERS_REQUESTED_DEBATES: 'USERS_REQUESTED_DEBATES',
   USERS_REJECTED_DEBATES: 'USERS_REJECTED_DEBATES',
   USERS_ACTIVE_DEBATES: 'USERS_ACTIVE_DEBATES',
+  ONE_DEBATE: 'ONE_DEBATE',
 };
 
-//const ROOT_URL = 'https://forum-debate.herokuapp.com/api';
+const ROOT_URL = 'https://forum-debate.herokuapp.com/api';
 
-const ROOT_URL = 'http://localhost:9090/api';
+//const ROOT_URL = 'http://localhost:9090/api';
 
 const ERROR_TIMEOUT = 5000;
 
@@ -327,4 +328,34 @@ export function getActiveDebatesForUser(email){
         dispatch(`failed to create post: ${error}`);
       });
   };
+}
+
+
+export function getOneDebate(id){
+  console.log("In axios");
+  console.log(id)
+  return (dispatch) => {
+    axios.get(`${ROOT_URL}/oneDebate/${id}`)
+      .then((response) => {
+        dispatch({ type: ActionTypes.ONE_DEBATE, payload: response.data});
+      })
+      .catch((error) => {
+        dispatch(`failed to create post: ${error}`);
+      });
+  };
+}
+
+
+export function goToNextDebate(id, fields, history) {
+    return (dispatch) => {
+      axios.put(`${ROOT_URL}/oneDebate/${id}`, fields).then((response) => {
+          console.log("axiosed in next debate!")
+          console.log(response)
+          dispatch({ type: ActionTypes.ONE_DEBATE, payload: response.data });
+          history.push("/profile");
+      })
+        .catch(((error) => {
+          dispatch(`failed to create post: ${error}`);
+        }));
+    }
 }

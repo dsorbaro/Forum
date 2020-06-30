@@ -4,7 +4,7 @@ import AuthReducer from './authReducer';
 import ErrorReducer from './errorReducer';
 import PendingDebatorsReducer from './pendingDebatorsReducer';
 import ApprovedDebatorsReducer from './approvedDebatorsReducer';
-
+import DebateReducer from './debateReducer';
 
 const rootReducer = combineReducers({
   requests: RequestReducer,
@@ -12,6 +12,7 @@ const rootReducer = combineReducers({
   auth: AuthReducer,
   pendingDebators: PendingDebatorsReducer,
   approvedDebators: ApprovedDebatorsReducer,
+  debate: DebateReducer,
 });
 
 export default rootReducer;
