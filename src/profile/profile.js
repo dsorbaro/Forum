@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { getUserFromEmail, getActiveDebatesForUser,getRejectedDebatesForUser, getPendingDebatesForUser } from '../actions';
+import { getUserFromEmail, getActiveDebatesForUser,getRejectedDebatesForUser, getPendingDebatesForUser,getCompletedDebatesForUser } from '../actions';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';import "./profile.css"
 import RequestedDebatesForUser from "./requestedDebatesForUser"
@@ -20,7 +20,7 @@ class ProfilePage extends Component {
         this.props.getUserFromEmail({email: this.props.email});
         this.props.getActiveDebatesForUser({email: this.props.email})
         this.props.getRejectedDebatesForUser({email: this.props.email})
-  //      this.props.getUsersRequestedDebates({email: this.props.email})
+        this.props.getCompletedDebatesForUser({email: this.props.email})
         this.props.getPendingDebatesForUser({email: this.props.email})
       }
     }
@@ -78,7 +78,7 @@ class ProfilePage extends Component {
 
 
             <div class= "toptextnumbercolumn">
-              <div class ="participatedtoptextnumber">10</div>
+              <div class ="participatedtoptextnumber">{this.props.completedDebatesForUser == null ? "?" : this.props.completedDebatesForUser.length}</div>
               <button onClick={this.pastDebatespage} class = "participatedtoptext">Past Debates</button>
             </div>
 
@@ -121,7 +121,7 @@ class ProfilePage extends Component {
 
 
  function mapStateToProps(state) {
-   return { fields: state.auth.fields, email:state.auth.email, activeDebatesForUser: state.auth.activeDebatesForUser, rejectedDebatesForUser: state.auth.rejectedDebatesForUser, requestedDebatesForUser: state.auth.requestedDebatesForUser };
+   return { fields: state.auth.fields, email:state.auth.email, activeDebatesForUser: state.auth.activeDebatesForUser, rejectedDebatesForUser: state.auth.rejectedDebatesForUser, requestedDebatesForUser: state.auth.requestedDebatesForUser, completedDebatesForUser: state.auth.completedDebatesForUser };
  }
 
- export default withRouter(connect(mapStateToProps, { getUserFromEmail, getActiveDebatesForUser,getRejectedDebatesForUser, getPendingDebatesForUser })(ProfilePage));
+ export default withRouter(connect(mapStateToProps, { getUserFromEmail, getActiveDebatesForUser,getRejectedDebatesForUser,getCompletedDebatesForUser, getPendingDebatesForUser })(ProfilePage));

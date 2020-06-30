@@ -18,9 +18,9 @@ export const ActionTypes = {
   USERS_COMPLETED_DEBATES: 'USERS_COMPLETED_DEBATES',
 };
 
-// const ROOT_URL = 'https://forum-debate.herokuapp.com/api';
+ const ROOT_URL = 'https://forum-debate.herokuapp.com/api';
 
-const ROOT_URL = 'http://localhost:9090/api';
+//const ROOT_URL = 'http://localhost:9090/api';
 
 const ERROR_TIMEOUT = 5000;
 
@@ -243,6 +243,21 @@ export function editDebateStatus(id, fields) {
           .catch((error) => {
             dispatch(`failed to create post: ${error}`);
           });
+          axios.post(`${ROOT_URL}/userRejectedDebates`, fields)
+            .then((response) => {
+              dispatch({ type: ActionTypes.USERS_REJECTED_DEBATES, payload: response.data});
+            })
+            .catch((error) => {
+              dispatch(`failed to create post: ${error}`);
+            });
+            axios.post(`${ROOT_URL}/userActiveDebates`,fields)
+              .then((response) => {
+                console.log(response);
+                dispatch({ type: ActionTypes.USERS_ACTIVE_DEBATES, payload: response.data});
+              })
+              .catch((error) => {
+                dispatch(`failed to create post: ${error}`);
+              });
       })
         .catch(((error) => {
 
