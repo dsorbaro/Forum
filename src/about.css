@@ -126,7 +126,7 @@ width: 60%;
 
 .theageof {
   margin-right: 46%;
-  margin-top: -10%;
+  margin-top: -11.5%;
 }
 
 .ormaybe {
@@ -145,7 +145,8 @@ width: 60%;
   margin-left: 1%;
   margin-right: 20%;
     color: #3c065f;
-    margin-top: 1%;
+    margin-top: 2%;
+    font-weight:bolder;
     width: 50%;
 }
 
