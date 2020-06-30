@@ -8,7 +8,7 @@ import { getRejectedDebatesForUser,editDebateStatus } from '../actions';
 import { connect } from 'react-redux';
 
 
-class PastDebatespage extends Component {
+class ForfitedDebatespage extends Component {
   constructor(props) {
     super(props);
         this.state = {};
@@ -65,4 +65,4 @@ function mapStateToProps(state) {
   return { email:state.auth.email, rejectedDebatesForUser: state.auth.rejectedDebatesForUser  };
 }
 
-export default withRouter(connect(mapStateToProps, { getRejectedDebatesForUser, editDebateStatus })(PastDebatespage));
+export default withRouter(connect(mapStateToProps, { getRejectedDebatesForUser, editDebateStatus })(ForfitedDebatespage));

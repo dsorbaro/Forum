@@ -15,11 +15,12 @@ export const ActionTypes = {
   USERS_REJECTED_DEBATES: 'USERS_REJECTED_DEBATES',
   USERS_ACTIVE_DEBATES: 'USERS_ACTIVE_DEBATES',
   ONE_DEBATE: 'ONE_DEBATE',
+  USERS_COMPLETED_DEBATES: 'USERS_COMPLETED_DEBATES',
 };
 
-const ROOT_URL = 'https://forum-debate.herokuapp.com/api';
+// const ROOT_URL = 'https://forum-debate.herokuapp.com/api';
 
-//const ROOT_URL = 'http://localhost:9090/api';
+const ROOT_URL = 'http://localhost:9090/api';
 
 const ERROR_TIMEOUT = 5000;
 
@@ -359,4 +360,16 @@ export function goToNextDebate(id, fields, history) {
           dispatch(`failed to create post: ${error}`);
         }));
     }
+}
+
+export function getCompletedDebatesForUser(email){
+  return (dispatch) => {
+    axios.post(`${ROOT_URL}/userCompletedDebates`,email)
+      .then((response) => {
+        dispatch({ type: ActionTypes.USERS_COMPLETED_DEBATES, payload: response.data});
+      })
+      .catch((error) => {
+        dispatch(`failed to create post: ${error}`);
+      });
+  };
 }

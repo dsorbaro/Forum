@@ -27,14 +27,22 @@ class ActiveDebatespage extends Component {
          var currInfo = this.props.activeDebatesForUser[item];
       //   console.log(this.props.activeDebatesForUser[item])
 
-        var whoseTurn = ! thisUsersTurn(currInfo, this.props.email) ? <p> You are currently waiting on your opponent to finish their debate </p>
-        : (
+        var whoseTurn = null;
+        if(! thisUsersTurn(currInfo, this.props.email))
+        {
+          whoseTurn =  <p> You are currently waiting on your opponent to finish their debate </p>
+        }
+        else if(currInfo.person1Status === "PENDING" || currInfo.person2Status === "PENDING"){
+          whoseTurn =  <p> You are currently waiting on your opponent to accept the debate </p>
+
+        } else {
+          whoseTurn = (
              <div>
               <p> It is your turn to go! </p>
               <button style={{backgroundColor: 'black'}}> <Link to={`/createDebate/${currInfo._id}`}>Debate Now</Link> </button>
             </div>
           )
-
+}
 
 
 
