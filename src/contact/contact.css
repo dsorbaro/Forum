@@ -1,0 +1,63 @@
+.hereAtForum {
+  margin-left: 8%;
+  margin-right: 10%;
+  margin-top: -3%;
+  color: #3c065f;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.contactText {
+  position: static;
+  color: green;
+  margin-left: 6%;
+  padding-top: 10px;
+  font-size: 5%;
+}
+
+.contactInfoText {
+  position: static;
+  color: green;
+  margin-left: 6%;
+  font-size: 1px;
+}
+
+.contactName {
+  margin-left: 4.4%;
+  margin-right: 10%;
+  margin-top: 5%;
+  color: #3c065f;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.contactSubj {
+  margin-left: 4.4%;
+  margin-right: 10%;
+  margin-top: 0%;
+  color: #3c065f;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.contactInfo {
+  margin-left: 4.4%;
+  margin-right: 10%;
+  margin-top: 0%;
+  color: #3c065f;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.contactPage {
+  margin-top: -3%;
+}
+
+.btn {
+  text-align: right;
+  margin-right: 100%;
+  margin-top: 2%;
+  color: #3c065f;
+  font-weight: bold;
+  font-size: 25px;
+}
