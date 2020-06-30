@@ -10,7 +10,7 @@ import smallColumn from "../images/smallColumn.png"
 import intrViewLogo from "../images/IntrViewlogo.png"
 import aboutbground from "../images/aboutbground.jpg"
 import RequestButtons from "./requestButtons";
-import TrendingNewsTopicsPage from "../trendingNews/trendingNewsTopics.js";
+import TrendingNewsTopicsPage from "../trendingNews/trendingNewsTopics";
 import RequestButtonTopics from "./Requestbuttontopics";
 import NewsTicker from "../newsticker/newsticker";
 import emailjs from 'emailjs-com';
@@ -61,7 +61,7 @@ class Main extends Component {
            },
            {
              author: "Bobb",
-             title: "Is dad funny?",
+             title: "Laccrosse Ball should have had more recovery time.",
              url: "www.fakenews.com"
            },
            {
