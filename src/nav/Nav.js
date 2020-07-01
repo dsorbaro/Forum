@@ -6,7 +6,6 @@ import { signoutUser } from '../actions';
 import FindyourNewsroomSearch from "./FindyourNewsroomSearch";
 import logo from "../images/forumCircle.png";
 import navbarprofile from "../images/navbarprofile.png"
-import "../App.css"
 
 
 

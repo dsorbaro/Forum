@@ -10,7 +10,9 @@ class Faq extends Component {
 
    render() {
      return (
-      <p>FAQ</p>
+       <div>
+          <p>FAQ</p>
+      </div>
      );
    }
  }

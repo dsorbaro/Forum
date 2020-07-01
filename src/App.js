@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./App.css";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Main from "./homepage/Main";
 import AboutPage from "./about/about";
@@ -20,7 +19,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div class="navbardesign">
+        <div>
           <div>
             <Nav />
             <div>

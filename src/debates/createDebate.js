@@ -4,6 +4,7 @@ import { NavLink, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import {  getOneDebate, goToNextDebate } from '../actions';
 import { getDebateRound, thisUsersTurn} from './../profile/debateMethod'
+import VideoUpload from './VideoUpload'
 
 class CreateDebate extends Component {
   constructor(props) {
@@ -37,9 +38,7 @@ class CreateDebate extends Component {
        mainInfo = (
          <div>
           <p> Its your turn! </p>
-          <p> Normally a video would be shown here with the other users debate before (or not yet if its round one)</p>
-          <p>Then you can record / upload ur video </p>
-          <p> but for now that functionality is not here.... :( </p>
+          <VideoUpload />
           <button style={{backgroundColor:'black', width: '200px'}} onClick={this.goToNextDebator}> Click me to "submit" and send debate to next person </button>
          </div>
        )

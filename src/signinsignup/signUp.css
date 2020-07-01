@@ -1,5 +1,4 @@
 
-/*  background and sizing stuff  */
 .initialsignuptext{
 color: #3c065f;
 display:block;
@@ -36,7 +35,6 @@ box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
 
 
 
-/*  internal positioning  */
 
 .login-html{
 	width:100%;
@@ -70,7 +68,6 @@ box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
 
 
 
-/*  Sign up text */
 
 .login-html .tab{
 	font-size:22px;
@@ -86,7 +83,6 @@ box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
 
 
 
-/*  internal positioning  */
 
 .login-form .group{
 	margin-bottom:15px;
@@ -105,7 +101,6 @@ box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
 }
 
 
-/*  input bar styling */
 .input {
   margin-bottom: 7%;
   margin-top: 3%;
