@@ -16,10 +16,6 @@ class ContactPage extends Component {
       subj: "",
       info: "",
     };
-
-    //this.changeName = this.changeName.bind(this);
-    // this.changeSubj = this.changeSubj.bind(this);
-    // this.changeInfo = this.changeInfo.bind(this);
   }
 
   onNameChange(event) {
@@ -41,66 +37,54 @@ class ContactPage extends Component {
   }
 
   handleSubmit = () => {
-    console.log("calls handleSubmit");
     var content = {
       name: this.state.name,
       subj: this.state.subj,
       info: this.state.info,
     };
-    console.log("makes content");
-    emailjs
-      .send
-      // "default_service",
-      // "template_iBMeLvoi",
-      // content,
-      // "user_a0mDXNdkYotfY6VZ2jiIA"
-      ()
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-    console.log("sends email");
+    // emailjs
+    //   .send(
+    //     "default_service",
+    //     "template_iBMeLvoi",
+    //     content,
+    //     "user_a0mDXNdkYotfY6VZ2jiIA"
+    //   );
   };
 
   render() {
     return (
       <div class="ContactPage">
-        <p class="hereAtForum">
-          Here at Forum, we are committed to serving the people. If you have any
-          suggestions for improving our platform, then please do not hesitate to
-          reach out to us with your ideas. We value suggestions from every
-          member of our community.
-        </p>
+        <p class="contactUs">Contact Us</p>
 
-        <label class="contactNameLabel">Name:</label>
-        <input
+        <div></div>
+        <textarea
           type="text"
           class="contactName"
           value={this.state.name}
           onChange={this.onNameChange.bind(this)}
+          rows="1"
+          placeholder="Name"
         />
-        <div class="ContactDiv"></div>
-        <label class="contactSubjLabel">Subject: </label>
-        <input
+        <div></div>
+        <textarea
           type="text"
           class="contactSubj"
           value={this.state.subj}
           onChange={this.onSubjChange.bind(this)}
+          rows="1"
+          placeholder="Subject"
         />
-        <div class="ContactDiv"></div>
+
         <textarea
           type="text"
           class="contactInfo"
           value={this.state.message}
           onChange={this.onInfoChange.bind(this)}
-          placeholder="Write your thoughts here.."
+          rows="10"
+          placeholder="Write your thoughts here"
         ></textarea>
 
-        <button className="btn btn-primary" onClick={this.handleSubmit}>
+        <button className="btn" onClick={this.handleSubmit}>
           Submit
         </button>
       </div>
