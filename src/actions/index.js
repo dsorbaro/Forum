@@ -21,7 +21,7 @@ export const ActionTypes = {
 
 const ROOT_URL = 'https://forum-debate.herokuapp.com/api';
 
-// const ROOT_URL = 'http://localhost:9090/api';
+//const ROOT_URL = 'http://localhost:9090/api';
 
 const ERROR_TIMEOUT = 5000;
 
@@ -366,10 +366,12 @@ export function getOneDebate(id){
 
 
 export function goToNextDebate(id, fields, history) {
+  console.log(fields);
+  console.log("in go to next debate");
     return (dispatch) => {
       axios.put(`${ROOT_URL}/oneDebate/${id}`, fields).then((response) => {
-          // console.log("axiosed in next debate!")
-          // console.log(response)
+          console.log("axiosed in next debate!")
+          console.log(response)
           dispatch({ type: ActionTypes.ONE_DEBATE, payload: response.data });
           history.push("/profile");
       })

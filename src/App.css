@@ -226,9 +226,8 @@ font-size: 15px;
 }
 
 
-/* below is color of search text input */
 
-input, button
+/* input, button
 {
     color: #fff;
     font-family: Nunito;
@@ -236,9 +235,8 @@ input, button
     margin: 0;
     border: 0;
     background-color: transparent;
-}
+} */
 
-/* below is color of search box */
 
 #cover
 {
@@ -293,7 +291,7 @@ input[type="text"]::placeholder
     width: 1px;
     padding-left: 35px;
 }
-
+/*
 button
 {
     position: relative;
@@ -301,7 +299,7 @@ button
     width: 84px;
     height: 30px;
     cursor: pointer;
-}
+} */
 
 #s-circle
 {
@@ -317,7 +315,7 @@ button
     transition: 0.5s ease all;
 }
 
-button span
+/* button span
 {
     position: absolute;
     top: 20px;
@@ -329,8 +327,8 @@ button span
     border-radius: 3px;
     transform: rotateZ(52deg);
     transition: 0.5s ease all;
-}
-
+} */
+/* 
 button span:before, button span:after
 {
     content: '';
@@ -343,7 +341,7 @@ button span:before, button span:after
     border-radius: 10px;
     transform: rotateZ(0);
     transition: 0.5s ease all;
-}
+} */
 
 #s-cover:hover #s-circle
 {

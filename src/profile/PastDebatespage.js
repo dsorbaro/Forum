@@ -30,7 +30,7 @@ class PastDebatespage extends Component {
           <div>
           <div class = "iconrow">
             <img class = "personprofileicon" src={personprofileicon} />
-            <p class = "currentrequestspf">{this.props.completedDebatesForUser[item].requestID.person1ID.firstName} </p>
+            <p class = "currentrequestspf">{this.props.completedDebatesForUser[item].requestID.person1} </p>
           </div>
               <div class = "iconrow">
               <img class = "newsprofileicon" src={newsprofileicon} />
@@ -39,7 +39,7 @@ class PastDebatespage extends Component {
 
             <div class = "iconrow">
                 <img class = "personprofileicontwo" src={personprofileicon} />
-                <p class = "currentrequestspf"> {this.props.completedDebatesForUser[item].requestID.person2ID.firstName} </p>
+                <p class = "currentrequestspf"> {this.props.completedDebatesForUser[item].requestID.person2} </p>
             </div>
             <p class = "currentrequestsnumber"> Number of Requests: {this.props.completedDebatesForUser[item].requestID.numRequests} </p>
             <button style={{backgroundColor: 'black'}}> <Link to={`/debate/${this.props.completedDebatesForUser[item]._id}`}>View Debate</Link> </button>
