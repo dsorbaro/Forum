@@ -34,17 +34,23 @@
   position: relative;
   top: -125px;
 }
+.mainForumtext {
+  font-family: Noto Sans;
+  font-style: bold;
+  font-size: 30px;
+  position: relative;
+  left: -50px;
+  top: -20px;
+}
 
-
-    font-family: Noto Sans;
-    font-style: bold;
-    font-size: 30px;
-    position: relative;
-    left: -50px;
-    top: -30px;
-  }
-
-
+.logoline {
+  position: relative;
+  width: 749px;
+  height: 0px;
+  top: -55px;
+  left: -40px;
+  border: 2px solid #3c065f;
+}
 
 .row {
   display: flex;
@@ -94,7 +100,6 @@ button[class="contactnavbarbutton"] {
 
   border-right: 2px solid #3c065f;
   border-left: 2px solid #3c065f;
-
 }
 
 button[class="contactnavbarbutton"]:hover {
@@ -227,20 +232,15 @@ button[class="aboutnavbarbutton"]:hover {
   display: table-cell;
 }
 
-
-
-
-/* input, button
-{
-    color: #fff;
-    font-family: Nunito;
-    padding: 0;
-    margin: 0;
-    border: 0;
-    background-color: transparent;
-} */
-
-
+input,
+button {
+  color: #fff;
+  font-family: Nunito;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+}
 
 #cover {
   position: absolute;
@@ -267,125 +267,111 @@ form {
   left: 390px;
 }
 
-
-input[type="text"]
-{
-    width: 100%;
-    height: 100%;
-    font-size: 35px;
-    line-height: 1;
-    font-family: Noto Sans;
-    font-style: bold;
-
-
+input[type="text"] {
+  width: 100%;
+  height: 100%;
+  font-size: 35px;
+  line-height: 1;
+  font-family: Noto Sans;
+  font-style: bold;
 }
 
-input[type="text"]::placeholder
-{
-    color: #fff;
-    font-family: Noto Sans;
-    font-style: bold;
-    font-size: 30px;
-    text-align:center;
+input[type="text"]::placeholder {
+  color: #fff;
+  font-family: Noto Sans;
+  font-style: bold;
+  font-size: 30px;
+  text-align: center;
 }
 
-#s-cover
-{
-    width: 1px;
-    padding-left: 35px;
-}
-/*
-button
-{
-    position: relative;
-    display: block;
-    width: 84px;
-    height: 30px;
-    cursor: pointer;
-} */
-
-#s-circle
-{
-    position: relative;
-    top: -16px;
-    left: 0;
-    width: 33px;
-    height: 33px;
-    border-width: 15px;
-    border: 6px solid #fff;
-    background-color: transparent;
-    border-radius: 50%;
-    transition: 0.5s ease all;
+#s-cover {
+  width: 1px;
+  padding-left: 35px;
 }
 
-/* button span
-{
-    position: absolute;
-    top: 20px;
-    left: 22px;
-    display: block;
-    width: 20px;
-    height: 2px;
-    background-color: transparent;
-    border-radius: 3px;
-    transform: rotateZ(52deg);
-    transition: 0.5s ease all;
-} */
-/* 
-button span:before, button span:after
-{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 20px;
-    height: 4px;
-    background-color: #fff;
-    border-radius: 10px;
-    transform: rotateZ(0);
-    transition: 0.5s ease all;
-} */
-
-#s-cover:hover #s-circle
-{
-    top: -1px;
-    width: 47px;
-    height: 6px;
-    top: -4px;
-    left: 5px;
-    border-width: 0;
-    background-color: #fff;
-    border-radius: 20px;
+button {
+  position: relative;
+  display: block;
+  width: 84px;
+  height: 30px;
+  cursor: pointer;
 }
 
-#s-cover:hover span
-{
-    top: 21px;
-    left: 32px;
-    width: 3px;
-    margin-top: -9px;
-    transform: rotateZ(0);
+#s-circle {
+  position: relative;
+  top: -16px;
+  left: 0;
+  width: 33px;
+  height: 33px;
+  border-width: 15px;
+  border: 6px solid #fff;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: 0.5s ease all;
 }
 
-#s-cover:hover button span:before
-{
-    bottom: 11px;
-    transform: rotateZ(52deg);
+button span {
+  position: absolute;
+  top: 20px;
+  left: 22px;
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: transparent;
+  border-radius: 3px;
+  transform: rotateZ(52deg);
+  transition: 0.5s ease all;
 }
 
-#s-cover:hover button span:after
-{
-    bottom: -11px;
-    transform: rotateZ(-52deg);
+button span:before,
+button span:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 20px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 10px;
+  transform: rotateZ(0);
+  transition: 0.5s ease all;
 }
 
-#s-cover:hover button span:before, #s-cover:hover button span:after
-{
-    left: 0px;
-    width: 30px;
-    height: 6px;
-    background-color: #fff;
+#s-cover:hover #s-circle {
+  top: -1px;
+  width: 47px;
+  height: 6px;
+  top: -4px;
+  left: 5px;
+  border-width: 0;
+  background-color: #fff;
+  border-radius: 20px;
+}
 
+#s-cover:hover span {
+  top: 21px;
+  left: 32px;
+  width: 3px;
+  margin-top: -9px;
+  transform: rotateZ(0);
+}
+
+#s-cover:hover button span:before {
+  bottom: 11px;
+  transform: rotateZ(52deg);
+}
+
+#s-cover:hover button span:after {
+  bottom: -11px;
+  transform: rotateZ(-52deg);
+}
+
+#s-cover:hover button span:before,
+#s-cover:hover button span:after {
+  left: 0px;
+  width: 30px;
+  height: 6px;
+  background-color: #fff;
 }
 
 #ytd-url {
