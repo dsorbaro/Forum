@@ -87,10 +87,7 @@ return(
     <div class = "informationrow">
           <p class = "profilestatus"> Public Figure Status: {this.props.fields.status} </p>
           <div>
-          <div id="wrapper">
-              <img src= {informationicon} class="informationicon" />
-              <p class="infotext">Approved Public figures can engage in conversations</p>
-          </div>
+        
           </div>
       </div>
           <p class= "profilebio"> {this.props.fields.bio} </p>

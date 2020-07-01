@@ -3,8 +3,10 @@
   height: 600px;
   width: 400px;
   border: 2px solid #9f82af;
-  margin-left: 67.5%;
-  margin-top: -9%;
+  margin-left: 70.5%;
+  margin-top: -5%;
+  background-color: white;
+  z-index: 4;
   border-radius: 20px;
   background-color: white;
   display: flex;

@@ -54,10 +54,11 @@ ul {
 
 .formcss input {
   width: 100%;
+  color: red;
   height: 100%;
   color: #3c065f;
   padding-top: 10px;
-    font-size: 20px;
+    font-size: 15px;
   border: 1px black ;
   outline: none;
   left: -9px;
@@ -66,6 +67,8 @@ ul {
 
 .formcss label {
   position: absolute;
+  color: #3c065f;
+  left: -0px;
   bottom: 0px;
   width: 100%;
   height: 100%;

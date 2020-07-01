@@ -41,11 +41,12 @@ class Homepagetrendingnewscolumn extends Component {
     }
 
       render() {
+        console.log("running")
         return (
 
-    <div>
-          <TrendingNewsTopicsPage article={this.state.articles} />
-    </div>
+          <div>
+                <TrendingNewsTopicsPage article={this.state.articles} />
+          </div>
 
     );
   }

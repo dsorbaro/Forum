@@ -39,7 +39,7 @@ position: relative;
 width: 920px;
 height: 250px;
 left: 30px;
-top: -170px;
+top: -90px;
 border-radius: 17px;
   z-index: 1;
 }
@@ -48,7 +48,7 @@ border-radius: 17px;
   display: flex;
   flex-direction: row;
   position: absolute;
-  top: 20px;
+  top: 10px;
 }
 
 
@@ -150,7 +150,7 @@ h1 {
   width: 448px;
   height: 40px;
   left: 350px;
-  top: -420px;
+  top: -690px;
   font-family: Noto Sans;
   font-style: bold;
   font-weight: 800;
@@ -164,7 +164,7 @@ h1 {
   width: 850px;
   height: 367px;
   left: 47px;
-  top: -357px;
+  top: -667px;
   background: NONE;
   display: flex;
   flex-direction: row;
@@ -250,7 +250,7 @@ border-radius: 1000px;
 
 .recentlypostedtext {
   position: relative;
-  top: 430px;
+  top: 410px;
   left: 360px;
   text: bold;
   font-size: 20px;
@@ -261,7 +261,7 @@ border-radius: 1000px;
 .postedconvologoline {
   position: absolute;
   width: 375px;
-  left: -380px;
+  left: -400px;
   top: 15px;
   height: 0px;
     opacity: 50%;
@@ -297,4 +297,44 @@ border-radius: 1000px;
   font-weight: bold;
   top: -10%;
   margin-left: 77%;
+}
+
+.mainpageplaybutton {
+  position: relative;
+  height: 140px;
+ left: -260px;
+ top: -170px;
+}
+
+.currentdebatesrowmain {
+  display: flex;
+  flex-direction: row;
+}
+
+.profileicontrend {
+  height: 30px;
+  margin-top: 1.5%;
+  margin-right: -5%;
+}
+
+.newstrendiconmain {
+  height: 30px;
+  margin-top: 1.5%;
+  margin-right: -5%;
+}
+
+.asingleposteddebate {
+  margin-top: -2%;
+}
+
+.postedconversationborder {
+  opacity: 50%;
+  border-top:1px dotted #3c065f;
+  color:#fff;
+  background-color:#fff;
+  height:1px;
+  position: relative;
+  top: 20px;
+  left: -300px;
+width: 800px;
 }
