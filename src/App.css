@@ -13,7 +13,7 @@
   }
 }
 
-.navbardesign{
+.navbardesign {
   background-color: white;
   height: 100px;
   box-shadow: 5px 2px 10px #888888;
@@ -27,16 +27,14 @@
   left: -30px;
 }
 
-
 .navbarRow {
-    display: flex;
-    flex-direction: row;
-    margin-left: 120px;
-    position: relative;
-    top: -125px;
-  }
+  display: flex;
+  flex-direction: row;
+  margin-left: 120px;
+  position: relative;
+  top: -125px;
+}
 
-  .mainForumtext {
 
     font-family: Noto Sans;
     font-style: bold;
@@ -47,22 +45,21 @@
   }
 
 
-  .row {
-    display: flex;
-    flex-direction: row;
-    margin-left: 20px;
-    position: relative;
-  }
 
+.row {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+  position: relative;
+}
 
-  .forumaboveLine {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-  }
+.forumaboveLine {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
 
-
-.navbarbutton {
+button[class="faqnavbarbutton"] {
   background-color: white;
   font-family: Noto Sans;
   font-style: bold;
@@ -73,16 +70,39 @@
   height: 40px;
   border-top-style: none;
   border-bottom-style: none;
-  border-right: 3px solid #75009c;
-  border-left: 3px solid #75009c;
+  border-right: 2px solid #3c065f;
+  border-left: none;
 }
 
-.navbarbutton:hover {
-  color: #530096;
-  background-color: #f5f5f5;
+button[class="faqnavbarbutton"]:hover {
+  background-color: #3c065f;
+  color: white;
+  /* color: white; */
 }
 
-.aboutnavbarbutton {
+button[class="contactnavbarbutton"] {
+  background-color: white;
+  font-family: Noto Sans;
+  font-style: bold;
+  font-size: 20px;
+  font-weight: 800;
+  width: 120px;
+  color: #3c065f;
+  height: 40px;
+  border-top-style: none;
+  border-bottom-style: none;
+
+  border-right: 2px solid #3c065f;
+  border-left: 2px solid #3c065f;
+
+}
+
+button[class="contactnavbarbutton"]:hover {
+  background-color: #3c065f;
+  color: white;
+}
+
+button[class="aboutnavbarbutton"] {
   background-color: white;
   font-family: Noto Sans;
   font-style: bold;
@@ -98,12 +118,10 @@
   border-left: 2px solid #3c065f;
 }
 
-
-.aboutnavbarbutton:hover {
-  color: #530096;
-  background-color: #f5f5f5;
+button[class="aboutnavbarbutton"]:hover {
+  background-color: #3c065f;
+  color: white;
 }
-
 
 .signinbutton {
   background-color: white;
@@ -130,15 +148,14 @@
   height: 40px;
   margin-left: 70px;
   border: 2px solid #3c065f;
-
 }
 
-.approveDebatorsbutton{
+.approveDebatorsbutton {
   position: absolute;
   font-weight: bold;
-    font-family: Noto Sans;
+  font-family: Noto Sans;
   background-color: white;
-font-size: 15px;
+  font-size: 15px;
   border: 3px solid #3c065f;
   width: 70px;
   height: 40px;
@@ -165,7 +182,6 @@ font-size: 15px;
 .newsroomsearchholder {
   margin-top: -17px;
   margin-left: -40px;
-
 }
 
 .App-header {
@@ -192,29 +208,25 @@ font-size: 15px;
   }
 }
 
-
 .newsroomsearchbar {
   position: absolute;
   left: 460px;
   top: 61px;
 }
 
-*
-{
-    outline: none;
+* {
+  outline: none;
 }
 
-
-.tb
-{
-    display: table;
-    width: 100%;
+.tb {
+  display: table;
+  width: 100%;
 }
 
-.td
-{
-    display: table-cell;
+.td {
+  display: table-cell;
 }
+
 
 
 
@@ -229,25 +241,24 @@ font-size: 15px;
 } */
 
 
-#cover
-{
-    position: absolute;
-    top: 50%;
-    padding-bottom: 20px;
-    left: 0;
 
-    right: 0;
-    width: 500px;
-    padding: 35px;
-    margin: -83px auto 0 auto;
-    background-color: #3c065f;
-    border-radius: 20px;
-    transform: scale(0.6);
+#cover {
+  position: absolute;
+  top: 50%;
+  padding-bottom: 20px;
+  left: 0;
+
+  right: 0;
+  width: 500px;
+  padding: 35px;
+  margin: -83px auto 0 auto;
+  background-color: #3c065f;
+  border-radius: 20px;
+  transform: scale(0.6);
 }
 
-form
-{
-    height: 15px;
+form {
+  height: 15px;
 }
 
 .pleasemoveagain {
@@ -255,6 +266,7 @@ form
   top: 35px;
   left: 390px;
 }
+
 
 input[type="text"]
 {
@@ -373,6 +385,7 @@ button span:before, button span:after
     width: 30px;
     height: 6px;
     background-color: #fff;
+
 }
 
 #ytd-url {
@@ -394,12 +407,11 @@ button span:before, button span:after
 
 .profilenavbar {
   position: relative;
-    background-image: url("./images/navbarprofile.png");
-    background-repeat: no-repeat;
-    background-size: 32px 35px;
-    padding-bottom: 10px;
-top: 3px;
-margin-left:60.5%;
+  background-image: url("./images/navbarprofile.png");
+  background-repeat: no-repeat;
+  background-size: 32px 35px;
+  padding-bottom: 10px;
+  top: 3px;
+  margin-left: 60.5%;
   z-index: 4;
-
 }
