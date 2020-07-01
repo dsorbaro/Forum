@@ -84,7 +84,7 @@ class ContactPage extends Component {
           placeholder="Write your thoughts here"
         ></textarea>
 
-        <button className="btn" onClick={this.handleSubmit}>
+        <button class="contactBtn" onClick={this.handleSubmit}>
           Submit
         </button>
       </div>

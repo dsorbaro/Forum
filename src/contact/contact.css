@@ -64,7 +64,7 @@
   margin-top: -3%;
 }
 
-button {
+button[class="contactBtn"] {
   background-color: #3c065f;
   text-align: center;
   width: 80%;
@@ -81,7 +81,8 @@ button {
   font-size: 35px;
 }
 
-button:hover {
-  background-color: #00b909;
-  border: 10px solid #00b909;
+button[class="contactBtn"]:hover {
+  background-color: #60009e;
+  color: white;
+  border: 10px solid #60009e;
 }
