@@ -49,12 +49,12 @@ class ContactPage extends Component {
     };
     console.log("makes content");
     emailjs
-      .send(
-        "default_service",
-        "template_iBMeLvoi",
-        content,
-        "user_a0mDXNdkYotfY6VZ2jiIA"
-      )
+      .send
+      // "default_service",
+      // "template_iBMeLvoi",
+      // content,
+      // "user_a0mDXNdkYotfY6VZ2jiIA"
+      ()
       .then(
         (result) => {
           console.log(result.text);
@@ -68,40 +68,38 @@ class ContactPage extends Component {
 
   render() {
     return (
-      <div className="ContactPage">
+      <div class="ContactPage">
         <p class="hereAtForum">
           Here at Forum, we are committed to serving the people. If you have any
           suggestions for improving our platform, then please do not hesitate to
           reach out to us with your ideas. We value suggestions from every
           member of our community.
         </p>
-        <div className="contactName">
-          <label class="contactName">Name:</label>
-          <input
-            type="text"
-            className="contactText"
-            value={this.state.name}
-            onChange={this.onNameChange.bind(this)}
-          />
-        </div>
-        <div className="contactSubj">
-          <label class="contactSubj">Subject: </label>
-          <input
-            type="text"
-            className="contactText"
-            value={this.state.subj}
-            onChange={this.onSubjChange.bind(this)}
-          />
-        </div>
-        <div className="contactInfo">
-          <label class="contactInfo">Message:</label>
-          <input
-            type="text"
-            className="contactInfoText"
-            value={this.state.message}
-            onChange={this.onInfoChange.bind(this)}
-          />
-        </div>
+
+        <label class="contactNameLabel">Name:</label>
+        <input
+          type="text"
+          class="contactName"
+          value={this.state.name}
+          onChange={this.onNameChange.bind(this)}
+        />
+        <div class="ContactDiv"></div>
+        <label class="contactSubjLabel">Subject: </label>
+        <input
+          type="text"
+          class="contactSubj"
+          value={this.state.subj}
+          onChange={this.onSubjChange.bind(this)}
+        />
+        <div class="ContactDiv"></div>
+        <textarea
+          type="text"
+          class="contactInfo"
+          value={this.state.message}
+          onChange={this.onInfoChange.bind(this)}
+          placeholder="Write your thoughts here.."
+        ></textarea>
+
         <button className="btn btn-primary" onClick={this.handleSubmit}>
           Submit
         </button>
