@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { getPendingDebatesForUser,editDebateStatus } from '../actions';
 import { connect } from 'react-redux';
 import "./profile.css"
+import requestbuttoniconprof from "./requestbuttoniconprof.png"
 import newsprofileicon from "./newsprofileicon.png"
 import personprofileicon from "./personprofileicon.png"
 
@@ -65,10 +66,11 @@ class RequestedDebatesForUser extends Component {
                 <img class = "personprofileicontwo" src={personprofileicon} />
                 <p class = "currentrequestspf"> {this.props.requestedDebatesForUser[item].requestID.person2ID.firstName} </p>
             </div>
-            <p class = "currentrequestsnumber"> Number of Requests: {this.props.requestedDebatesForUser[item].requestID.numRequests} </p>
-
-
-            <div class ="borderline">
+                <div class = "iconrow">
+              <img class = "currentrequestsnumbericon" src={requestbuttoniconprof} />
+            <p class = "currentrequestsnumber"> {this.props.requestedDebatesForUser[item].requestID.numRequests} </p>
+            </div>
+            <div class ="borderlinerequesteddebates">
             </div>
           </div>
           </div>

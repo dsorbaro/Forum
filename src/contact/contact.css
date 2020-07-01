@@ -1,33 +1,19 @@
-.hereAtForum {
+.contactUs {
   text-align: center;
-  margin-left: 8%;
-  margin-right: 10%;
-  margin-top: -6%;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: -9%;
+  margin-bottom: 1%;
   color: #3c065f;
+  font-family: Bookman, URW Bookman L, serif;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 60px;
 }
 
-textarea {
-  text-align: center;
-  width: 40%;
-  height: 15%;
-  padding: 12px;
-  border: 3px solid #3c065f;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 25px;
-  margin-bottom: 16px;
-  margin-left: 100px;
-  resize: vertical;
-  color: green;
-  font-size: 15px;
-}
-
-input[type="text"] {
+.contactname[type="text"] {
   text-align: left;
-  width: 20%;
-  padding: 12px;
+  width: 80%;
+  padding: 7px;
   border: 2px solid #3c065f;
   border-radius: 4px;
   border-style: ridge;
@@ -39,42 +25,92 @@ input[type="text"] {
   font-size: 16.25px;
 }
 
- textarea {
-  height: 150px;
+/* input[class="contactSubj"] {
+  width: 20%;
+  padding: 12px;
+  border: 1px solid #3c065f;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  color: green;
+  font-size: 10px;
+  text-align: right;
+} */
+
+/* input[class="contactInfo"] {
+  width: 40%;
+  height: 20%;
+  padding: 12px;
+  border: 1px solid #3c065f;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 11px;
+  margin-bottom: 0px;
+  margin-left: 10%;
+  margin-right: 10%;
+  resize: vertical;
+  color: #3c065f;
+  font-size: 20px;
 }
 
-.contactNameLabel {
-  text-align: center;
+.contactName[type="text"] {
+  text-align: left;
+  width: 80%;
+  padding: 7px;
+  border: 2px solid #3c065f;
+  border-radius: 4px;
+  border-style: inset;
+  box-sizing: border-box;
+  margin-top: 1%;
   margin-left: 10%;
-  margin-right: 4.5%;
-
+  margin-right: 10%;
+  resize: vertical;
   color: #3c065f;
-  font-weight: bold;
-  font-size: 30px;
+  font-size: 20px;
 }
 
-.contactSubjLabel {
-  text-align: center;
+.contactSubj[type="text"] {
+  height: 2%;
+  text-align: left;
+  width: 80%;
+  padding: 7px;
+  border: 2px solid #3c065f;
+  border-radius: 4px;
+  border-style: inset;
+  box-sizing: border-box;
+  margin-top: 12px;
   margin-left: 10%;
-  margin-right: 2.3%;
+  margin-right: 10%;
+  resize: vertical;
   color: #3c065f;
-  font-weight: bold;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .contactPage {
   margin-top: -3%;
 }
 
-.btn {
-  text-align: right;
-  margin-left: -15%;
-  margin-top: 0%;
-  color: #3c065f;
+button[class="contactBtn"] {
+  background-color: #3c065f;
+  text-align: center;
+  width: 80%;
+  height: 60px;
+  padding: 0px;
+  border: 10px solid #3c065f;
+  border-width: 3px;
+  border-radius: 0px;
+  box-sizing: border-box;
+  margin-left: 10%;
+  margin-top: 1.5%;
+  color: white;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 35px;
 }
 
-.btn :hover {
-  color: #8948b4;
-}
+button[class="contactBtn"]:hover {
+  background-color: #60009e;
+  color: white;
+  border: 10px solid #60009e;
+}*/

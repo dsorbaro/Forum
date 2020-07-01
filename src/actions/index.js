@@ -385,6 +385,7 @@ export function getCompletedDebatesForUser(email){
   return (dispatch) => {
     axios.post(`${ROOT_URL}/userCompletedDebates`,email)
       .then((response) => {
+        console.log(response)
         dispatch({ type: ActionTypes.USERS_COMPLETED_DEBATES, payload: response.data});
       })
       .catch((error) => {

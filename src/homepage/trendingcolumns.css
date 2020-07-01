@@ -2,23 +2,25 @@
 .containter {
   display: flex;
   flex-direction: column;
-align-items: center;
-
+  align-items: center;
 }
 
 
 
 .requestnumberrow {
   position: relative;
-  right: 50px;
-  width: 100%;
-
+  margin-top: -27%;
+  left: -50px;
+  font-size: 100%;
+  font-family: noto sans;
+  font-weight: bold;
+  color: #6201a1;
 }
 
 
 .mediumColumn {
   position: relative;
-  height: 230px;
+  height: 160px;
   top: 30%;
 left: 0px;
   width: 80px;
@@ -33,23 +35,18 @@ font-size: 11px;
 font-family: noto sans;
 }
 
-.requestbuttonicon {
-  position: relative;
-width: 50px;
- height: 50px;
- top: 83%;
- margin-left: 12%;
 
-}
 
 .person1row {
 color: #404040;
 font-weight: bold;
+margin-bottom: -1%;
 }
 
 .person2row {
 color: #404040;
 font-weight: bold;
+    margin-top: 1%;
 }
 
 
@@ -57,12 +54,23 @@ font-weight: bold;
 .topicrow {
   color: #3c065f;
   font-weight: bold;
+  width: 40%;
+    display: inline-block;
+    margin-bottom: -3%;
 }
 
 .requestbuttoniconclicked {
-    position: relative;
+  position: relative;
   width: 50px;
    height: 50px;
-   top: 83%;
-   margin-left: 2%;
+margin-left: 40%;
+margin-top: 4%;
+  display: inline-block;
+}
+
+.requestbuttonicontrend {
+  position: relative;
+width: 50px;
+ height: 50px;
+
 }
