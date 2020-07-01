@@ -13,7 +13,7 @@
   }
 }
 
-.navbardesign{
+.navbardesign {
   background-color: white;
   height: 130px;
   box-shadow: 5px 2px 10px #888888;
@@ -27,50 +27,46 @@
   left: -30px;
 }
 
-
 .navbarRow {
-    display: flex;
-    flex-direction: row;
-    margin-left: 120px;
-    position: relative;
-    top: -125px;
-  }
+  display: flex;
+  flex-direction: row;
+  margin-left: 120px;
+  position: relative;
+  top: -125px;
+}
 
-  .mainForumtext {
+.mainForumtext {
+  font-family: Noto Sans;
+  font-style: bold;
+  font-size: 30px;
+  position: relative;
+  left: -50px;
+  top: -20px;
+}
 
-    font-family: Noto Sans;
-    font-style: bold;
-    font-size: 30px;
-    position: relative;
-    left: -50px;
-    top: -20px;
-  }
+.logoline {
+  position: relative;
+  width: 749px;
+  height: 0px;
+  top: -55px;
+  left: -40px;
+  border: 2px solid #3c065f;
+}
 
-  .logoline {
-    position: relative;
-    width: 749px;
-    height: 0px;
-    top: -55px;
-    left: -40px;
-    border: 2px solid #3c065f;
-  }
+.row {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+  position: relative;
+}
 
-  .row {
-    display: flex;
-    flex-direction: row;
-    margin-left: 20px;
-    position: relative;
-  }
+.forumaboveLine {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
 
-
-  .forumaboveLine {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-  }
-
-
-.navbarbutton {
+button[class="faqnavbarbutton"] {
   background-color: white;
   font-family: Noto Sans;
   font-style: bold;
@@ -81,17 +77,37 @@
   height: 40px;
   border-top-style: none;
   border-bottom-style: none;
+  border-right: 2px solid #3c065f;
+  border-left: none;
+}
 
+button[class="faqnavbarbutton"]:hover {
+  background-color: #3c065f;
+  color: white;
+  /* color: white; */
+}
+
+button[class="contactnavbarbutton"] {
+  background-color: white;
+  font-family: Noto Sans;
+  font-style: bold;
+  font-size: 20px;
+  font-weight: 800;
+  width: 120px;
+  color: #3c065f;
+  height: 40px;
+  border-top-style: none;
+  border-bottom-style: none;
   border-right: 2px solid #3c065f;
   border-left: 2px solid #3c065f;
 }
 
-.navbarbutton:hover {
-  color: #530096;
-  background-color: #f5f5f5;
+button[class="contactnavbarbutton"]:hover {
+  background-color: #3c065f;
+  color: white;
 }
 
-.aboutnavbarbutton {
+button[class="aboutnavbarbutton"] {
   background-color: white;
   font-family: Noto Sans;
   font-style: bold;
@@ -107,12 +123,10 @@
   border-left: 2px solid #3c065f;
 }
 
-
-.aboutnavbarbutton:hover {
-  color: #530096;
-  background-color: #f5f5f5;
+button[class="aboutnavbarbutton"]:hover {
+  background-color: #3c065f;
+  color: white;
 }
-
 
 .signinbutton {
   background-color: white;
@@ -139,15 +153,14 @@
   height: 40px;
   margin-left: 70px;
   border: 2px solid #3c065f;
-
 }
 
-.approveDebatorsbutton{
+.approveDebatorsbutton {
   position: absolute;
   font-weight: bold;
-    font-family: Noto Sans;
+  font-family: Noto Sans;
   background-color: white;
-font-size: 15px;
+  font-size: 15px;
   border: 3px solid #3c065f;
   width: 70px;
   height: 40px;
@@ -174,7 +187,6 @@ font-size: 15px;
 .newsroomsearchholder {
   margin-top: -17px;
   margin-left: -40px;
-
 }
 
 .App-header {
@@ -201,64 +213,56 @@ font-size: 15px;
   }
 }
 
-
 .newsroomsearchbar {
   position: absolute;
   left: 460px;
   top: 61px;
 }
 
-*
-{
-    outline: none;
+* {
+  outline: none;
 }
 
-
-.tb
-{
-    display: table;
-    width: 100%;
+.tb {
+  display: table;
+  width: 100%;
 }
 
-.td
-{
-    display: table-cell;
+.td {
+  display: table-cell;
 }
-
 
 /* below is color of search text input */
 
-input, button
-{
-    color: #fff;
-    font-family: Nunito;
-    padding: 0;
-    margin: 0;
-    border: 0;
-    background-color: transparent;
+input,
+button {
+  color: #fff;
+  font-family: Nunito;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
 }
 
 /* below is color of search box */
 
-#cover
-{
-    position: absolute;
-    top: 50%;
-    padding-bottom: 20px;
-    left: 0;
+#cover {
+  position: absolute;
+  top: 50%;
+  padding-bottom: 20px;
+  left: 0;
 
-    right: 0;
-    width: 500px;
-    padding: 35px;
-    margin: -83px auto 0 auto;
-    background-color: #3c065f;
-    border-radius: 20px;
-    transform: scale(0.6);
+  right: 0;
+  width: 500px;
+  padding: 35px;
+  margin: -83px auto 0 auto;
+  background-color: #3c065f;
+  border-radius: 20px;
+  transform: scale(0.6);
 }
 
-form
-{
-    height: 15px;
+form {
+  height: 15px;
 }
 
 .pleasemoveagain {
@@ -267,123 +271,111 @@ form
   left: 390px;
 }
 
-input[type="text"]
-{
-    width: 100%;
-    height: 100%;
-    font-size: 35px;
-    line-height: 1;
-    font-family: Noto Sans;
-    font-style: bold;
-
-
+input[type="text"] {
+  width: 100%;
+  height: 100%;
+  font-size: 35px;
+  line-height: 1;
+  font-family: Noto Sans;
+  font-style: bold;
 }
 
-input[type="text"]::placeholder
-{
-    color: #fff;
-    font-family: Noto Sans;
-    font-style: bold;
-    font-size: 30px;
-    text-align:center;
+input[type="text"]::placeholder {
+  color: #fff;
+  font-family: Noto Sans;
+  font-style: bold;
+  font-size: 30px;
+  text-align: center;
 }
 
-#s-cover
-{
-    width: 1px;
-    padding-left: 35px;
+#s-cover {
+  width: 1px;
+  padding-left: 35px;
 }
 
-button
-{
-    position: relative;
-    display: block;
-    width: 84px;
-    height: 30px;
-    cursor: pointer;
+button {
+  position: relative;
+  display: block;
+  width: 84px;
+  height: 30px;
+  cursor: pointer;
 }
 
-#s-circle
-{
-    position: relative;
-    top: -16px;
-    left: 0;
-    width: 33px;
-    height: 33px;
-    border-width: 15px;
-    border: 6px solid #fff;
-    background-color: transparent;
-    border-radius: 50%;
-    transition: 0.5s ease all;
+#s-circle {
+  position: relative;
+  top: -16px;
+  left: 0;
+  width: 33px;
+  height: 33px;
+  border-width: 15px;
+  border: 6px solid #fff;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: 0.5s ease all;
 }
 
-button span
-{
-    position: absolute;
-    top: 20px;
-    left: 22px;
-    display: block;
-    width: 20px;
-    height: 2px;
-    background-color: transparent;
-    border-radius: 3px;
-    transform: rotateZ(52deg);
-    transition: 0.5s ease all;
+button span {
+  position: absolute;
+  top: 20px;
+  left: 22px;
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: transparent;
+  border-radius: 3px;
+  transform: rotateZ(52deg);
+  transition: 0.5s ease all;
 }
 
-button span:before, button span:after
-{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 20px;
-    height: 4px;
-    background-color: #fff;
-    border-radius: 10px;
-    transform: rotateZ(0);
-    transition: 0.5s ease all;
+button span:before,
+button span:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 20px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 10px;
+  transform: rotateZ(0);
+  transition: 0.5s ease all;
 }
 
-#s-cover:hover #s-circle
-{
-    top: -1px;
-    width: 47px;
-    height: 6px;
-    top: -4px;
-    left: 5px;
-    border-width: 0;
-    background-color: #fff;
-    border-radius: 20px;
+#s-cover:hover #s-circle {
+  top: -1px;
+  width: 47px;
+  height: 6px;
+  top: -4px;
+  left: 5px;
+  border-width: 0;
+  background-color: #fff;
+  border-radius: 20px;
 }
 
-#s-cover:hover span
-{
-    top: 21px;
-    left: 32px;
-    width: 3px;
-    margin-top: -9px;
-    transform: rotateZ(0);
+#s-cover:hover span {
+  top: 21px;
+  left: 32px;
+  width: 3px;
+  margin-top: -9px;
+  transform: rotateZ(0);
 }
 
-#s-cover:hover button span:before
-{
-    bottom: 11px;
-    transform: rotateZ(52deg);
+#s-cover:hover button span:before {
+  bottom: 11px;
+  transform: rotateZ(52deg);
 }
 
-#s-cover:hover button span:after
-{
-    bottom: -11px;
-    transform: rotateZ(-52deg);
+#s-cover:hover button span:after {
+  bottom: -11px;
+  transform: rotateZ(-52deg);
 }
 
-#s-cover:hover button span:before, #s-cover:hover button span:after
-{
-    left: 0px;
-    width: 30px;
-    height: 6px;
-    background-color: #fff;
+#s-cover:hover button span:before,
+#s-cover:hover button span:after {
+  left: 0px;
+  width: 30px;
+  height: 6px;
+  background-color: #fff;
 }
 
 #ytd-url {
@@ -405,12 +397,11 @@ button span:before, button span:after
 
 .profilenavbar {
   position: relative;
-    background-image: url("./images/navbarprofile.png");
-    background-repeat: no-repeat;
-    background-size: 32px 35px;
-    padding-bottom: 10px;
-top: 3px;
-margin-left:60.5%;
+  background-image: url("./images/navbarprofile.png");
+  background-repeat: no-repeat;
+  background-size: 32px 35px;
+  padding-bottom: 10px;
+  top: 3px;
+  margin-left: 60.5%;
   z-index: 4;
-
 }
