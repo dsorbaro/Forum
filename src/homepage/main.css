@@ -2,6 +2,16 @@
   background-color: white;
 }
 
+
+.indexone {
+  display: flex;
+  flex-direction: column;
+  background-color: none;
+  z-index: -2;
+}
+
+
+
 .row {
   display: flex;
   flex-direction: row;
@@ -11,9 +21,8 @@
 
 .breaktheNews {
   position: relative;
-  left: 344px;
-  top: 10px;
-  color: black;
+  left: 5px;
+  top: -30px;
   font-family: Noto Sans;
   font-style: bold;
   font-style: italic;
@@ -23,17 +32,16 @@
 
 .SubmitRequestbuttonlocation {
   position: absolute;
-  left: 320px;
+  left: 260px;
   top: 2px;
 }
 
 .parth {
   position: relative;
-  width: 1200px;
-  height: 270px;
+  width: 920px;
+  height: 250px;
   left: 30px;
-  top: -50px;
-  background: #f5f5f5;
+  top: -90px;
   border-radius: 17px;
   z-index: 1;
 }
@@ -42,7 +50,7 @@
   display: flex;
   flex-direction: row;
   position: absolute;
-  top: 20px;
+  top: 10px;
 }
 
 .topLogo {
@@ -75,9 +83,11 @@ h1 {
   box-sizing: border-box;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   height: 90px;
-  width: 300px;
-  padding-left: 45px;
-  border: 2px solid #60009e;
+
+    width: 250px;
+    padding-left: 45px;
+      border: 2px solid #60009E;
+
   left: 15px;
   top: 90px;
   border-radius: 17px;
@@ -92,8 +102,10 @@ h1 {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0px;
   height: 90px;
-  width: 300px;
-  padding-left: 50px;
+
+  width: 250px;
+      padding-left: 50px;
+
   left: 50px;
   top: 90px;
   border-radius: 17px;
@@ -109,7 +121,7 @@ h1 {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0px;
   height: 90px;
-  width: 400px;
+  width: 300px;
   left: 30px;
 }
 
@@ -134,38 +146,40 @@ h1 {
   position: relative;
   width: 448px;
   height: 40px;
-  left: 225px;
-  top: -255px;
+  left: 350px;
+  top: -690px;
   font-family: Noto Sans;
   font-style: bold;
   font-weight: 800;
   color: #3c065f;
 }
 
-.trendinglogoline {
-  position: relative;
-  width: 175px;
-  left: 27px;
-  top: -220px;
-  height: 0px;
-  opacity: 50%;
-  border: 1px solid #3c065f;
+
+.trendingvoterRectangle {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: 850px;
+  height: 367px;
+  left: 47px;
+  top: -667px;
+  background: NONE;
+  display: flex;
+  flex-direction: row;
+  border-radius: 36px;
 }
 
-.trendinglogolineTwo {
-  position: relative;
-  width: 700px;
-  top: -305px;
-  opacity: 50%;
-  left: 500px;
-  border: 1px solid #3c065f;
-}
+
+
+
 
 .trendingNewstopicstext {
   position: relative;
   left: 890px;
-  top: -58px;
-  font-weight: bold;
+
+  top: -78px;
+  text: bold;
+
   font-size: 20px;
   color: #3c065f;
 }
@@ -180,24 +194,9 @@ h1 {
 
 .bottomhalf {
   position: relative;
-  top: 200px;
-}
 
-.trendingvoterRectangle {
-  position: absolute;
-  width: 850px;
-  height: 467px;
-  left: 27px;
-  top: -190px;
-  background: #f5f5f5;
-  border-radius: 36px;
-}
+  top: 550px;
 
-.trendingheadlinestext h3 {
-  font-size: 17px;
-  position: absolute;
-  top: -245px;
-  margin-left: 200px;
 }
 
 .columnrequestbuttonmedium {
@@ -244,17 +243,18 @@ h1 {
 
 .recentlypostedtext {
   position: relative;
-  top: 400px;
-  left: 230px;
-  font-weight: bold;
+
+  top: 410px;
+  left: 360px;
+  text: bold;
   font-size: 20px;
   color: #3c065f;
 }
 
 .postedconvologoline {
   position: absolute;
-  width: 175px;
-  left: -210px;
+  width: 375px;
+  left: -400px;
   top: 15px;
   height: 0px;
   opacity: 50%;
@@ -263,9 +263,10 @@ h1 {
 
 .postedconvologolineTwo {
   position: absolute;
-  width: 160px;
-  top: 17px;
-  opacity: 50%;
+
+  width: 310px;
+  top: 13px;
+    opacity: 50%;
   left: 275px;
   border: 1px solid #3c065f;
 }
@@ -290,4 +291,44 @@ h1 {
   font-weight: bold;
   top: -10%;
   margin-left: 77%;
+}
+
+.mainpageplaybutton {
+  position: relative;
+  height: 140px;
+ left: -260px;
+ top: -170px;
+}
+
+.currentdebatesrowmain {
+  display: flex;
+  flex-direction: row;
+}
+
+.profileicontrend {
+  height: 30px;
+  margin-top: 1.5%;
+  margin-right: -5%;
+}
+
+.newstrendiconmain {
+  height: 30px;
+  margin-top: 1.5%;
+  margin-right: -5%;
+}
+
+.asingleposteddebate {
+  margin-top: -2%;
+}
+
+.postedconversationborder {
+  opacity: 50%;
+  border-top:1px dotted #3c065f;
+  color:#fff;
+  background-color:#fff;
+  height:1px;
+  position: relative;
+  top: 20px;
+  left: -300px;
+width: 800px;
 }

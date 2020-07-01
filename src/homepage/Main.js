@@ -5,11 +5,17 @@ import "./main.css";
 import "../App.css";
 import "./submitrequestbutton.css";
 import bigColumn from "../images/bigColumn.png";
-import mediumColumn from "../images/mediumColumn.png";
-import smallColumn from "../images/smallColumn.png";
-import intrViewLogo from "../images/IntrViewlogo.png";
-import aboutbground from "../images/aboutbground.jpg";
+import newstrendicon from "../images/newstrendicon.png"
+import "./trendingheadlineandpf.css";
+import mediumColumn from "../images/mediumColumn.png"
+import mainpageplaybutton from "../images/mainpageplaybutton.png"
+import smallColumn from "../images/smallColumn.png"
+import intrViewLogo from "../images/IntrViewlogo.png"
+import aboutbground from "../images/aboutbground.jpg"
+import profileicontrend from "../images/profileicontrend.png"
 import RequestButtons from "./requestButtons";
+import Homepagetrendingnewscolumn from "./homepagetrendingnewscolumn";
+import Homepagetrendingpfcolumn from "./homepagetrendingpfcolumn";
 import TrendingNewsTopicsPage from "../trendingNews/trendingNewsTopics";
 import RequestButtonTopics from "./Requestbuttontopics";
 import NewsTicker from "../newsticker/newsticker";
@@ -29,15 +35,7 @@ const axios = require("axios");
 class Main extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      articles: null,
-      person1: "",
-      topic1: "",
-      person2: "",
-      notLoggedIn: null,
-      person1Email: "",
-      person2Email: "",
-    };
+    this.state = {articles: null, person1: "", topic1: "", person2:'', notLoggedIn:null, person1Email: '', person2Email:'', Homepagetrendingnewscolumn:true, Homepagetrendingpfcolumn:false};
   }
 
   componentDidMount() {
@@ -87,15 +85,20 @@ class Main extends Component {
     this.props.getAllCompletedDebates();
   }
 
+
+
+  homepagetrendingnewscolumn = () => {
+    console.log("bieng clicked")
+    this.setState({Homepagetrendingnewscolumn: true, Homepagetrendingpfcolumn: false})
+  }
+
+  homepagetrendingpfcolumn = () => {
+    this.setState({Homepagetrendingnewscolumn: false, Homepagetrendingpfcolumn: true})
+  }
+
   changePerson1 = (item) => {
-    // console.log(item);
-    // console.log("I am item ^")
-    this.setState({
-      person1: item.name,
-      person1Email: item.email,
-      person1ID: item.id,
-    });
-  };
+    this.setState({person1: item.name, person1Email: item.email, person1ID: item.id})
+  }
 
   changePerson2 = (item) => {
     this.setState({
@@ -156,6 +159,8 @@ class Main extends Component {
   };
 
   render() {
+
+    console.log(this.Homepagetrendingnewscolumn, this.Homepagetrendingpfcolumn)
     var classs = "button";
     if (
       this.state.person1 != "" &&
@@ -191,13 +196,30 @@ class Main extends Component {
           console.log(this.props.debates[item]);
           return (
             <div>
-              <p> Debate title: {this.props.debates[item].requestID.topic}</p>
-              <p> Person1: {this.props.debates[item].requestID.person1}</p>
-              <p> person2: {this.props.debates[item].requestID.person2}</p>
+            <div class = "asingleposteddebate">
+            <div class = "currentdebatesrowmain">
+              <img class = "profileicontrend" src = {profileicontrend}/>
+              <p>{this.props.debates[item].requestID.person1}</p>
+            </div>
+
+            <div class = "currentdebatesrowmain">
+                  <img class = "newstrendiconmain" src = {newstrendicon}/>
+                  <p>{this.props.debates[item].requestID.topic}</p>
+            </div>
+
+            <div class = "currentdebatesrowmain">
+              <img class = "profileicontrend" src = {profileicontrend}/>
+              <p>{this.props.debates[item].requestID.person2}</p>
+            </div>
+
+            <div class = "postedconversationborder"></div>
+</div>
+
+
               <button>
                 {" "}
                 <Link to={`/debate/${this.props.debates[item]._id}`}>
-                  Click to See Debate
+                <img src = {mainpageplaybutton} class = "mainpageplaybutton"/>
                 </Link>{" "}
               </button>
             </div>
@@ -205,12 +227,31 @@ class Main extends Component {
         })
       );
 
+    var trendingType = null;
+
+    console.log(this.state.Homepagetrendingpfcolumn);
+    console.log("^homepage thing")
+     if(this.state.Homepagetrendingnewscolumn === true)
+      {
+        trendingType =  (<Homepagetrendingnewscolumn />)
+      }
+     else if (this.state.Homepagetrendingpfcolumn === true)
+      {
+        trendingType =  (<Homepagetrendingpfcolumn />)
+        }
     return (
       <div>
         <div class="backgroundofsite">
           <div>
             <NewsTicker requests={this.props.allRequests} />
           </div>
+
+          <div class= "trendingeverythingbox">
+              <button onClick={this.homepagetrendingnewscolumn} class = {this.state.Homepagetrendingnewscolumn ? "toggletrendingnews" : "toggletrendingnewsgrey"}>Trending News</button>
+              <button onClick={this.homepagetrendingpfcolumn} class = {this.state.Homepagetrendingpfcolumn ? "toggletrendingpf" : "toggletrendingpfgrey "}>Trending Figures</button>
+              {trendingType}
+         </div>
+
           <div class="indexone">
             <div class="parth">
               <div class="breaktheNews">
@@ -263,7 +304,6 @@ class Main extends Component {
               </div>
             </div>
           </div>
-
           <div>
             <div class="bottomhalf">
               <div class="trendinglogoline"> </div>
@@ -272,11 +312,7 @@ class Main extends Component {
                 <div class="trendinglogolineTwo"> </div>
                 <div class="trendingNewstopicstext">
                   {" "}
-                  <div class="trendingheadlinestext">
-                    <h3>Trending Headlines</h3>
-                  </div>
                   <div class="TrendingNewTopicsBox">
-                    <TrendingNewsTopicsPage articles={this.state.articles} />
                   </div>
                 </div>
               </div>
@@ -299,10 +335,11 @@ class Main extends Component {
             {recentDebates}
           </div>
         </div>
-        <div class="bottomborder"></div>
-      </div>
+        <div class = "dline"> </div>
+    </div>
     );
   }
+
 }
 
 function mapStateToProps(state) {

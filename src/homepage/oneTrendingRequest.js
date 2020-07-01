@@ -51,33 +51,25 @@ class OneTrendingRequest extends Component {
       vote= <img src={require("../images/alreadyclicked.png")} class = "requestbuttoniconclicked"/>
     }
     else {
-      vote= <img src={require("./requestbuttonicon.png")} class = "requestbuttonicon" onClick={this.vote}/>
+      vote= <img src={require("./requestbuttonicon.png")} class = "requestbuttonicontrend" onClick={this.vote}/>
     }
 
 
     return (
-      <div>
-
-
-<div class = "containter">
+<div>
+    <div class = "containter">
         <div class = "textabovecolumn">
-
-
               <p class="person1row" > {this.props.info.person1}</p>
               <p class= "topicrow" > {this.props.info.topic}</p>
               <p  class="person2row" >{this.props.info.person2}</p>
-
-
-
-      </div>
-        <img class="mediumColumn" src={mediumColumn} />
-      <div>
-
-                  <p class = "requestnumberrow" >Requests: {this.props.info.numRequests}</p>
-             </div>
-             {vote}
-      </div>
-      </div>
+        </div>
+            <img class="mediumColumn" src={mediumColumn} />
+        <div>
+              <p class = "requestnumberrow" >{this.props.info.numRequests}</p>
+       </div>
+       <div class ="requestbuttonicontrend">{vote}</div>
+    </div>
+</div>
     );
   }
 }

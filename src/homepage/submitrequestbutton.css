@@ -23,7 +23,7 @@ width: 60%;
 .button {
   min-width: 1px;
   min-height: 1px;
-  background-color: #f5f5f5;
+  background-color: #ffff;
   border-radius: 1000px;
   cursor: pointer;
   outline: none;

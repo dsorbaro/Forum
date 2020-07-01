@@ -1,9 +1,9 @@
-
 import React, { Component } from "react";
 import { NavLink, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import {  getOneDebate, goToNextDebate } from '../actions';
 import { getDebateRound, thisUsersTurn} from './../profile/debateMethod'
+import VideoPlayer from './debatePlayer'
 
 class FinalDebate extends Component {
   constructor(props) {
@@ -26,7 +26,8 @@ class FinalDebate extends Component {
         <p> Page for {this.props.match.params.id} </p>
         <p> Topic: {this.props.debate.requestID.topic} </p>
         <p> People: {this.props.debate.requestID.person1} vs {this.props.debate.requestID.person2} </p>
-        <p> Hypothetically there is a video here </p>
+        <p> Here is the debate </p>
+        <VideoPlayer debateData={this.props.debate}/>
       </div>
 
      );
