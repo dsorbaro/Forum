@@ -47,6 +47,7 @@ class ActiveDebatespage extends Component {
 
 
          return (
+
           <div class= "asinglerequest">
           <div class ="borderline">
           </div>
@@ -67,10 +68,9 @@ class ActiveDebatespage extends Component {
             <p class = "currentrequestsnumber"> Number of Requests: {this.props.activeDebatesForUser[item].requestID.numRequests} </p>
             {whoseTurn}
             <div class ="borderline">
-
             </div>
           </div>
-          </div>
+</div>
 
          )
        })

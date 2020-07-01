@@ -5,11 +5,14 @@ import "./main.css";
 import "../App.css";
 import "./submitrequestbutton.css"
 import bigColumn from "../images/bigColumn.png";
+import "./trendingheadlineandpf.css";
 import mediumColumn from "../images/mediumColumn.png"
 import smallColumn from "../images/smallColumn.png"
 import intrViewLogo from "../images/IntrViewlogo.png"
 import aboutbground from "../images/aboutbground.jpg"
 import RequestButtons from "./requestButtons";
+import Homepagetrendingnewscolumn from "./homepagetrendingnewscolumn";
+import Homepagetrendingpfcolumn from "./homepagetrendingpfcolumn";
 import TrendingNewsTopicsPage from "../trendingNews/trendingNewsTopics";
 import RequestButtonTopics from "./Requestbuttontopics";
 import NewsTicker from "../newsticker/newsticker";
@@ -26,7 +29,7 @@ const axios = require('axios');
 class Main extends Component {
   constructor(props) {
     super(props);
-    this.state = {articles: null, person1: "", topic1: "", person2:'', notLoggedIn:null, person1Email: '', person2Email:''};
+    this.state = {articles: null, person1: "", topic1: "", person2:'', notLoggedIn:null, person1Email: '', person2Email:'', Homepagetrendingnewscolumn:true, Homepagetrendingpfcolumn:false};
   }
 
 
@@ -83,11 +86,20 @@ class Main extends Component {
 
 
 
+  homepagetrendingnewscolumn = () => {
+    this.setState({Homepagetrendingnewscolumn: true, Homepagetrendingpfcolumn: false})
+  }
+
+  homepagetrendingpfcolumn = () => {
+    this.setState({Homepagetrendingnewscolumn: false, Homepagetrendingpfcolumn: true})
+  }
+
+
+
+
 
 
   changePerson1 = (item) => {
-    // console.log(item);
-    // console.log("I am item ^")
     this.setState({person1: item.name, person1Email: item.email, person1ID: item.id})
   }
 
@@ -142,7 +154,10 @@ class Main extends Component {
       classs = "buttonBlink"
     }
 
-    //console.log(this.props.email);
+
+
+
+
     var error = this.state.notLoggedIn == null ? null : <p class = "youneedtobeloggedintext"> You need to be signed in to submit a request</p>
 
     var requestColums = this.props.popularRequests == null ? <p> no requests </p> : (
@@ -167,16 +182,39 @@ class Main extends Component {
       })
     )
 
+    var trendingType = null;
+
+    console.log(this.state.Homepagetrendingpfcolumn);
+    console.log("^homepage thing")
+     if(this.state.Homepagetrendingnewscolumn === true)
+      {
+        trendingType =  (<Homepagetrendingnewscolumn />)
+      }
+     else if (this.state.Homepagetrendingpfcolumn === true)
+      {
+        trendingType =  (<Homepagetrendingpfcolumn />)
+        }
     return (
 
       <div>
-
       <div class="backgroundofsite">
-      <div>
-          <NewsTicker requests={this.props.allRequests}
-          />
-      </div>
+      <div><NewsTicker requests={this.props.allRequests}  /></div>
           <div class = "indexone">
+
+
+
+                <div class = "bottomhalf">
+                      <div class="trendinglogoline"> </div>
+                      <div class="todaysTrendingConversationRequests"><h4>Trending Conversation Requests</h4>
+                        <div class="trendinglogolineTwo"> </div>
+                        <div class="trendingNewstopicstext">{" "}</div>
+                      </div>
+                      <div class="trendingvoterRectangle">{requestColums}</div>
+                </div>
+
+
+
+
             <div class="parth">
               <div class="breaktheNews"><h1>Break the News</h1></div>
                   <div class="requestsystemRow">
@@ -187,8 +225,7 @@ class Main extends Component {
                             text={this.state.person1}
                             changePerson1={this.changePerson1}
                             changePerson2={null}
-                            textFromParent={this.state.person1}
-                          />
+                            textFromParent={this.state.person1}/>
                          </div>
                       </div>
 
@@ -197,49 +234,44 @@ class Main extends Component {
                       title="Debate Topic"
                       changeTopic1={this.changeTopic1}
                       articles={this.state.articles}
-                      textFromParent={this.state.topic}
-                      />
+                      textFromParent={this.state.topic}/>
                       </div>
+
                       <div class="publicFigurerequstBoxRight">
                           <div class="publicFigurerequstBox">
                           <RequestButtons
                           title="Public Figure"
                           changePerson1={null}
                           changePerson2={this.changePerson2}
-                          textFromParent={this.state.person2}
-                          />
+                          textFromParent={this.state.person2}/>
                           </div>
                             <div class="SubmitRequestbuttonlocation">
                             <SubmitRequestbutton
                               bclass={classs}
-                              emailFunctionVariable={() => {if(this.props.email != null) {this.sendEmail()} else {this.setState({notLoggedIn:true})}}}
-                            />
-                        </div>
+                              emailFunctionVariable={() => {if(this.props.email != null) {this.sendEmail()} else {this.setState({notLoggedIn:true})}}}/>
                       </div>
+                   </div>
                       {error}
+                </div>
+                  <div>
+                        <div class ="trendingeverythingbox">
 
+                            <div class ="trendingbuttons">
+                            <button onClick={this.homepagetrendingnewscolumn} class = {this.state.Homepagetrendingnewscolumn ? "toggletrendingnews" : "toggletrendingnewsgrey"}>Headlines</button>
+                            <button onClick={this.homepagetrendingpfcolumn} class = {this.state.Homepagetrendingpfcolumn ? "toggletrendingpf" : "toggletrendingpfgrey"}>Public Figures</button>
+                              <div class = "hline"></div>
+                            </div>
+                            <div>
+                            {trendingType}
+                            </div>
+                        </div>
                   </div>
                 </div>
           </div>
 
 
         <div>
-            <div class = "bottomhalf">
-                  <div class="trendinglogoline"> </div>
-                  <div class="todaysTrendingConversationRequests"><h4>Trending Conversation Requests</h4>
-                                <div class="trendinglogolineTwo"> </div>
-                                <div class="trendingNewstopicstext">
-                                  {" "}
-                                  <div class="trendingheadlinestext">
-                                      <h3>Trending Headlines</h3>
-                                  </div>
-                                  <div class="TrendingNewTopicsBox"><TrendingNewsTopicsPage articles={this.state.articles}/></div>
-                                </div>
-                  </div>
-                    <div class="trendingvoterRectangle" style={{display: 'flex', flexDirection:'row'}}>
-                      {requestColums}
-                    </div>
-            </div>
+
         </div>
         </div>
       <div class = "recentlypostedbar">
@@ -252,10 +284,11 @@ class Main extends Component {
             {recentDebates}
           </div>
         </div>
-        <div class ="bottomborder"></div>
+        <div class = "dline"> </div>
     </div>
     );
   }
+
 }
 
 function mapStateToProps(state) {

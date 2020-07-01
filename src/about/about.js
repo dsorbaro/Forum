@@ -83,7 +83,7 @@ We need to force those channels of communication back open. We need open dialogu
 
 <p class = "wasfounded">Reportr was founded for the sole reason that some kid (yours truly) got so annoyed by how terrible things have gotten that out of pure spite he created a place where this open dialogue could occur, because that is the only way things will get better. We are independent and non-partisan. Our only allegiance is to open, unfettered, uncut, raw dialogue between anyone anywhere. </p>
 
-<p class = "quote">“When the debate is over, slander becomes the tool of the loser.” – Socrates
+<p class = "quote">“When the debate is over, slander becomes the tool of the loser.” Socrates
 </p>
 </div>
 

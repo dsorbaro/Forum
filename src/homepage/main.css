@@ -2,6 +2,13 @@
   background-color: white;
 }
 
+.indexone {
+  display: flex;
+  flex-direction: column;
+  background-color: none;
+  z-index: -2;
+}
+
 
 .row {
   display: flex;
@@ -12,9 +19,8 @@
 
 .breaktheNews {
   position: relative;
-  left: 344px;
-  top: 10px;
-  color: black;
+  left: 5px;
+  top: -30px;
   font-family: Noto Sans;
   font-style: bold;
   font-style: italic;
@@ -24,17 +30,16 @@
 
 .SubmitRequestbuttonlocation {
   position: absolute;
-  left: 320px;
+  left: 260px;
   top: 2px;
 }
 
 .parth {
 position: relative;
-width: 1200px;
-height: 270px;
+width: 920px;
+height: 250px;
 left: 30px;
-top: -50px;
-background: #f5f5f5;
+top: -170px;
 border-radius: 17px;
   z-index: 1;
 }
@@ -84,7 +89,7 @@ h1 {
   box-sizing: border-box;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   height: 90px;
-    width: 300px;
+    width: 250px;
     padding-left: 45px;
       border: 2px solid #60009E;
   left: 15px;
@@ -101,7 +106,7 @@ h1 {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0px;
   height: 90px;
-  width: 300px;
+  width: 250px;
       padding-left: 50px;
   left: 50px;
   top: 90px;
@@ -119,7 +124,7 @@ h1 {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0px;
   height: 90px;
-  width: 400px;
+  width: 300px;
   left: 30px;
 }
 
@@ -144,37 +149,36 @@ h1 {
   position: relative;
   width: 448px;
   height: 40px;
-  left: 225px;
-  top: -255px;
+  left: 350px;
+  top: -420px;
   font-family: Noto Sans;
   font-style: bold;
   font-weight: 800;
   color: #3c065f;
 }
 
-.trendinglogoline {
-  position: relative;
-  width: 175px;
-  left: 27px;
-  top: -220px;
-  height: 0px;
-    opacity: 50%;
-  border: 1px solid #3c065f;
+.trendingvoterRectangle {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: 850px;
+  height: 367px;
+  left: 47px;
+  top: -357px;
+  background: NONE;
+  display: flex;
+  flex-direction: row;
+  border-radius: 36px;
 }
 
-.trendinglogolineTwo {
-  position: relative;
-  width: 700px;
-  top: -305px;
-    opacity: 50%;
-  left: 500px;
-  border: 1px solid #3c065f;
-}
+
+
+
 
 .trendingNewstopicstext {
   position: relative;
   left: 890px;
-  top: -58px;
+  top: -78px;
   text: bold;
   font-size: 20px;
   color: #3c065f;
@@ -190,25 +194,7 @@ h1 {
 
 .bottomhalf {
   position: relative;
-  top: 200px;
-}
-
-.trendingvoterRectangle {
-  position: absolute;
-  width: 850px;
-  height: 467px;
-  left: 27px;
-  top: -190px;
-  background: #f5f5f5;
-  border-radius: 36px;
-}
-
-
-.trendingheadlinestext h3 {
-  font-size: 17px;
-  position: absolute;
-  top: -245px;
-  margin-left: 200px;
+  top: 550px;
 }
 
 
@@ -264,8 +250,8 @@ border-radius: 1000px;
 
 .recentlypostedtext {
   position: relative;
-  top: 400px;
-  left: 230px;
+  top: 430px;
+  left: 360px;
   text: bold;
   font-size: 20px;
   color: #3c065f;
@@ -274,8 +260,8 @@ border-radius: 1000px;
 
 .postedconvologoline {
   position: absolute;
-  width: 175px;
-  left: -210px;
+  width: 375px;
+  left: -380px;
   top: 15px;
   height: 0px;
     opacity: 50%;
@@ -284,8 +270,8 @@ border-radius: 1000px;
 
 .postedconvologolineTwo {
   position: absolute;
-  width: 160px;
-  top: 17px;
+  width: 310px;
+  top: 13px;
     opacity: 50%;
   left: 275px;
   border: 1px solid #3c065f;

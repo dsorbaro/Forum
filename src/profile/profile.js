@@ -6,13 +6,14 @@ import RequestedDebatesForUser from "./requestedDebatesForUser"
 import ActiveDebatespage from "./ActiveDebatespage.js"
 import parthenonprofile from './parthenonprofile.png'
 import cliffline from "./cliffline.png"
+import informationicon from "./informationicon.png"
 import PastDebatespage from './PastDebatespage.js'
 import CurrentRequestspage from './CurrentRequestspage.js'
 import ForfeitedDebatespage from './ForfeitedDebatespage.js'
 class ProfilePage extends Component {
   constructor(props) {
     super(props);
-        this.state = {varNoInfo: true, PastDebatespage: false, CurrentRequestspage: false, ForfeitedDebatespage:false, ActiveDebatespage: false};
+        this.state = {varNoInfo: true, PastDebatespage: true, CurrentRequestspage: false, ForfeitedDebatespage:false, ActiveDebatespage: false};
     }
 
     componentDidMount(){
@@ -41,6 +42,10 @@ class ProfilePage extends Component {
       this.setState ({ActiveDebatespage:true, CurrentRequestspage: false, ForfeitedDebatespage:false, PastDebatespage:false})
     }
 
+
+
+
+
    render() {
      if(this.props.fields == null){
        return (<p> Loading</p>)
@@ -61,15 +66,33 @@ class ProfilePage extends Component {
      }
      else if (this.state.ActiveDebatespage === true)
       profileOption = (<ActiveDebatespage />)
-     return (
 
+     // var profileOption = null;
+     //    if (this.state.PastDebatespage === true)
+     //     {
+     //       return(<div class = "redbox"></div>)
+     //     }
+
+    //hypoclass textPurple
+
+return(
 
     <div class = "profileinfoformat">
 
       <div>
           <p class = "profilename">{this.props.fields.firstName} {this.props.fields.lastName}</p>
+                <p class = "profileschool"> {this.props.fields.school} </p>
+
+
+    <div class = "informationrow">
           <p class = "profilestatus"> Public Figure Status: {this.props.fields.status} </p>
-          <p class = "profileschool"> {this.props.fields.school} </p>
+          <div>
+          <div id="wrapper">
+              <img src= {informationicon} class="informationicon" />
+              <p class="infotext">Approved Public figures can engage in conversations</p>
+          </div>
+          </div>
+      </div>
           <p class= "profilebio"> {this.props.fields.bio} </p>
       </div>
       <img class = "parthenonprofile" src ={parthenonprofile}/>
@@ -79,14 +102,14 @@ class ProfilePage extends Component {
 
             <div class= "toptextnumbercolumn">
               <div class ="participatedtoptextnumber">{this.props.completedDebatesForUser == null ? "?" : this.props.completedDebatesForUser.length}</div>
-              <button onClick={this.pastDebatespage} class = "participatedtoptext">Past Debates</button>
+              <button onClick={this.pastDebatespage} class = {this.state.PastDebatespage ? "purpleparticipatedtoptext" : "participatedtoptext"}>Past Debates</button>
             </div>
 
               <div class ="seperatingline"> </div>
 
               <div class= "toptextnumbercolumn">
                 <div class ="forfeiteddebatestoptextnumber">{this.props.rejectedDebatesForUser == null ? "?" : this.props.rejectedDebatesForUser.length}</div>
-                <button onClick={this.forfeitedDebatespage} class = "forfeitstoptext">Forfeited Debates</button>
+                <button onClick={this.forfeitedDebatespage} class = {this.state.ForfeitedDebatespage ? "purpleforfeitstoptext" : "forfeitstoptext"}>Forfeited Debates</button>
               </div>
 
 
@@ -94,17 +117,17 @@ class ProfilePage extends Component {
               <div class ="seperatingline"> </div>
 
 
-
             <div class= "toptextnumbercolumn">
               <div class ="currentrequesttoptextnumber">{this.props.requestedDebatesForUser == null ? "?" : this.props.requestedDebatesForUser.length}</div>
-              <button onClick={this.currentRequestspage} class = "currentrequeststoptext">Current Requests</button>
+              <button onClick={this.currentRequestspage} class ={this.state.CurrentRequestspage ? "purplecurrentrequeststoptext" : "currentrequeststoptext"}>Current Requests</button>
             </div>
+
 
             <div class ="seperatingline"> </div>
 
             <div class= "toptextnumbercolumn">
               <div class ="activedebatestoptextnumber">{this.props.activeDebatesForUser == null ? "?" : this.props.activeDebatesForUser.length}</div>
-              <button onClick={this.activeDebatespage} class ="activetoptext">Active Debates</button>
+              <button onClick={this.activeDebatespage} class ={this.state.ActiveDebatespage ? "purpleactivetoptext" : "activetoptext"}>Active Debates</button>
             </div>
         </div>
 
@@ -114,8 +137,9 @@ class ProfilePage extends Component {
 
 
       </div>
-     )
 
+
+   )
    }
  }
 
