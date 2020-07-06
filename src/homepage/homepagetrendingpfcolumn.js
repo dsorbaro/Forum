@@ -12,7 +12,7 @@ class Homepagetrendingpfcolumn extends Component {
   return (
 
         <div>
-            <h1>I am trending pf</h1>
+            <p class = "trendingpfs">I am trending pf</p>
         </div>
 
 

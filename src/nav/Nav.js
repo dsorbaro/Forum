@@ -20,7 +20,7 @@ const Nav = (props) => {  var adminLink = props.admin ? (
         <button class = "signoutbutton" style={{marginLeft: '140px'}} onClick={()=>{ props.signoutUser(props.history) }}>Sign Out</button>
       </NavLink>
       <NavLink to="/profile">
-        <button class ="profilenavbar"></button>
+        <button class ="profilenavbarbutton"></button>
       </NavLink>
     </div>
 
@@ -44,7 +44,7 @@ const Nav = (props) => {  var adminLink = props.admin ? (
                         <img class="mainForumlogo" src={logo} />
                         <div class="forumaboveLine">
                                 <div class="mainForumtext"><h1>FORUM</h1></div>
-                                <div class="logoline"></div>
+                                <div class = "navbarline"> </div>
                         </div>
             </div>
       </div>
@@ -56,7 +56,6 @@ const Nav = (props) => {  var adminLink = props.admin ? (
               <NavLink to="/contact">
                 <button class = "navbarbutton">Contact</button>
               </NavLink>
-
             {loggedIn}
             </div>
             {adminLink}
