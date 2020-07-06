@@ -564,8 +564,8 @@ margin-top: 40%;
 }
 
 .profilestatus {
-  margin-top: 8%;
-  margin-left: 35%;
+text-align: center;
+justify-content: center;
   width: 200%;
   position: relative;
   color: #530096;

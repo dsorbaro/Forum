@@ -6,6 +6,7 @@ import {  getOneDebate, goToNextDebate } from '../actions';
 import { getDebateRound, thisUsersTurn} from './../profile/debateMethod'
 import VideoUpload from './VideoUpload'
 import VideoPlayer from './debatePlayer'
+import "./debates.css"
 
 class CreateDebate extends Component {
   constructor(props) {
@@ -69,9 +70,9 @@ class CreateDebate extends Component {
      return (
        <div>
         <p> Page for {this.props.match.params.id} </p>
-        <p> It is currently round {getDebateRound(this.props.debate)} </p>
-        <p> Topic: {this.props.debate.requestID.topic} </p>
-        <p> People: {this.props.debate.requestID.person1} vs {this.props.debate.requestID.person2} </p>
+        <p class = "itiscurrently"> It is currently round {getDebateRound(this.props.debate)} </p>
+        <p class = "headlineondebateapage"> Headline: {this.props.debate.requestID.topic} </p>
+        <p class = "publicfigureondebatepage"> Public Figures: {this.props.debate.requestID.person1} and {this.props.debate.requestID.person2} </p>
         {mainInfo}
       </div>
 

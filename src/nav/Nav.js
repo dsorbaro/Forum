@@ -26,7 +26,10 @@ const Nav = (props) => {
         </button>
       </NavLink>
       <NavLink to="/profile">
-        <button class="profilenavbar"></button>
+
+        <button class ="profilenavbarbutton"></button>
+
+
       </NavLink>
     </div>
   ) : (
@@ -43,26 +46,32 @@ const Nav = (props) => {
   return (
     <div>
       <div>
-        <div class="row">
-          <img class="mainForumlogo" src={logo} />
-          <div class="forumaboveLine">
-            <div class="mainForumtext">
-              <h1>FORUM</h1>
+
+            <div class="row">
+                        <img class="mainForumlogo" src={logo} />
+                        <div class="forumaboveLine">
+                                <div class="mainForumtext"><h1>FORUM</h1></div>
+                                <div class = "navbarline"> </div>
+                        </div>
+
             </div>
             <div class="logoline"></div>
           </div>
         </div>
       </div>
-      <div class="navbarRow">
-        <NavLink to="/about">
-          <button class="aboutnavbarbutton">About</button>
-        </NavLink>
-        <NavLink to="/contact">
-          <button class="contactnavbarbutton">Contact</button>
-        </NavLink>
-        <NavLink to="/faq">
-          <button class="faqnavbarbutton">FAQs</button>
-        </NavLink>
+
+      <div class= "navbarRow">
+
+              <NavLink to="/about">
+                    <button class = "aboutnavbarbutton">About</button>
+              </NavLink>
+              <NavLink to="/contact">
+                <button class = "navbarbutton">Contact</button>
+              </NavLink>
+            {loggedIn}
+            </div>
+            {adminLink}
+
 
         {loggedIn}
       </div>

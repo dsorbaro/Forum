@@ -60,7 +60,7 @@ class Main extends Component {
       },
       {
         author: "Person B",
-        title: "First Egg! Will there be more?",
+        title: "Is there a market for a Mavis Lego?",
         url: "www.fakenews.com",
       },
       {
@@ -190,7 +190,7 @@ class Main extends Component {
 
     var recentDebates =
       this.props.debates == null ? (
-        <p> no debates </p>
+        <p>No Conversations</p>
       ) : (
         Object.keys(this.props.debates).map((item) => {
           console.log(this.props.debates[item]);
@@ -216,12 +216,10 @@ class Main extends Component {
 </div>
 
 
-              <button>
-                {" "}
-                <Link to={`/debate/${this.props.debates[item]._id}`}>
+
+                <Link  to={`/debate/${this.props.debates[item]._id}`}>
                 <img src = {mainpageplaybutton} class = "mainpageplaybutton"/>
-                </Link>{" "}
-              </button>
+                </Link>
             </div>
           );
         })
@@ -247,8 +245,8 @@ class Main extends Component {
           </div>
 
           <div class= "trendingeverythingbox">
-              <button onClick={this.homepagetrendingnewscolumn} class = {this.state.Homepagetrendingnewscolumn ? "toggletrendingnews" : "toggletrendingnewsgrey"}>Trending News</button>
-              <button onClick={this.homepagetrendingpfcolumn} class = {this.state.Homepagetrendingpfcolumn ? "toggletrendingpf" : "toggletrendingpfgrey "}>Trending Figures</button>
+              <button onClick={this.homepagetrendingnewscolumn} class = {this.state.Homepagetrendingnewscolumn ? "toggletrendingnews" : "toggletrendingnewsgrey"}>Headlines</button>
+              <button onClick={this.homepagetrendingpfcolumn} class = {this.state.Homepagetrendingpfcolumn ? "toggletrendingpf" : "toggletrendingpfgrey "}>Public Figures</button>
               {trendingType}
          </div>
 

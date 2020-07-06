@@ -1,14 +1,12 @@
 .trendingeverythingbox {
   position: fixed;
-  height: 600px;
+  height: 870px;
   width: 400px;
-  border: 2px solid #9f82af;
-  margin-left: 70.5%;
-  margin-top: -5%;
-  background-color: white;
+  margin-top: -14.5%;
+  right: 30px;
+  background-color: none;
+  border-left: 2px solid #36115b;
   z-index: 4;
-  border-radius: 20px;
-  background-color: white;
   display: flex;
 }
 
@@ -31,51 +29,62 @@
 
 }
 .toggletrendingnews{
-font-weight: bold;
+font-weight: bolder;
 margin-top: 5%;
 width: 50%;
-font-size: 130%;
+font-size: 160%;
   font-family: Noto Sans;
   position: absolute;
   color: #3c065f;
+  border: none;
+  background: none;
 }
 .toggletrendingnewsgrey {
   margin-top: 5%;
-  font-weight: bold;
+font-weight: bolder;
   width: 50%;
-font-size: 130%;
+font-size: 160%;
   font-family: Noto Sans;
   position: absolute;
   color: grey;
   z-index: 4;
+  border: none;
+  background: none;
 }
 
 .toggletrendingpf {
   margin-top: 5%;
-  width: 100%;
-font-size: 130%;
+  width: 50%;
+font-size: 160%;
   font-weight: bold;
-   left: -20px;
+   left: 198px;
+   justify-content: center;
   font-family: Noto Sans;
   position: absolute;
   color: #3c065f;
-  margin-left: 29%;
+  border: none;
+  background: none;
 }
 
 .toggletrendingpfgrey {
   margin-top: 5%;
-  width: 100%;
-font-size: 130%;
- left: -20px;
+  width: 50%;
+font-size: 160%;
+   left: 198px;
   font-weight: bold;
   font-family: Noto Sans;
   position: absolute;
-
     color: grey;
-    margin-left: 29%;
+    border: none;
+    background: none;
 }
 
 .trendingbuttons {
   display: flex;
   flex-direction: row;
+}
+
+.trendingpfs {
+  position: absolute;
+  top: 50px;
 }
