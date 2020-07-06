@@ -2,12 +2,14 @@
   background-color: white;
 }
 
+
 .indexone {
   display: flex;
   flex-direction: column;
   background-color: none;
   z-index: -2;
 }
+
 
 
 .row {
@@ -25,7 +27,7 @@
   font-style: bold;
   font-style: italic;
   font-size: 25px;
-    z-index: 2;
+  z-index: 2;
 }
 
 .SubmitRequestbuttonlocation {
@@ -52,18 +54,11 @@ border-radius: 17px;
   top: -5px;
 }
 
-
-
-
 .topLogo {
   display: flex;
   flex-direction: row;
   margin-left: 20px;
 }
-
-
-
-
 
 .publicFiguretext {
   font-family: Noto Sans;
@@ -82,17 +77,18 @@ h1 {
   margin-left: 2px;
 }
 
-
 .publicFigurerequstBoxRight {
   position: relative;
   background-color: white;
-  border: 0px solid #60009E;
+  border: 0px solid #60009e;
   box-sizing: border-box;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   height: 90px;
+
     width: 250px;
     padding-left: 45px;
       border: 2px solid #60009E;
+
   left: 15px;
   top: 90px;
   border-radius: 17px;
@@ -102,25 +98,26 @@ h1 {
 .publicFigurerequstBoxLeft {
   position: relative;
   background-color: white;
-  border: 2px solid #60009E;
+  border: 2px solid #60009e;
   box-sizing: border-box;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0px;
   height: 90px;
+
   width: 250px;
       padding-left: 50px;
+
   left: 50px;
   top: 90px;
   border-radius: 17px;
   z-index: 2;
 }
 
-
 .topicRequestbox {
   position: relative;
   top: 90px;
-  background-color: #3C065F;
-  border: 0px solid #60009E;
+  background-color: #3c065f;
+  border: 0px solid #60009e;
   box-sizing: border-box;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0px;
@@ -158,6 +155,7 @@ h1 {
   color: #3c065f;
 }
 
+
 .trendingvoterRectangle {
   position: absolute;
   display: flex;
@@ -179,8 +177,10 @@ left: 40px;
 .trendingNewstopicstext {
   position: relative;
   left: 890px;
+
   top: -78px;
   text: bold;
+
   font-size: 20px;
   color: #3c065f;
 }
@@ -195,10 +195,10 @@ left: 40px;
 
 .bottomhalf {
   position: relative;
+
   top: 550px;
+
 }
-
-
 
 .columnrequestbuttonmedium {
   height: 66px;
@@ -207,14 +207,12 @@ left: 40px;
   position: absolute;
   left: 97px;
   top: 395px;
-
 }
 
-.columnrequestbuttonmedium:hover{
-border: 2px solid #60009E;
-border-radius: 1000px;
+.columnrequestbuttonmedium:hover {
+  border: 2px solid #60009e;
+  border-radius: 1000px;
 }
-
 
 .columnrequestbuttonbig {
   height: 66px;
@@ -223,14 +221,12 @@ border-radius: 1000px;
   transition: all 0.1s ease-in-out 0s;
   left: 294px;
   top: 395px;
-
 }
 
-.columnrequestbuttonbig:hover{
-border: 2px solid #60009E;
-border-radius: 1000px;
+.columnrequestbuttonbig:hover {
+  border: 2px solid #60009e;
+  border-radius: 1000px;
 }
-
 
 .columnrequestbuttonsmall {
   height: 66px;
@@ -239,18 +235,16 @@ border-radius: 1000px;
   transition: all 0.1s ease-in-out 0s;
   left: 494px;
   top: 395px;
-
 }
 
-.columnrequestbuttonsmall:hover{
-border: 2px solid #60009E;
-border-radius: 1000px;
+.columnrequestbuttonsmall:hover {
+  border: 2px solid #60009e;
+  border-radius: 1000px;
 }
-
-
 
 .recentlypostedtext {
   position: relative;
+
   top: 410px;
   left: 310px;
   text: bold;
@@ -259,13 +253,13 @@ border-radius: 1000px;
   color: #3c065f;
 }
 
-
 .postedconvologoline {
   position: absolute;
   width: 365px;
   left: -385px;
   top: 15px;
   height: 0px;
+  opacity: 50%;
   border: 1px solid #3c065f;
 }
 
@@ -277,9 +271,9 @@ border-radius: 1000px;
   border: 1px solid #3c065f;
 }
 
-.recentlypostedbar{
-    margin-top: -250px;
-    z-index: 2;
+.recentlypostedbar {
+  margin-top: -250px;
+  z-index: 2;
 }
 
 .bottomborder {
@@ -290,7 +284,7 @@ border-radius: 1000px;
   border: 1px solid #3c065f;
 }
 
-.youneedtobeloggedintext{
+.youneedtobeloggedintext {
   position: absolute;
   color: #3c065f;
   font-family: noto sans;
