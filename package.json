@@ -10,7 +10,7 @@
     "@uppy/google-drive": "^1.5.8",
     "@uppy/react": "^1.8.1",
     "@uppy/tus": "^1.6.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "emailjs-com": "^2.4.1",
     "firebase": "^7.15.4",
     "node-sass": "^4.14.1",
